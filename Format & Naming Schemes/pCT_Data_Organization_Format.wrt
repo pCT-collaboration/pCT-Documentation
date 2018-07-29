@@ -1,0 +1,151 @@
+\@writefile{toc}{\nobreakspace {}\hfill \textbf {Page}\par \vspace \medskipamount }
+\@writefile{toc}{\contentsline {Part}{{\numberline {\raisebox {10pt}{\hypertarget {PartI}{}}Part I : }}General/Universal Content}{2}{section*.6}}
+\@writefile{toc}{\contentsline {Topic}{{\numberline {\raisebox {10pt}{\hypertarget {TopicI-1}{}}Topic I-1 : }}Package Level Content}{3}{section*.8}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter1}{}}1}}Package Development}{3}{section*.9}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section1.1}{}}1.1}}Package Comments}{3}{section*.10}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section1.2}{}}1.2}}Package Development Testing}{3}{section*.11}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection1.2.1}{}}1.2.1}}Package Options/Configurations}{3}{section*.12}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection1.2.2}{}}1.2.2}}Argument Parsing/Manipulation}{4}{section*.14}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection1.2.3}{}}1.2.3}}Lists/Groups}{6}{section*.17}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection1.2.4}{}}1.2.4}}Conditional Tests/Statements}{6}{section*.18}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection1.2.5}{}}1.2.5}}Register/Variable Interaction}{9}{section*.22}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection1.2.6}{}}1.2.6}}Text/Paragraphs}{10}{section*.24}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection1.2.7}{}}1.2.7}}Math/Equations}{14}{section*.29}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection1.2.8}{}}1.2.8}}Macro Testing}{14}{section*.30}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection1.2.9}{}}1.2.9}}Graphics/Image Testing}{14}{section*.31}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection1.2.10}{}}1.2.10}}Color/Style Testing}{17}{section*.35}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection1.2.11}{}}1.2.11}}Misc./Temporary Testing}{17}{section*.36}}
+\@writefile{toc}{\contentsline {Part}{{\numberline {\raisebox {10pt}{\hypertarget {PartII}{}}Part II : }}Document Section Examples}{18}{section*.42}}
+\@writefile{toc}{\contentsline {Topic}{{\numberline {\raisebox {10pt}{\hypertarget {TopicII-1}{}}Topic II-1 : }}Example Topic + Chapter + Section}{19}{section*.44}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter2}{}}2}}Example Chapter* + Section}{19}{section*.45}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section2.1}{}}2.1}}Example Chapter*: Section}{19}{section*.46}}
+\@writefile{toc}{\contentsline {Topic}{{\numberline {\raisebox {10pt}{\hypertarget {TopicII-2}{}}Topic II-2 : }}Example Topic + Chapter + Subsection}{20}{section*.48}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter3}{}}3}}Example Chapter* + Subsection}{20}{section*.49}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection3.1.1}{}}3.1.1}}Example Chapter*: Subsection}{20}{section*.50}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection3.1.2}{}}3.1.2}}\texttt {organized\_data} Hierarchy}{20}{section*.51}}
+\@writefile{toc}{\contentsline {Topic}{{\numberline {\raisebox {10pt}{\hypertarget {TopicII-3}{}}Topic II-3 : }}Example Topic + Chapter + Text + Section}{21}{section*.53}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter4}{}}4}}Example Chapter* + Text + Section}{21}{section*.54}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section4.1}{}}4.1}}Example Chapter*: Text + Section}{21}{section*.55}}
+\@writefile{toc}{\contentsline {Topic}{{\numberline {\raisebox {10pt}{\hypertarget {TopicII-4}{}}Topic II-4 : }}Example Topic + Chapter + Section + Text}{22}{section*.57}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter5}{}}5}}Example Chapter* + Section + Text}{22}{section*.58}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section5.1}{}}5.1}}Example Chapter*: Section + Text}{22}{section*.59}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter6}{}}6}}Example Chapter + Section + Text}{23}{section*.61}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section6.1}{}}6.1}}Example Chapter: Section + Text}{23}{section*.62}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter7}{}}7}}Example Chapter + Text + Section}{24}{section*.64}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section7.1}{}}7.1}}Example Chapter: + Text + Section}{24}{section*.65}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section7.2}{}}7.2}}Front/back Matter Examples}{24}{section*.66}}
+\@writefile{toc}{\contentsline {Part}{{\numberline {\raisebox {10pt}{\hypertarget {PartIII}{}}Part III : }}Custom Package Environments}{25}{section*.72}}
+\@writefile{toc}{\contentsline {Topic}{{\numberline {\raisebox {10pt}{\hypertarget {TopicIII-1}{}}Topic III-1 : }}Float Environments}{26}{section*.74}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter8}{}}8}}Float/Graphics Examples}{26}{section*.75}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section8.1}{}}8.1}}Figure Examples}{26}{section*.76}}
+\@writefile{lof}{\contentsline {figbox}{{\numberline {\raisebox {10pt}{\hypertarget {figbox1}{}}1}Figure Box 1}}{26}{section*.77}}
+\@writefile{lof}{\contentsline {tcolorbox}{\hspace {\cftfigboxfigureindent }\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {figboxfigure1.1}{}}1.1} Figure 1 : Plots $ax=b$ of $ax=b$ the the the Dolph-Chebyshev windo $ax=b$ for $ax=b$ ad $ax=b$ fsfsf sfsfsfsf fsfs sfsf add}{26}{figure.8.1}}
+\@writefile{lof}{\contentsline {tcolorbox}{\hspace {\cftfigboxfigureindent }\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {figboxfigure1.2}{}}1.2} Figure 2 : Plots of Dolph-Chebyshev window for}{26}{figure.8.2}}
+\@writefile{lof}{\contentsline {tcolorbox}{\hspace {\cftfigboxfigureindent }\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {figboxfigure1.3}{}}1.3} Figure 3 : hellob3}{26}{figure.8.3}}
+\@writefile{lof}{\contentsline {tcolorbox}{\hspace {\cftfigboxfigureindent }\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {figboxfigure1.4}{}}1.4} Figure 4 : hellob2}{26}{figure.8.4}}
+\@writefile{lof}{\contentsline {tcolorbox}{\hspace {\cftfigboxfigureindent }\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {figboxfigure1.5}{}}1.5} Figure 5 : hellob}{26}{figure.8.5}}
+\@writefile{lof}{\contentsline {figbox}{{\numberline {\raisebox {10pt}{\hypertarget {figbox2}{}}2}Figure Box 2} : hello title}{27}{section*.78}}
+\@writefile{lof}{\contentsline {tcolorbox}{\hspace {\cftfigboxfigureindent }\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {figboxfigure2.1}{}}2.1} Figure 6 : Plots of Dolph-Chebyshev windo for ad fsfsf sfsfsfsf $ax=b$ fsfs sfsf add}{27}{figure.8.6}}
+\@writefile{lof}{\contentsline {tcolorbox}{\hspace {\cftfigboxfigureindent }\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {figboxfigure2.2}{}}2.2} Figure 7 : Plots of Dolph-Chebyshev window for}{27}{figure.8.7}}
+\@writefile{lof}{\contentsline {tcolorbox}{\hspace {\cftfigboxfigureindent }\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {figboxfigure2.3}{}}2.3} Figure 8 }{27}{figure.8.8}}
+\@writefile{lof}{\contentsline {tcolorbox}{\hspace {\cftfigboxfigureindent }\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {figboxfigure2.4}{}}2.4} Figure 9 : hellob2}{27}{figure.8.9}}
+\@writefile{lof}{\contentsline {tcolorbox}{\hspace {\cftfigboxfigureindent }\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {figboxfigure2.5}{}}2.5} Figure 10 : hellob}{27}{figure.8.10}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section8.2}{}}8.2}}Math Table Examples}{28}{section*.81}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection8.2.1}{}}8.2.1}}Long Division Tables}{28}{section*.82}}
+\@writefile{lot}{\contentsline {LDtable}{{\numberline {\raisebox {10pt}{\hypertarget {LDtable1}{}}\hspace {0.5pt}1}Long Division Table 1}}{29}{section*.83}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection8.2.2}{}}8.2.2}}Integration by Parts Tables}{29}{section*.85}}
+\@writefile{lot}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {IBPtable1}{}} \hspace {-3.0pt}2 \hspace {0.0pt}}Integration by Parts Table 1 }{29}{table.8.2}}
+\@writefile{lot}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {IBPtable2}{}} \hspace {-3.0pt}3 \hspace {0.0pt}}Integration by Parts Table 2 }{30}{table.8.3}}
+\@writefile{lot}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {IBPtable3}{}} \hspace {-3.0pt}4 \hspace {0.0pt}}Integration by Parts Table 3 : text description}{30}{table.8.4}}
+\@writefile{lot}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {IBPtable4}{}} \hspace {-3.0pt}5 \hspace {0.0pt}}Integration by Parts Table 4 }{30}{table.8.5}}
+\@writefile{lot}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {IBPtable5}{}} \hspace {-3.0pt}6 \hspace {0.0pt}}Integration by Parts Table 5 : the the text description}{30}{table.8.6}}
+\@writefile{lot}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {IBPtable6}{}} \hspace {-3.0pt}7 \hspace {0.0pt}}Integration by Parts Table 6 }{31}{table.8.7}}
+\@writefile{lot}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {IBPtable7}{}} \hspace {-3.0pt}8 \hspace {0.0pt}}Integration by Parts Table 7 : the the text description}{31}{table.8.8}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection8.2.3}{}}8.2.3}}Polynomial Long Division Examples}{31}{section*.88}}
+\@writefile{lot}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {PLDtable1}{}}\hspace {0.5pt}9}Polynomial Long Division Table 1 }{32}{table.8.9}}
+\@writefile{lot}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {PLDtable2}{}}\hspace {0.5pt}10}Polynomial Long Division Table 2 }{33}{table.8.10}}
+\@writefile{lot}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {PLDtable3}{}}\hspace {0.5pt}11}Polynomial Long Division Table 3 }{33}{table.8.11}}
+\@writefile{lot}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {PLDtable4}{}}\hspace {0.5pt}12}Polynomial Long Division Table 4 : hello}{34}{table.8.12}}
+\@writefile{lot}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {PLDtable5}{}}\hspace {0.5pt}13}Polynomial Long Division Table 5 }{34}{table.8.13}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter9}{}}9}}Problem Examples}{35}{section*.93}}
+\@writefile{probs}{\contentsline {problem}{\numberline {\raisebox {10pt}{\unskip \ignorespaces \hypertarget {problem3.8}{}}}\normalsize *\normalfont \bfmseries Problem 3.8}{35}{section*.94}}
+\@writefile{probs}{\contentsline {problem}{\numberline {\raisebox {10pt}{\unskip \ignorespaces \hypertarget {problem4.2}{}}}\normalsize *\normalfont \bfmseries Problem 4.2}{36}{section*.96}}
+\@writefile{probs}{\contentsline {problem}{\numberline {\raisebox {10pt}{\unskip \ignorespaces \hypertarget {problem5}{}}}\normalsize *\normalfont \bfmseries Problem 5}{37}{section*.98}}
+\@writefile{probs}{\contentsline {problem}{\numberline {\raisebox {10pt}{\unskip \ignorespaces \hypertarget {problem6}{}}}\normalsize *\normalfont \bfmseries Problem 6}{37}{section*.99}}
+\@writefile{probs}{\contentsline {subproblem}{\numberline {\raisebox {10pt}{\unskip \ignorespaces \hypertarget {subproblema}{}}}\normalsize *\normalfont \bfmseries (\ignorespaces a)}{38}{section*.100}}
+\@writefile{probs}{\contentsline {subproblempart}{\numberline {\raisebox {10pt}{\unskip \ignorespaces \hypertarget {subproblemparti}{}}}\normalsize *\normalfont \bfmseries (\ignorespaces i)}{38}{section*.102}}
+\@writefile{probs}{\contentsline {problem}{\numberline {\raisebox {10pt}{\unskip \ignorespaces \hypertarget {problem3.12}{}}}\normalsize *\normalfont \bfmseries Problem 3.12}{38}{section*.103}}
+\@writefile{probs}{\contentsline {subproblem}{\numberline {\raisebox {10pt}{\unskip \ignorespaces \hypertarget {subproblema}{}}}\normalsize *\normalfont \bfmseries (\ignorespaces a)}{38}{section*.104}}
+\@writefile{probs}{\contentsline {problem}{\numberline {\raisebox {10pt}{\unskip \ignorespaces \hypertarget {problem3.10}{}}}\normalsize *\normalfont \bfmseries Problem 3.10}{38}{section*.105}}
+\@writefile{probs}{\contentsline {problempart}{\numberline {\raisebox {10pt}{\unskip \ignorespaces \hypertarget {problemparti}{}}}\normalsize *\normalfont \bfmseries (\ignorespaces i)}{38}{section*.106}}
+\@writefile{probs}{\contentsline {problempartsubproblem}{\numberline {\raisebox {10pt}{\unskip \ignorespaces \hypertarget {problempartsubproblema}{}}}\normalsize *\normalfont \bfmseries (\ignorespaces a)}{38}{section*.107}}
+\@writefile{probs}{\contentsline {problempartsubproblem}{\numberline {\raisebox {10pt}{\unskip \ignorespaces \hypertarget {problempartsubproblemb}{}}}\normalsize *\normalfont \bfmseries (\ignorespaces b)}{38}{section*.108}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter10}{}}10}}Math Examples}{39}{section*.110}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter11}{}}11}}List and Equation List Box Examples}{41}{section*.113}}
+\@writefile{toc}{\contentsline {Topic}{{\numberline {\raisebox {10pt}{\hypertarget {TopicIII-2}{}}Topic III-2 : }}Documenting Code/Programming}{49}{section*.122}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter12}{}}12}}Code Listing and Function/Script Definition Examples}{49}{section*.123}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section12.1}{}}12.1}}Code Listing Examples}{49}{section*.124}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection12.1.1}{}}12.1.1}}Inline Terminal/Command Box Examples}{49}{section*.125}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection12.1.2}{}}12.1.2}}Matlab/Terminal Box Examples}{49}{section*.126}}
+\@writefile{lol}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {Matlab1}{}} \hspace {2.5pt}1} Matlab Listing 1 : hello}{49}{lstlisting.12.1}}
+\@writefile{lol}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {Terminal1}{}} \hspace {2.5pt}2} Terminal Listing 1 : hello}{50}{lstlisting.12.2}}
+\@writefile{lol}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {Matlab2}{}} \hspace {2.5pt}3} Matlab Listing 2 : hello}{50}{lstlisting.12.3}}
+\@writefile{lol}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {Matlab3}{}} \hspace {2.5pt}4} Matlab Listing 3 }{51}{lstlisting.12.4}}
+\@writefile{lol}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {Terminal2}{}} \hspace {2.5pt}5} Terminal Listing 2 }{52}{lstlisting.12.5}}
+\@writefile{lol}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {Terminal3}{}} \hspace {2.5pt}6} Terminal Listing 3 : hello}{52}{lstlisting.12.6}}
+\@writefile{lol}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {Terminal4}{}} \hspace {2.5pt}7} Terminal Listing 4 }{52}{lstlisting.12.7}}
+\@writefile{lol}{\contentsline {tcolorbox}{\normalsize *\normalfont \bfmseries \numberline {\raisebox {10pt}{\hypertarget {Terminal5}{}} \hspace {2.5pt}8} Terminal Listing 5 }{53}{lstlisting.12.8}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section12.2}{}}12.2}}Script/Function Definition Examples}{53}{section*.131}}
+\@writefile{funcs}{\contentsline {scriptdefbox}{{\numberline {\raisebox {10pt}{\hypertarget {scriptdefbox1}{}}1}Script Definition Box 1} : bash scripts}{53}{section*.132}}
+\@writefile{funcs}{\contentsline {scriptdefboxdef}{{\numberline {\raisebox {10pt}{\hypertarget {scriptdefboxdef1.1}{}}1.1}Script Definition 1}: \texttt {.bash\_profile}}{53}{section*.133}}
+\@writefile{funcs}{\contentsline {scriptdefboxdef}{{\numberline {\raisebox {10pt}{\hypertarget {scriptdefboxdef1.2}{}}1.2}Script Definition 2}: \texttt {load\_pct\_functions.sh}}{53}{section*.134}}
+\@writefile{funcs}{\contentsline {scriptdefboxdef}{{\numberline {\raisebox {10pt}{\hypertarget {scriptdefboxdef1.3}{}}1.3}Script Definition 3}: \texttt {link\_raw\_data.sh}}{54}{section*.135}}
+\@writefile{funcs}{\contentsline {functiondef}{{\numberline {\raisebox {10pt}{\hypertarget {functiondef1}{}}\hspace {0pt}2\hspace {-2pt}}Function Definition 1}: \texttt {set\_rcode}}{54}{section*.137}}
+\@writefile{funcs}{\contentsline {functiondefbox}{{\numberline {\raisebox {10pt}{\hypertarget {functiondefbox1}{}}3}Function Definition Box 1} : bash functions}{55}{section*.138}}
+\@writefile{funcs}{\contentsline {functiondefboxdef}{{\numberline {\raisebox {10pt}{\hypertarget {functiondefboxdef3.1}{}}3.1}Function Definition 2}: \texttt {add\_rcode\_repo}}{55}{section*.139}}
+\@writefile{funcs}{\contentsline {functiondefboxdef}{{\numberline {\raisebox {10pt}{\hypertarget {functiondefboxdef3.2}{}}3.2}Function Definition 3}: \texttt {link\_raw\_data}}{55}{section*.140}}
+\@writefile{funcs}{\contentsline {functiondefboxdef}{{\numberline {\raisebox {10pt}{\hypertarget {functiondefboxdef3.3}{}}3.3}Function Definition 4}: \texttt {set\_rcode}}{56}{section*.141}}
+\@writefile{funcs}{\contentsline {functiondefdetail}{{\numberline {\raisebox {10pt}{\hypertarget {functiondefdetail1}{}}\hspace {0pt}4\hspace {-2pt}}Function Details 1}: \texttt {add\_tardis\_data}}{57}{section*.145}}
+\@writefile{funcs}{\contentsline {functiondef}{{\numberline {\raisebox {10pt}{\hypertarget {functiondef5}{}}\hspace {0pt}5\hspace {-2pt}}Function Definition 5}: \texttt {set\_rcode}}{58}{section*.147}}
+\@writefile{funcs}{\contentsline {functiondefbox}{{\numberline {\raisebox {10pt}{\hypertarget {functiondefbox2}{}}6}Function Definition Box 2} : bash functions}{59}{section*.149}}
+\@writefile{funcs}{\contentsline {functiondefboxdef}{{\numberline {\raisebox {10pt}{\hypertarget {functiondefboxdef6.1}{}}6.1}Function Definition 6}: \texttt {set\_rcode}}{59}{section*.150}}
+\@writefile{funcs}{\contentsline {functiondef}{{\numberline {\raisebox {10pt}{\hypertarget {functiondef7}{}}\hspace {0pt}7\hspace {-2pt}}Function Definition 7}: \texttt {set\_rcode}}{60}{section*.151}}
+\@writefile{funcs}{\contentsline {functiondef}{{\numberline {\raisebox {10pt}{\hypertarget {functiondef8}{}}\hspace {0pt}8\hspace {-2pt}}Function Definition 8}: \texttt {set\_rcode}}{60}{section*.153}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter13}{}}13}}Definition/Statement Box Examples}{62}{section*.156}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section13.1}{}}13.1}}Inline Text Boxes}{62}{section*.157}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section13.2}{}}13.2}}Itemized Text Boxes}{62}{section*.158}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section13.3}{}}13.3}}Definition Text Boxes}{62}{section*.159}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section13.4}{}}13.4}}Definition/Theorem/Corollary/Lemma Title Boxes}{66}{section*.164}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section13.5}{}}13.5}}Definition/Theorem/Corollary/Lemma Boxes}{66}{section*.165}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter14}{}}14}}'tcolorbox' Options Testing}{68}{section*.168}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection14.5.1}{}}14.5.1}}'tcolorbox' tcbset components/styles testing}{82}{section*.183}}
+\@writefile{toc}{\contentsline {Part}{{\numberline {\raisebox {10pt}{\hypertarget {PartIV}{}}Part IV : }}Package Usage Examples}{85}{section*.191}}
+\@writefile{toc}{\contentsline {Topic}{{\numberline {\raisebox {10pt}{\hypertarget {TopicIV-1}{}}Topic IV-1 : }}Example Application: Data Storage Documentation}{86}{section*.193}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter15}{}}15}}Directory Usage}{86}{section*.194}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section15.1}{}}15.1}}Kodiak Directories}{86}{section*.195}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section15.2}{}}15.2}}Tardis Directories}{90}{section*.200}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter16}{}}16}}Organizational Scheme}{92}{section*.203}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section16.1}{}}16.1}}Code Organization}{92}{section*.204}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection16.1.1}{}}16.1.1}}\texttt {pCT\_Code} Hierarchy}{92}{section*.205}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section16.2}{}}16.2}}Data Organization}{93}{section*.207}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection16.2.1}{}}16.2.1}}\texttt {organized\_data} Hierarchy}{93}{section*.208}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection16.2.2}{}}16.2.2}}\texttt {raw\_data} Hierarchy}{98}{section*.214}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection16.2.3}{}}16.2.3}}\texttt {preprocessed\_data} Hierarchy}{100}{section*.217}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection16.2.4}{}}16.2.4}}\texttt {user\_data} (Unorganized Data) Hierarchy}{101}{section*.219}}
+\@writefile{toc}{\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection16.2.5}{}}16.2.5}}\texttt {reconstruction\_data} Hierarchy}{101}{section*.220}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter17}{}}17}}Code Hierarchy Diagrams}{108}{section*.228}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section17.1}{}}17.1}}\texttt {pCT\_code} Hierarchy Diagram}{108}{section*.229}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section17.2}{}}17.2}}\texttt {organized\_data} Hierarchy Diagram}{109}{section*.231}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter18}{}}18}}GitHub Sources}{110}{section*.233}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section18.1}{}}18.1}}GitHub Accounts/Repositories}{110}{section*.234}}
+\@writefile{toc}{\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter19}{}}19}}File Lists}{113}{section*.238}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section19.1}{}}19.1}}\texttt {reconstruction\_data} File List}{113}{section*.239}}
+\@writefile{toc}{\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section19.2}{}}19.2}}Master File List}{115}{section*.242}}
+\@writefile{toc}{\contentsfinish }
+\@writefile{lof}{\contentsfinish }
+\@writefile{lot}{\contentsfinish }
+\@writefile{toc}{\contentsline {backmatter}{\hspace {-1.5em}\numberline {\raisebox {10pt}{\hypertarget {symbols}{}}}List of Symbols}{i}{section*.249}}
+\@writefile{toc}{\contentsline {backmatter}{\hspace {-1.5em}\numberline {\raisebox {10pt}{\hypertarget {acronym}{}}}List of Acronyms}{i}{section*.252}}
+\@writefile{toc}{\contentsline {backmatter}{\hspace {-1.5em}\numberline {\raisebox {10pt}{\hypertarget {List of Abbreviations}{}}}List of Abbreviations}{ii}{section*.253}}
+\@writefile{toc}{\contentsline {backmatter}{\hspace {-1.5em}\numberline {\raisebox {10pt}{\hypertarget {main}{}}}Glossary}{ii}{section*.256}}
+\@writefile{toc}{\contentsline {backmatter}{\hspace {-1.5em}\numberline {\raisebox {10pt}{\hypertarget {Index}{}}}Index}{iii}{section*.257}}

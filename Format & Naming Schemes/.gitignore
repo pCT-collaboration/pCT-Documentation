@@ -1,0 +1,453 @@
+###################################################################################
+################ Default GitHub supplied file ignoring settings ##################
+###################################################################################
+#---- Compiled Object Files ----#
+*.slo
+*.lo
+*.o
+
+#---- Compiled Dynamic Libraries ----#
+*.so
+*.dylib
+
+#---- Compiled Static Libraries ----#
+*.lai
+*.la
+*.a
+
+###################################################################################
+########### User Defined Exceptions to Default File/Folder Ignore List ############
+###################################################################################
+#---- Exceptions ----# 
+#!*.def
+!*.eps
+#!*.ijm
+#!*.ist
+#!*.m
+#!*.mst
+!*.pdf
+!*.ps
+#!*.tex
+###################################################################################
+########### User Defined Additions to Default File/Folder Ignore List #############
+###################################################################################
+
+###################################################################################
+######################## Default File/Folder Ignore List ##########################
+###################################################################################
+#---- Folders ----#
+\nppBackup
+
+#---- Text files ----#
+*.bak
+*.cfg
+*.tmp
+*.txt.bak
+
+#---- User defined text file types ----#
+*.hidden
+*.notes
+
+#---- ImageJ files ----#
+*.ijm
+*.java
+
+#---- Matlab files ----#
+*.m
+*.mat
+*.asv
+*.m~
+*.mex*
+
+#---- Mac IDE files ----#             
+*.swp               
+*~              
+*(Autosaved).rtfd/              
+Backup[ ]of[ ]*.pages/              
+Backup[ ]of[ ]*.key/                
+Backup[ ]of[ ]*.numbers/                
+
+#---- Mac finder files and hidden folders ----#               
+.DS_Store
+
+###################################################################################
+######################## Visual Studio Files/Folders ##############################
+###################################################################################
+#---- VS Folders and Specific Files ----#     
+\ipch
+\Release
+\x64
+\x64\src
+\x64\Release
+16
+64
+#PLOP
+Project_VC++Directories_root.txt ----#     
+vc100.pdb
+vc110.pdb
+usertype.dat
+
+#---- VS File Types ----#     
+*.Build.CppClean.log
+*.command.1.tlog
+*.cpp1.ii
+*.cpp2.i
+*.cpp3.i
+*.cpp4.ii
+*.cu.cache
+*.cu.cpp.ii
+*.cu.deps
+*.cu.obj
+*.cudafe1.c
+*.cudafe1.cpp
+*.cudafe1.gpu
+*.cudafe1.stub.c
+*.cudafe2.c
+*.cudafe2.cpp
+*.cudafe2.gpu
+*.cudafe2.stub.c
+*.exe
+*.exe.intermediate.manifest
+*.fatbin
+*.fatbin.c
+*.hash
+*.ilk
+*.ipch
+*.lastbuildstate
+*.log
+*.module_id
+*.opensdf
+*.pdb
+*.ptx
+*.read.1.tlog
+*.sdf
+*.sln
+*.sm_10.cubin
+*.sm_20.cubin
+*.sm_21.cubin
+*.sm_30.cubin
+*.sm_35.cubin
+*.suo
+*.unsuccessfulbuild
+*.v10.suo
+*.v11.suo
+*.vcxproj
+*.vcxproj.user
+*.vcxprojResolveAssemblyReference.cache
+*.vssettings
+*.write.1.tlog
+
+###################################################################################
+######################## LaTeX Folder/File Ignore List ############################
+###################################################################################
+#***********************************************************************#
+#-----------------------------------------------------------------------#
+#--------------------- Folders and User Types/Files --------------------#
+#-----------------------------------------------------------------------#
+#***********************************************************************#
+# Folders
+\_minted-*
+*.listing
+*.probs
+#***********************************************************************#
+#-----------------------------------------------------------------------#
+#----------------- Core TeX Documents and Auxiliary Files --------------#
+#-----------------------------------------------------------------------#
+#***********************************************************************#
+# MODE=TeX (uniquely TeX mode only)
+*.ltx
+*.tex
+*.texi
+
+# MODE=AUX
+*.aux
+*.lof
+*.lot
+*.toc
+
+# MODE=STY
+*.clo
+*.cls
+*.def
+*.fd
+*.sty
+
+# MODE=BibTeX/biblatex/biber/bibref
+*.bcf
+*.bdx
+*.bib
+*.bbl
+*.blg
+*-blx.aux
+*-blx.bib
+*.bnd
+*.brf
+*.run.xml
+
+# MODE=BST
+*.bst
+
+# MODE=MetaFont
+*.mf
+
+# MODE=MetaPost
+*.mp
+*.mpx
+
+# MODE=EDT
+*.edt
+
+# MODE=DTX
+*.dtx
+*.fdd
+
+# MODE=INS
+*.ins
+*.drv
+
+#---- Additional Auxiliary Files ----#
+*.afm
+*.cfg
+*.dep
+*.dfu
+*.enc
+*.etx
+*.fls
+*.fot
+*.gf
+*.ldf
+*.map
+*.mtx
+*.pfb
+*.pk
+*.pl
+*.soc
+*.spl
+*.tfm
+*.tmb
+*.top               
+*.ttf
+*.tuc             
+*.tui               
+*.vf
+*.vpl
+*.xcp
+*.xref
+#***********************************************************************#
+#-----------------------------------------------------------------------#
+#---------- Intermediate/Temporary and Editor Specific Files -----------#
+#-----------------------------------------------------------------------#
+#***********************************************************************#
+#---- Intermediate/Output Files/Documents ----#
+*.dvi
+*-converted-to.*
+*.ps
+*.eps
+*.pdf
+
+#---- Temporary Files/Documents ----#
+*.bak
+*.sav
+*.txt.bak
+*.tex.sav
+*.tmp   
+
+#---- Build Tool Auxiliary Files ----#
+*.fdb_latexmk
+*.log
+*.msg
+*.pdfsync
+*.synctex
+*.synctex.gz
+*.synctex.gz(busy)
+
+#---- Subversion Version Control Files ----#
+*.svn
+*.svt
+*.svx            
+
+#---- Editor Specific Files ----#
+# ConTeXt
+*.cld
+
+# Kile
+*.backup
+
+# KBibTeX
+*~[0-9]*
+
+# Texpad
+*.texpadtmp
+
+# WinEdt
+*.bak
+*.sav
+
+#***********************************************************************#
+#-----------------------------------------------------------------------#
+#-------- Auxiliary and intermediate files from other packages ---------#
+#-----------------------------------------------------------------------#
+#***********************************************************************#
+# achemso
+acs-*.bib
+
+# algorithms
+*.alg
+*.loa
+
+# amsthm
+*.thm
+
+# beamer
+*.nav
+*.snm
+*.vrb
+
+# changebar
+*.cb
+*.cb2
+
+# cprotect
+*.cpt
+
+# easy-todo
+*.lod
+
+# endfloat
+*.ttt
+*.fff
+
+# fixme
+*.lox
+
+#(r)(e)ledmac/(r)(e)ledpar
+*.end
+*.?end
+*.[1-9]
+*.[1-9][0-9]
+*.[1-9][0-9][0-9]
+*.[1-9]R
+*.[1-9][0-9]R
+*.[1-9][0-9][0-9]R
+*.eledsec[1-9]
+*.eledsec[1-9]R
+*.eledsec[1-9][0-9]
+*.eledsec[1-9][0-9]R
+*.eledsec[1-9][0-9][0-9]
+*.eledsec[1-9][0-9][0-9]R
+
+# glossaries
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.ist
+
+# gnuplottex
+*-gnuplottex-*
+
+# hypdoc
+*.hd
+
+# hyperref
+*.brf
+*.idv
+*.lg
+*.out
+*.url
+
+# KBibTeX
+*~[0-9]*
+
+# Kile
+*.backup
+
+# knitr
+*-concordance.tex
+# TODO Comment the next line if you want to keep your tikz graphics files
+*.tikz
+*-tikzDictionary
+
+# Latexian
+TSWLatexianTemp*
+
+# listings
+*.lol
+
+# makeidx
+*.idx
+*.ilg
+*.ind
+*.ist
+*.mst
+
+# minitoc
+*.maf
+*.mlf
+*.mlt
+*.mtc
+*.mtc1
+*.mtc[0-9]
+*.mtc[1-9][0-9]
+
+# minted
+_minted*
+*.pyg
+*.pygtex
+*.pygstyle
+
+# morewrites
+*.mw
+
+# mylatexformat
+*.fmt
+
+# nomencl
+*.nlo
+*.nls
+
+# pdfcomment
+*.upa
+*.upb
+
+# pythontex
+*.pytxcode
+pythontex-files-*/
+
+# sagetex
+*.sagetex.sage
+*.sagetex.py
+*.sagetex.scmd
+
+# standalone
+*.sta
+*.stp
+
+# sympy
+*.sout
+*.sympy
+sympy-plots-for-*.tex/
+
+# tex4ht
+*.4tc
+*.4ct
+
+# thmtools
+*.loe
+
+# TikZ & PGF
+*.dpth
+*.md5
+*.auxlock
+
+# todonotes
+*.tdo
+
+# xindy
+*.xdy
+
+# xypic precompiled matrices
+*.xyc
