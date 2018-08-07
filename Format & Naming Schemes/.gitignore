@@ -25,7 +25,7 @@
 #!*.ist
 #!*.m
 #!*.mst
-!*.pdf
+#!*.pdf
 !*.ps
 #!*.tex
 ###################################################################################
@@ -175,11 +175,11 @@ usertype.dat
 # MODE=BibTeX/biblatex/biber/bibref
 *.bcf
 *.bdx
-*.bib
+#*.bib
 *.bbl
 *.blg
 *-blx.aux
-*-blx.bib
+#*-blx.bib
 *.bnd
 *.brf
 *.run.xml
@@ -243,7 +243,7 @@ usertype.dat
 *-converted-to.*
 *.ps
 *.eps
-*.pdf
+#*.pdf
 
 #---- Temporary Files/Documents ----#
 *.bak
@@ -289,7 +289,7 @@ usertype.dat
 #-----------------------------------------------------------------------#
 #***********************************************************************#
 # achemso
-acs-*.bib
+#acs-*.bib
 
 # algorithms
 *.alg
