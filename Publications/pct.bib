@@ -1,14 +1,154 @@
-\Sort{
-  Mode{on}
-  Collation{mixed}
-  SortTypeOrder{pattern,key,name}
-  NameOrder{ascending}
-  Key{{author,editor},\year{year,note}}
-  KeyOrder{descending,nulls first}
-  Pattern{author+editor: "Schubert"}
-  PatternOrder{first}
-}
-%%% ABBREVIATIONS
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Collection of literature/publication references relevant to pCT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
+% - References are typically acquired directly from the publisher, when possible, or from online resources such as IOPscience,
+%   ResearchGate, ScienceDirect, CiteSeerX, PubMed, and IEEEXplore which provide the relevant and properly formatted citation
+%   info in either a downloadable .BibTeX file or in a popup window. The corresponding reference is then added to this .bib file
+%   by copying the content of the .BibTeX file or popup window and pasting it into the appropriate section.
+% - References are organized by topic/category, roughly by publiation date, within the following sections:
+%   (1) Proton beam theory, energy straggling, range uncertainty, etc.
+%   (2) Accelerator studies, scanner system, data acquisition, calibration, etc.
+%   (3) Preprocessing/prereconstruction: statistical data analysis/cuts, most-likely path (MLP) & system matrix, etc.
+%   (4) Hull-Detection, space/silhouette carving, etc.
+%   (5) Filtered Backprojection (FBP), cone/fan beam inversion, etc.
+%   (6) pCT image reconstruction, iterative reconstruction algorithms, etc.
+%   (7) pCT image reconstruction optimization: total variation superiorization (TVS), projected subgradient methods (PSM), etc.
+%   (8) General pCT: theories/fundamentals, techniques and applications, etc.
+%   (9) Monte Carlo/geant4 simulations/studies: Scanner system, simplified proton beam, dose distributions, range uncertainties, planning verification, etc.
+%   (10) Dose evaluation/calculations, hadron/ion/proton/radio therapy & treatment planning, etc.
+%   (11) Miscellaneous: cancer/radiation oncology facts, image analysis, etc.
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ List of pCT collaborators and the longest form of their name ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
+% pCT collaborator names are assigned to references using the longest known names, i.e. with full first and last name
+% and middle initial when these are known. Below is a list of known pCT collaborator names and their longest known form,
+% listed alphabetically by last name. If your name is listed below and you have a correction or additional information
+% to add, please make the change and update it in every reference it appears in.
+%
+%Vladimir A. Bashkirov
+%Dan Butnariu
+%Yair Censor
+%George Coutrakon
+%Ran Davidi
+%Valentina Giacometti
+%Gabor T. Herman
+%Robert Ford Hurley
+%Robert P. Johnson
+%Paniz Karbasi
+%Nicolas T. Karonis
+%Ivan G. Kazantsev
+%S. Macafee
+%Scott A. McAllister
+%Caesar Ordonez
+%Mark Pankuch
+%Scott N. Penfold
+%Pierluigi Piersimoni
+%Tia E. Plautz
+%A. Plumb
+%Anatoly B. Rosenfeld
+%Keith E. Schubert
+%Hartmut F.-W. Sadrozinski
+%Reinhard W. Schulte
+%Blake E. Schultze
+%D. Steinberg
+%Andriy Zatserklyaniy
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Formatting of references and procedure for adding new references ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
+%       Below is a description of how the citation fields of a publication reference are defined and formatted in this
+%   .bib file and general guidelines/instructions on their usage and how new references should be defined. This .bib file
+%   is intended to be a general resource for the entire pCT collaboration and provide references to every publication
+%   relevant to pCT research, so users are encouraged to add any publications that should but have not yet been added.
+%   Above is a list of common pCT collaborators and their full names (if known) so these appear correctly in each of
+%   their publications, but users are encouraged to add their name to this list if it's missing and correct any mistakes.
+%   Note that any changes made to this file are only made to a user's local copy on their computer (unless being shared
+%   through Dropbox), these changes must be committed/pushed to GitHub to make these changes permanently available to
+%   everyone. This file is available from the pCT-collaboration/pCT_Documentation repository in the /Publications folder.
+%   Any questions/comments should be directed to Blake (Blake_Schultze@Baylor.edu) or Keith (Keith_Schubert@Baylor.edu).
+%
+%   The naming/formatting scheme and procedure for adding references is as follows:
+%
+% - Reference names (i.e. name used in \cite{<name>} commands to cite the corresponding publication) are assigned according
+%   to the initials of the 1st 2-4 authors & the YY publication date (e.g. Schultze/Witt/Schubert/Schulte 2012 -> SWSS12).
+%   The default reference name provided by the publisher or online resource will not match the desired naming scheme and
+%   should be changed to conform with it by the person that is adding the reference.
+%   NOTE: some of the references in this .bib file do NOT currently conform to the desired naming scheme and still retain
+%   their original name. This will be addressed over time and others are more than welcome to fix these when these are
+%   encountered so that this may be resolved more quickly.
+% - There are several references to publications from Medical Physics, IEEE Transactions on Nuclear Science, etc. and to
+%   ensure such publisher names appear exactly the same for each of its publications, the @string variable defined for
+%   these publishers should be used as the value of the 'PUBLISHER' field in each of the references from these publishers.
+%   When adding a reference to this .bib file, users should check to see if there is an @string variable defined for this
+%   publisher and replace the explicit value in this field with the corresponding variable if there is. The next section
+%   provides details on this topic, including the motivation for adopting this approach and some user options for its usage.
+% - The text of the references do not necessarily appear in the document as they appear here, the bibliography style
+%   largely controls which fields are included/excluded and the text formatting, sometimes yielding undesired effects.
+%   To avoid these issues and ensure references appear as desired within documents, users should consider the following
+%   procedures and concerns when adding references to this .bib file:
+%       (1) Author names can be defined as "first (middle) last" or "last, first (middle)", where first/middle may be
+%   full names or initials and the middle name/initial is optional (can be omitted); the list of authors can be separated
+%   by either the word "and" or a comma. When the "last, first (middle)" author format is used and authors are separated
+%   by a comma, this can cause an ambiguity for the compiler to determine if a comma represented the separation between
+%   the author's first/middle and last names or the separation between author names, which it may not do correctly. To
+%   avoid even the potential for such issues, it is highly suggested to use the "first (middle) last" format and the
+%   the word "and" to separate author names.
+%   NOTE: the bibliography style controls whether author names are formatted as "first (middle) last" or
+%   "last, first (middle)" and if the first/middle names appear in full or as initials only; if full names are not
+%   provided, the specified initials are used instead.
+%   (2) Capitalizing letters in a reference definition does not necessarily yield this in the document, letters that
+%   should always appear capitalized must be enclosed within curly braces (e.g. "p{CT}", "{WEPL}") to prevent this
+%   from being affected by the bibliography style. Any other TeX commands used to yield the desired formatting must also
+%   be enclosed within curly braces, such as accented characters like {\~n} or font style commands like "\textit{...}".
+%   (3) Always include information for as many fields as possible, including the abstract; the style controls which of
+%   the fields appear in the document.
+%   (4) Although publication month can be specified as a # (1-12), these should be defined as the 1st 3 letters of the
+%   month w/ 1st letter capitalized to avoid the ambiguous appearance that the # yields (appears to be stray #).
+%   (5) Page numbers should be specified as "<1st pg. #>--<last pg. #>", noting the double hyphen separating the page #s
+%   which produces a slightly wider hyphen with a nicer appearance in the document.
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~ @string definitions of common journal/conference publication venue (publisher) names ~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
+% - Below is a list of @string variables defined for publishers common to several references (e.g. Medical Physics,
+%   IEEE Transaction on Nuclear Science, etc.). These are all defined as the full publisher name instead of the
+%   abbreviated name used for the publisher; explicitly defined names assigned to references to other publishers are
+%   being converted to full names (almost completed) such that ALL publishers will be defined using their full name.
+%   Those publishers that were originally defined using their abbreviated name are defined in a separate list of
+%   @string definitions, with the original @string definitions of the same name retained as a separate list below it.
+%   This approach was chosen to satisfy the concerns raised by an individual about both the inconsistent naming/formatting
+%   references to the same publisher initially had and the mixed usage of full/abbreviated publisher names in different
+%   references. A separate .bib file may be created for those that prefer abbreviated publisher names so users may
+%   choose which .bib file they want to use (e.g. pct.bib and pct_abbrev.bib), but no final decision on an approach
+%   has yet been made. Currently, users can choose to use the full/abbreviated publisher names by commenting out the
+%   @string definitions of the corresponding abbreviated/full publisher names.
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Full (unabbreviated) journal/conference name @string definitions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+@string{MEDPHYS = "Medical Physics"}
+@string{PMB = "Physics in Medicine \& Biology"}
+@string{NIM = "Nuclear Instruments \& Methods"} %Nucl. Instrum. Methods
+@string{NIMPRA = "Nuclear Instruments \& Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment"} %NLM/ISO Abbrev: Nucl. Instrum. Methods Phys. Res. A
+@string{IEEETNS = "IEEE Transactions on Nuclear Science"} %IEEE Trans. Nucl. Sci.
+@string{TRANSANS = "Transactions of the American Nuclear Society"} %Trans. Am. Nucl. Soc.
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Alternative abbreviated journal/conference name @string definitions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%@string{MEDPHYS = "Med. Phys."}
+%@string{PMB = "Phys. Med. Bio."}
+%@string{NIM = "Nucl. Instrum. Methods"} %
+%@string{NIMPRA = "Nucl. Instrum. Methods Phys. Res. A"} %Nuclear Instruments \& Methods in Physics Research. Section A, Accelerators, spectrometers, detectors and associated equipment
+%@string{IEEETNS = "IEEE Trans. Nucl. Sci."} %IEEE Transactions on Nuclear Science
+%@string{TRANSANS = "Trans. Am. Nucl. Soc."} %Transactions of the American Nuclear Society
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Other misc. abbreviated journal/conference name @string definitions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 @string{TAC = "IEEE Trans. Aut. Control"}
 @string{IJC = "Int. J. Control"}
 @string{SICON = "SIAM J. Control Opt."}
@@ -20,81 +160,77 @@
 @string{SIREV = "SIAM Review"}
 @string{LAA = "Lin. Alg. Appl."}
 @string{MCSS = "Math. of Control, Signals, and Systems"}
-@string{MP = "Med. Phys."}
-@string{SCL = "Sys. Control Lett."}
 @string{IEEECAS = "IEEE Trans. Circ. Syst."}
 @string{IEEEIT = "IEEE Trans. Info. Theory"}
-@string{IEEENS = "IEEE Trans. Nucl. Sci."} %IEEE Transactions on Nuclear Science
 @string{ProcIEEE = "Proc. IEEE"}
 @string{ProcCDC = "Proc. IEEE Conf. Decis. Control"}
 @string{ProcACC = "Proc. Amer. Contr. Conf."}
+@string{SCL = "Sys. Control Lett."}
 @string{TOMS = "ACM Trans. Math. Software"}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BibTeX settings/configurations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
+\Sort{
+  Mode{on}
+  Collation{mixed}
+  SortTypeOrder{pattern,key,name}
+  NameOrder{ascending}
+  Key{{author,editor},\year{year,note}}
+  KeyOrder{descending,nulls first}
+  Pattern{author+editor: "Schubert"}
+  PatternOrder{first}
+}
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Potentially useful publications that have not yet been added ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
 %type, number, address, month, note, key
-%[8] R. Gordon, R. Bender, and G. Herman, "Algebraic reconstruction techniques(ART) forthree dimensional electron microscopy and X-ray photography," Journal of Theoritical Biology, vol. 36, pp. 105-117, 1970.
-
+%[8] R. Gordon, R. Bender, and G. Herman, "Algebraic reconstruction techniques (ART) for three dimensional electron microscopy and X-ray photography," Journal of Theoritical Biology, vol. 36, pp. 105-117, 1970.
 %[9] R. Gordon, "A tutorial on ART(Algebraic Reconstruction Techniques)," IEEE Trans-actions on Nuclear Science, vol. NS-21, pp. 78-93, 1974.
-
 %[10] G. Herman and A. Naparstek, "Fast image reconstruction based on a Radon inversionformula approppriate for rapidly collected data," SIAM Journal of Applied Mathematics, vol. 33, pp. 511-533, 1976.
-
 %[11] G. Herman and A. Lent, "Iterative reconstruction algorithms," Cornput. Biol. Med.,vol. 6, pp. 273-294, 1976.
-
 %[12] T. Budinger and G. Gullberg, "Three-dimensional reconstruction in nuclear medicineemission imaging," IEEE Transactions on Nuclear Science, vol. NS-21, pp. 2-21, 1974.
-
 %[13] S. Wernecke and L.D. Addario, "Maximum entropy image reconstruction," IEEETransactions on Computing, vol. C-26, pp. 351-364, 1977.
-
 %[14] L. Shepp and B. Logan, "The Fourier reconstruction of a head section," IEEE Trans-actions on Nuclear Science, vol. NS-21, pp. 21-43, 1974.
-
 %[15] E. Tanaka and T.A. Iinuma, "Correction functions for optimizing the reconstructedimage in transverse section scan," Phys. Med. Biol., vol. 20, pp. 789-798, 1975.
-
 %[16] S. Kenue and J. Greenleaf, "Efficient convolution kernels for computerized tomogra-phy," Ultrasonic Imaging, vol. 1, pp. 232-244, 1979.
-
 %[17] L.Wang, "Cross section reconstruction with fan beam scanning geometry," IEEETransactions on Computing, vol. C-26, pp. 264-268, 1977.
-
 %[18] P. Dreike and D. Boyd, "Convolution reconstructions of fan-beam reconstructions,"Computer Graphics and Image Processing, vol. 5, pp. 459-469, 1977.
-
 %[19] T. Peters and R.M. Lewitt, "Computed tomography with fan-beam geometry," Journalof Computer Assisted Tomography, vol. 1, pp. 429-436, 1977.
-
 %[20] C. Thompson and T. Peters, "A fractional address accumulator for fast backprojec-tion,'' IEEE Transactions on Nuclear Science, vol. NS-28, no. 4, pp. 3648-3650, 1981.
-
 %[21] R. Hartz, D. Bristow, and N. Mullani, "A real time TOFPET slice backproject en-gine using dual Am 29116 microprocessors," IEEE Transactions on Nuclear Science, vol. NS-32, pp. 839-842, February 1985.
-
 %[22] Iskender Agi, P.J. Hurst, and K.W. Current, "An image processing IC for backpro-jection and spatial histogramming in a pipelined array," IEEE Journal of Solid State Circuits, vol. 28, no. 3, pp. 210 - 220, 1993.
-
-%[23] C.M. Chen, S.Y. Lee, and Z.H. Cho, "A parallel implementation of 3D CT imagereconstruction on hypercube multiprocessor," IEEE Transactions on Nuclear Science, vol. 37, no. 3, pp. 1333 - 1346, 1990.
-
+%[23] C.M. Chen, S.Y. Lee, and Z.H. Cho, "A parallel implementation of 3D {CT} imagereconstruction on hypercube multiprocessor," IEEE Transactions on Nuclear Science, vol. 37, no. 3, pp. 1333 - 1346, 1990.
 %[24] Z. Cho, C. Chen, and S.-Y. Lee, "Incremental algorithms: fast back projection schemesfor parallel beam geometries," IEEE Transactions on Medical Imaging, 1991.
-
 %[25] S. Barresi, D. Bollini, and A.D. Guerr~, "Use of a tr~nsputer system for fast 3D imagereconstruction in 3D PET," IEEE Transactions on Nuclear Science, vol. 37, no. 2, pp. 812-816, 1990.
-
 %[26] W. Jones, L. Byars, and M. Casey, "Positron emission tomographic images and ex-pectation maximization:A VLSI architecture for multiple iterations per second," IEEE Transaction on Nuclear Science, vol. 35, no. 1, pp. 620-624, 1988.
-
 %[27] J. Llacer and J. Meng, "Matrix based image reconstruction methods for tomography,"IEEE Transactions on Nuclear Science, vol. NS-32, no. 1, pp. 855-864, 1985.
-
 %[28] M. Stella Atkins, Donald Murray, and R. Harrop, "Use of transputers in a 3D PositronEmission Tomograph," IEEE Transactions on Medical Imaging, vol. 10, no. 3, pp. 276 - 283, 1991.
-
 %[29] A real time parallel processing data acquisition system, December 1988.
-
 %[30] A.V. Oppenhiem and R.W. Schafer, Discrete-time signalprocessing. Englewood Cliffs,New Jersey: Prentice-Hall, 1989.
-
 %[31] Thinking Machines Corporation, Cambridge, Massachusetts, Connection Machine For-tran Reference Manual, 1993.
-
 %[32] P.N. Swarztrauber, "Multiprocessor FFT's," Parallel Computing, vol. 5, pp. 197-210,1987.
-
 %[33] Thinking Machines Corporation, Cambridge, Massachusetts, Connection Machine Sci-entific Subroutine Library, 1993.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Proton beam theory, energy straggling, range uncertainty
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Definition of publication citations for insertion of references ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Proton beam theory, energy straggling, range uncertainty, etc. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
 @ARTICLE{Tschalar68,
   AUTHOR =       {C. Tschal\" ar},
   TITLE =        {Straggling distributions of extremely large energy losses},
-  JOURNAL =      {Nucl. Instrum. Methods},
+  JOURNAL =      NIM,
   YEAR =         {1968},
   volume =       {61},
-  pages =        {141\-156},
+  pages =        {141--156},
 }
 %[2] G. Hounsfield, "A method of an apparatus for examination of a body by radiation suchas x-ray or gamma radiation," Patent specifcation 1283915, The Patent Office, 1972.
 @ARTICLE{ICRU93,
@@ -112,73 +248,69 @@
   YEAR =         {1994},
 }
 %B. Schaffner and E. Pedroni, "The precision of proton range calculations in proton radiotherapy treatment planning:
-%experimental verification of the relation between CT-HU and proton stopping power," Physics in Medicine and Biology,
+%experimental verification of the relation between {CT}-HU and proton stopping power," Physics in Medicine and Biology,
 %43, 1579-1592 (1998).
 @ARTICLE{SP98,
   AUTHOR =       {B. Schaffner and E. Pedroni},
-  TITLE =        {The precision of proton range calculations in proton radiotherapy treatment planning: experimental verification of the relation between CT-HU and proton stopping power},
-  JOURNAL =      {Physics in Medicine and Biology},
+  TITLE =        {The precision of proton range calculations in proton radiotherapy treatment planning: experimental verification of the relation between {CT-HU} and proton stopping power},
+  JOURNAL =      PMB,
   YEAR =         {1998},
   volume =       {43},
-  pages =        {1579�1592},
+  pages =        {1579--1592},
 }
 @inproceedings{CGHNSS12,
-  author    = {Y. Chen and E. Gomez and F. Hurley and Y. Nie and K.E. Schubert and R. Schulte},
+  author    = {Y. Chen and Ernesto Gomez and Robert Ford Hurley and Y. Nie and Keith E. Schubert and Reinhard W. Schulte},
   title     = {Accurate Proton Beam Localization},
   booktitle = {Proceedings of The 2012 International Conference on Bioinformatics and Computational Biology (BIOCOMP'12) },
   year      = {2012},
-  pages     = {213-217},
+  pages     = {213--217},
 }
 @article{CA15,
   author={Charles-Antoine Collins Fekete and Paul Doolan and Marta F Dias and Luc Beaulieu and Joao Seco},
   title={Developing a phenomenological model of the proton trajectory within a heterogeneous medium required for proton imaging},
-  journal={Physics in Medicine \& Biology},
+  journal=PMB,
   volume={60},
   number={13},
   pages={5071--5082},
   year={2015},
 }
-  %url={http://stacks.iop.org/0031-9155/60/i=13/a=5071},
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Scanner system, data acquisition, and calibration
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%url={http://stacks.iop.org/0031-9155/60/i=13/a=5071},
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~ Accelerator studies, scanner system, data acquisition, calibration, etc. ~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
 %G. Coutrakon, J. Hubbard, J. Johanning, G. Maudsley, T. Slaton, and P. Morton, "A performance study of the Loma Linda proton medical accelerator," Med. Phys., 21, 1691-1701 (1994).
 @ARTICLE{CHJ94,
-  AUTHOR =       {G. Coutrakon and J. Hubbard and J. Johanning and G. Maudsley and T. Slaton and P. Morton},
+  AUTHOR =       {George Coutrakon and J. Hubbard and J. Johanning and G. Maudsley and T. Slaton and P. Morton},
   TITLE =        {A performance study of the Loma Linda proton medical accelerator},
-  JOURNAL =      {Med. Phys.},
+  JOURNAL =      MEDPHYS,
   YEAR =         {1994},
   volume =       {21},
   pages =        {1691-1701}
 }
 @ARTICLE{Fel07,
-  author =       {M. Bruzziand and N. Blumenkrantz and J. Feldt and J. Heimann and
-                H.F.-W. Sadrozinski and A. Seiden and D.C. Williams and
-                V. Bashkirov and R. Schulte and D. Menichelli and
-                M. Scaringella and G.G.P. Cirrone and G. Cuttone and
-                N. Randazzo and V. Sipala and D. Lo Presti},
+  author =       {M. Bruzziand and N. Blumenkrantz and J. Feldt and J. Heimann and Hartmut F.-W. Sadrozinski and A. Seiden and D.C. Williams and
+                Vladimir A. Bashkirov and Reinhard W. Schulte and D. Menichelli and M. Scaringella and G.G.P. Cirrone and G. Cuttone and N. Randazzo and V. Sipala and D. Lo Presti},
   title =        {Prototype Tracking Studies for Proton {CT}},
-  journal =      {IEEE Trans. Nucl. Sci.},
+  journal =      IEEETNS,
   year =         {2007},
   volume =       {54},
   pages =        {140-145},
   month =        {Feb},
-}
+}%{IEEE Trans. Nucl. Sci.}
 @ARTICLE{Cut07,
-  author =       {G. Cuttone and G.A.P. Cirrone and G. Candiano and F. Di Rosa and
-                    G. Russo and N. Randazzo and V. Sipala and S. Lo Nigro and
-                    D. Lo Presti and J. Feldt and J. Heimann and H.F.-W. Sadrozinski and
-                    A. Seiden and D.C. Williams and V. Bashkirov and R. Schulte and
-                    M. Bruzzi and D. Menichelli},
-  title =        {Monte Carlo Studies of a Proton Computed Tomography System},
-  journal =      {IEEE Trans. Nucl. Sci.},
+  author =       {G. Cuttone and G.A.P. Cirrone and G. Candiano and F. Di Rosa and G. Russo and N. Randazzo and V. Sipala and S. Lo Nigro and
+                D. Lo Presti and J. Feldt and J. Heimann and Hartmut F.-W. Sadrozinski and A. Seiden and D.C. Williams and Vladimir A. Bashkirov and Reinhard W. Schulte and M. Bruzzi and D. Menichelli},
+  title =        {{Monte Carlo} Studies of a Proton Computed Tomography System},
+  journal =      IEEETNS,
   year =         {2007},
   volume =       {54},
   pages =        {1487-1491},
-  month =        {Oct.},
-}
+  month =        {Oct},
+}%{IEEE Trans. Nucl. Sci.},
 @ARTICLE{MHB10,
-  AUTHOR =       {Missaghian J. and Hurley F. and Bashkirov V. and Colby B. and Rykalin V. and Kachigiun S. and Fusi D. and Schulte R. and Martinez Mckinney F. and Sadrozinski H. and Penfold S},
+  AUTHOR =       {J. Missaghian and Robert Ford Hurley and Vladimir A. Bashkirov and B. Colby and V. Rykalin and S. Kachigiun and D. Fusi and Reinhard W. Schulte and Mckinney F. Martinez and Hartmut F.-W. Sadrozinski and Scott N. Penfold},
   TITLE =        {Beam test results of a CsI calorimeter matrix element},
   JOURNAL =      {JINST},
   YEAR =         {2010},
@@ -186,34 +318,34 @@
   pages =        {P06001}
 }
 @ARTICLE{HSBC12,
-  AUTHOR =       {R.F. Hurley and R.W. Schulte and V.A. Bashkirov and G. Coutrakon and H.F.-W. Sadrozinski and B. Patyal},
-  TITLE =        {The phase I proton CT scanner and test beam results at LLUMC},
-  JOURNAL =      {Trans. Am. Nucl. Soc.},
+  AUTHOR =       {Robert Ford Hurley and Reinhard W. Schulte and Vladimir A. Bashkirov and George Coutrakon and Hartmut F.-W. Sadrozinski and B. Patyal},
+  TITLE =        {The phase I proton {CT} scanner and test beam results at LLUMC},
+  JOURNAL =      TRANSANS,
   YEAR =         {2012},
   volume =       {106},
   pages =        {63--66},
-}
+}%{Trans. Am. Nucl. Soc.},
 @ARTICLE{HSB12,
-  AUTHOR =       {R.F. Hurley and R.W. Schulte and V.A. Bashkirov and A.J. Wroe and A. Ghebremedhin and H.F.-W. Sadrozinski and V. Rykalin and G. Coutrakon and P. Koss and B. Patyal},
-  TITLE =        {Water-equivalent path length calibration of a prototype proton CT scanner},
-  JOURNAL =      {Med. Phys.},
+  AUTHOR =       {Robert Ford Hurley and Reinhard W. Schulte and Vladimir A. Bashkirov and A.J. Wroe and A. Ghebremedhin and Hartmut F.-W. Sadrozinski and V. Rykalin and George Coutrakon and P. Koss and B. Patyal},
+  TITLE =        {Water-equivalent path length calibration of a prototype proton {CT} scanner},
+  JOURNAL =      MEDPHYS,
   YEAR =         {2012},
   volume =       {39},
   pages =        {2438--2446},
 }
 @INPROCEEDINGS{SBJSS12,
-  AUTHOR =       {R.W. Schulte and V. Bashkirov and R. Johnson and H. F.-W. Sadrozinski and K.E. Schubert},
-  TITLE =        {Overview of the LLUMC/UCSC/CSUSB phase 2 proton CT project},
-  BOOKTITLE =    {Trans. Am. Nucl. Soc.},
+  AUTHOR =       {Reinhard W. Schulte and Vladimir A. Bashkirov and Robert P. Johnson and Hartmut F.-W. Sadrozinski and Keith E. Schubert},
+  TITLE =        {Overview of the LLUMC/UCSC/CSUSB phase 2 proton {CT} project},
+  BOOKTITLE =    TRANSANS,
   YEAR =         {2012},
   volume =       {106},
   pages =        {59-62},
-}
-%H. F.-W. Sadrozinski, R. P. Johnson, S. Macafee, A. Plumb, D. Steinberg, A. Zatserklyaniy, V. Bashkirov, F. Hurley and R. Schulte, Development of a Head Scanner for Proton CT. Nucl.Instrum.Meth. A 699, 205-210, 2013.
+}%{Trans. Am. Nucl. Soc.},
+%Hartmut F.-W. Sadrozinski, R. P. Johnson, S. Macafee, A. Plumb, D. Steinberg, A. Zatserklyaniy, V. Bashkirov, F. Hurley and Reinhard W. Schulte, Development of a Head Scanner for Proton {CT}. Nucl.Instrum.Meth. A 699, 205-210, 2013.
 @ARTICLE{SJM13,
-  AUTHOR =       {H. F.-W. Sadrozinski and R. P. Johnson and S. Macafee and A. Plumb and D. Steinberg and A. Zatserklyaniy and V. Bashkirov and F. Hurley and R. Schulte},
-  TITLE =        {Development of a Head Scanner for Proton CT},
-  JOURNAL =      {Nucl.Instrum.Meth. A},
+  AUTHOR =       {Hartmut F.-W. Sadrozinski and Robert P. Johnson and S. Macafee and A. Plumb and D. Steinberg and Andriy Zatserklyaniy and Vladimir A. Bashkirov and Robert Ford Hurley and Reinhard W. Schulte},
+  TITLE =        {Development of a Head Scanner for Proton {CT}},
+  JOURNAL =      NIMPA,
   YEAR =         {2013},
   volume =       {699},
   pages =        {205-210}
@@ -228,12 +360,12 @@ Pallotta and C Pugliatti and N Randazzo and F Romano and V Sipala and C Stancamp
   pages={C12009},
   url={http://stacks.iop.org/1748-0221/9/i=12/a=C12009},
   year={2014},
-  abstract={This paper reports on the activity of the INFN PRIMA/RDH collaboration in the development of proton Computed Tomography (pCT) systems based on single proton tracking and residual energy measurement. The systems are made of a silicon microstrip tracker and a YAG:Ce crystal calorimeter to measure single protons trajectory and residual energy, respectively. A first prototype of pCT scanner, with an active area of about 5 × 5 cm 2 and a data rate capability of 10 kHz, has been constructed and characterized with 62 MeV protons at INFN Laboratori Nazionali del Sud in Catania (Italy) and with 180 MeV protons at The Svedberg Laboratory (TSL) in Uppsala (Sweden). Results of these measurements, including tomographic reconstructions of test phantoms, will be shown and discussed. An upgraded system with an extended field of view (up to ~ 5 × 20 cm 2 ) and an increased event rate capability up to one MHz, presently under development, will be also described.}
+  abstract={This paper reports on the activity of the INFN PRIMA/RDH collaboration in the development of proton Computed Tomography (p{CT}) systems based on single proton tracking and residual energy measurement. The systems are made of a silicon microstrip tracker and a YAG:Ce crystal calorimeter to measure single protons trajectory and residual energy, respectively. A first prototype of p{CT} scanner, with an active area of about 5 × 5 cm 2 and a data rate capability of 10 kHz, has been constructed and characterized with 62 MeV protons at INFN Laboratori Nazionali del Sud in Catania (Italy) and with 180 MeV protons at The Svedberg Laboratory (TSL) in Uppsala (Sweden). Results of these measurements, including tomographic reconstructions of test phantoms, will be shown and discussed. An upgraded system with an extended field of view (up to ~ 5 × 20 cm 2 ) and an increased event rate capability up to one MHz, presently under development, will be also described.}
 }
 % url={http://stacks.iop.org/0031-9155/26/i=6/a=001},
-@article{Bashkirov16,
+@article{BJSS16,
 title = "Development of proton computed tomography detectors for applications in hadron therapy ",
-journal = "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment ",
+journal = NIMPRA,
 volume = "809",
 number = "",
 pages = "120 -- 129",
@@ -251,40 +383,49 @@ keywords = "Head scanner "
 %note = "Advances in detectors and applications for medicine ",
 %url = "http://www.sciencedirect.com/science/article/pii/S0168900215009274",
 @article{BP16,
-author = {Plautz, Tia and Bashkirov, Vladimir and Giacometti, Valentina and Hurley, Ford and Johnson, Robert and Piersimoni, Pierluigi and F.-W. Sadrozinski, H and W. Schulte, R and Zatserklyaniy, Andriy},
+author = {Tia E. Plautz and Vladimir A. Bashkirov and Valentina Giacometti and Robert Ford Hurley and Robert P. Johnson and Pierluigi Piersimoni and Hartmut F.-W. Sadrozinski and Reinhard W. Schulte and Andriy Zatserklyaniy},
 year = {2016},
-month = {12},
+month = {Dec},
 pages = {6291--6300},
 title = {An evaluation of spatial resolution of a prototype proton {CT} scanner},
 volume = {43},
-booktitle = {Medical Physics}
-}
+booktitle = MEDPHYS
+}%65008
 @article{JB16,
-author = {Johnson, Robert and Bashkirov, Vladimir and Coutrakon, George and Giacometti, Valentina and Karbasi, Paniz and T. Karonis, N and Ordonez, Caesar and Pankuch, M and F. -W. Sadrozinski, H and Schubert, Keith and W. Schulte, R},
+author = {Robert P. Johnson and Vladimir A. Bashkirov and George Coutrakon and Valentina Giacometti and Paniz Karbasi and Nicolas T. Karonis and Caesar Ordonez and Mark Pankuch and Hartmut F.-W. Sadrozinski and Keith E. Schubert and Reinhard W. Schulte},
 year = {2017},
 journal={Conference on the Application of Accelerators in Research and Industry, CAARI 2016, 30 October - 4 November 2016, Ft. Worth, TX, USA},
-month = {07},
+month = {Jul},
 pages = {},
 title = {Results from a Prototype Proton-{CT} Head Scanner},
 url = {https://arxiv.org/pdf/1707.01580}
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Preprocessing/pre-reconstruction: most-likely path (MLP) formalism, system matrix, pCT data analysis/cuts
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@article{RJVB16,
+  title={A Fast Experimental Scanner for Proton {CT}: Technical Performance and First Experience With Phantom Scans},
+  author={Robert P. Johnson and Vladimir A. Bashkirov and Langley DeWitt and Valentina Giacometti and Robert Ford Hurley and Pierluigi Piersimoni and Tia E. Plautz and Hartmut F.-W. Sadrozinski and Keith E. Schubert and Reinhard W. Schulte and Blake E. Schultze and Andriy Zatserklyaniy},
+  journal=IEEETNS,
+  year={2016},
+  volume={63},
+  pages={52-60}
+}
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~ Preprocessing/prereconstruction: statistical data analysis/cuts, most-likely path (MLP) & system matrix, etc. ~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
 @ARTICLE{SPTS08,
-  AUTHOR =       {R. Schulte and S. Penfold and J. Tafas and K.E. Schubert},
+  AUTHOR =       {Reinhard W. Schulte and Scott N. Penfold and Jihad Tafas and Keith E. Schubert},
   TITLE =        {A maximum likelihood proton path formalism for application in proton computed tomography},
-  JOURNAL =      {Med. Phys.},
+  JOURNAL =      MEDPHYS,
   YEAR =         {2008},
   volume =       {35},
   pages =        {4849-4856},
-  month =        {November},
+  month =        {Nov},
 }
 @INPROCEEDINGS{BSCEWSPRMS08,
-  AUTHOR =       {V. Bashkirov and R. Schulte and G. Coutrakon and B. Erdelyi and K. Wong and H. Sadrozinski and S. Penfold
-  and Anatoly Rosenfeld and Scott McAllister and Keith Schubert},
+  AUTHOR =       {Vladimir A. Bashkirov and Reinhard W. Schulte and George Coutrakon and B. Erdelyi and K. Wong and Hartmut F.-W. Sadrozinski and Scott N. Penfold and Anatoly B. Rosenfeld and Scott A. McAllister and Keith E. Schubert},
   TITLE =        {{Development of Proton Computed Tomography for Applications in Proton Therapy}},
-  BOOKTITLE =    {APPLICATION OF ACCELERATORS IN RESEARCH AND INDUSTRY: Twentieth International Conference},
+  BOOKTITLE =    {Application of Accelerators in Research and Industry: Twentieth International Conference},
   YEAR =         {2008},
   editor =       {Floyd D. McDaniel and Barney L. Doyle},
   organization = {American Institute of Physics},
@@ -292,31 +433,33 @@ url = {https://arxiv.org/pdf/1707.01580}
   note =         {ISBN: 978-0-7354-0633-9},
   volume =       {AIP Conference Proceedings Volume 1099},
   pages =        {460-463},
-  month =        {August 10-15},
+  month =        {Aug 10-15},
 }
 @ARTICLE{PSSR09,
-  AUTHOR =       {S.N. Penfold and A.B. Rosenfeld and R.W. Schulte and K.E. Schubert},
+  AUTHOR =       {Scott N. Penfold and Anatoly B. Rosenfeld and Reinhard W. Schulte and Keith E. Schubert},
   TITLE =        {A more accurate reconstruction system matrix for quantitative proton computed tomography},
-  JOURNAL =      {Med. Phys.},
+  JOURNAL =      MEDPHYS,
   YEAR =         {2009},
   volume =       {36},
   number =       {10},
   pages =        {4511-4518},
-  month =        {October},
+  month =        {Oct},
 }
 @INPROCEEDINGS{MSSP09,
-  AUTHOR =       {S.A. McAllister and K.E. Schubert and R. Schulte and S. Penfold},
+  AUTHOR =       {Scott A. McAllister and Keith E. Schubert and Reinhard W. Schulte and Scott N. Penfold},
   TITLE =        {General Purpose Graphics Processing Unit Speedup of Integral Relative Electron Density Calculation for Proton Computed Tomography},
   BOOKTITLE =    {Proceedings of the IEEE High Performance Medical Imaging Workshop 2009},
   YEAR =         {2009},
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%% Hull-Detection, Space/Silhouette Carving
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Hull-Detection, space/silhouette carving, etc. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
 @INPROCEEDINGS{KS99,
   AUTHOR =       {K. N. Kutulakos and S. M. Seitz},
   TITLE =        {A Theory of Shape by Space Carving},
-  BOOKTITLE =    {Proc. Seventh International Conference on Computer Vision (ICCV)},
+  BOOKTITLE =    {Proceedings of the Seventh International Conference on Computer Vision (ICCV)},
   YEAR =         {1999},
   pages =        {307-314},
 }
@@ -331,9 +474,9 @@ url = {https://arxiv.org/pdf/1707.01580}
   month =        {Marr Prize Special Issue},
 }
 @INPROCEEDINGS{VBSK00,
-  AUTHOR =       {S. Vedula, S. Baker, S. Seitz, and T. Kanade},
+  AUTHOR =       {S. Vedula and S. Baker and S. Seitz and T. Kanade},
   TITLE =        {Shape and Motion Carving in 6D},
-  BOOKTITLE =    {Proc. Computer Vision and Pattern Recognition Conf. (CVPR)},
+  BOOKTITLE =    {Proceedings of Computer Vision and Pattern Recognition Conference (CVPR)},
   YEAR =         {2000},
 }
 %Region-of-Construction Algorithm
@@ -342,17 +485,12 @@ url = {https://arxiv.org/pdf/1707.01580}
 %Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, 2001. CVPR 2001.
 %II-663 - II-668 vol.2
 %
-
 %uses silhouette carving
 %Silhouette Carving
 %Bj-orn Karlsson William Nilsson- Johan Wetter-
 
-%uses silhouette carving
-%Lyness, C., Marte, O., Wong, B., Marais, P. 2001. Low-Cost Model Reconstruction
-%from Image Sequences. AFRIGRAPH 2001, 131-135.
-
+%uses silhouette carving: Lyness, C., Marte, O., Wong, B., Marais, P. 2001. Low-Cost Model Reconstruction from Image Sequences. AFRIGRAPH 2001, 131-135.
 %introduced idea of silhouette carving
-
 @INPROCEEDINGS{Niem94,
   author =       {W. Niem},
   title =        {Robust and fast modelling of 3{D} natural objects from multiple views},
@@ -365,7 +503,7 @@ url = {https://arxiv.org/pdf/1707.01580}
 @INPROCEEDINGS{Niem97,
   author =       {W. Niem},
   title =        {Error analysis for silhouette-based 3{D} shape estimation from multiple views},
-  booktitle =    {Proc. Int. Workshop on Synthetic-Natural Hybrid Coding and Three-Dimensional Imaging},
+  booktitle =    {Proceedings of International Workshop on Synthetic-Natural Hybrid Coding and Three-Dimensional Imaging},
   year =         {1997},
   pages =        {143-146},
 }
@@ -373,22 +511,22 @@ url = {https://arxiv.org/pdf/1707.01580}
 @ARTICLE{JC86,
   AUTHOR =       {J. Canny},
   TITLE =        {A Computational Approach to Edge Detection},
-  JOURNAL =      {IEEE Trans. Pattern Anal. Mach. Intell.},
+  JOURNAL =      {IEEE Transactions on Pattern Analysis and Machine Intelligence},
   YEAR =         {1986},
   volume =       {8},
   number =       {6},
   pages =        {679-698},
-  month =        {November},
-}
+  month =        {Nov},
+}%{IEEE Trans. Pattern Anal. Mach. Intell.},
 @inproceedings{SWSS12,
-  author    = {B. Schultze and M. Witt and K.E. Schubert and R. Schulte},
+  author    = {Blake E. Schultze and Micah Witt and Keith E. Schubert and Reinhard W. Schulte},
   title     = {Space Carving and Filtered Back Projection as Preconditioners for Proton Computed Tomography Reconstruction},
-  booktitle = {Proceedings of the IEEE Nuclear Science Symposium Medical Imaging Conference},
+  booktitle = {Proceedings of the IEEE Nuclear Science Symposium \& Medical Imaging Conference (NSS/MIC) 2012},
   year      = {2012},
   pages     = {4335-4340},
 }
 @INPROCEEDINGS{SWCSS15,
-  AUTHOR =       {B. Schultze and M. Witt and Y. Censor and K.E. Schubert and R. Schulte},
+  AUTHOR =       {Blake E. Schultze and Micah Witt and Yair Censor and Keith E. Schubert and Reinhard W. Schulte},
   TITLE =        {Performance of Hull-Detection Algorithms for Proton Computed Tomography Reconstruction},
   BOOKTITLE =    {Infinite Products of Operators and Their Applications},
   SERIES = {Contemporary Mathematics},
@@ -398,9 +536,11 @@ url = {https://arxiv.org/pdf/1707.01580}
   pages =        {211-224},
   publisher =    {American Mathematical Society}
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Filtered Back Projection
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Filtered Backprojection (FBP), cone/fan beam inversion, etc. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
 @article{radon17,
  author={J. Radon},
  title={Uber due bestimmung von funktionen durch ihre intergralwerte langsgewisser mannigfaltigkeiten
@@ -410,9 +550,7 @@ url = {https://arxiv.org/pdf/1707.01580}
  volume={29},
  pages={262 - 277},
 }
-
 %[4] H.H. Barrett and W. Swindell, Radialogical Imaging: The Theory of Image Formation,Detection and Processing. New York: Academic Press, 1981.
-
 % The filtered back-projection algorithm was invented by Bracewell and Riddle
 @ARTICLE{BR67,
   AUTHOR =       {R.H. Bracewell and A.C. Riddle},
@@ -422,23 +560,21 @@ url = {https://arxiv.org/pdf/1707.01580}
   volume =       {150},
   pages =        {427-434},
 }
-
 % fbp was later developed independently with additional insights by Ramanchandran and Lakshminarayanan
 @ARTICLE{RL71,
   AUTHOR =       {G.N. Ramanchandran and A.V. Lakshminarayanan},
   TITLE =        {Three dimensional reconstructions from radiographs and electron micrographs: Application of convolution instead of {F}ourier transforms},
-  JOURNAL =      {Proc. Natl. Acad. Sci. USA},
+  JOURNAL =      {Proceedings of the National Academy of Sciences, USA},
   YEAR =         {1971},
   volume =       {68},
   pages =        {2236-2240},
-}
+}%Proc. Natl. Acad. Sci.
 @TECHREPORT{Lak75,
   AUTHOR =       {A.V. Lakshminarayanan},
   TITLE =        {Reconstruction from divergent ray data},
   INSTITUTION =  {Dept.Computer Science, State University of New York at Buffalo},
   YEAR =         {1975},
 }
-
 % 3d algorithm fdk
 @ARTICLE{fdk,
   AUTHOR =       {L.A. Feldkamp and L.C. Davis and J.W. Kress},
@@ -448,17 +584,19 @@ url = {https://arxiv.org/pdf/1707.01580}
   volume =       {A1},
   pages =        {612-619},
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Image Reconstruction
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ pCT image reconstruction, iterative reconstruction algorithms, etc. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
 @ARTICLE{SL74,
   AUTHOR =       {L. Shepp and B. Logan},
   TITLE =        {The {F}ourier reconstruction of a head section},
-  JOURNAL =      {IEEE Trans. Nucl. Sci.},
+  JOURNAL =      IEEETNS,
   YEAR =         {1974},
   volume =       {NS-21},
   pages =        {21-43},
-}
+}%{IEEE Trans. Nucl. Sci.}
 %L. Shepp and B. Logan, "The Fourier reconstruction of a head section," IEEE Trans-actions on Nuclear Science, vol. NS-21, pp. 21-43, 1974.
 %http://www.cirsinc.com/products/all/36/pediatric-anthropomorphic-training-phantoms/?details=specs
 %2006-03-23
@@ -482,7 +620,7 @@ URL = {https://doi.org/10.1137/050639399},
 eprint = {https://doi.org/10.1137/050639399}
 }
 @article{GHRD08,
-  author={G T Herman and R Davidi},
+  author={Gabor T. Herman and Ran Davidi},
   title={Image reconstruction from a small number of projections},
   journal={Inverse Problems},
   volume={24},
@@ -490,44 +628,44 @@ eprint = {https://doi.org/10.1137/050639399}
   pages={045011},
   url={http://stacks.iop.org/0266-5611/24/i=4/a=045011},
   year={2008},
-  abstract={Image reconstruction from projections suffers from an inherent difficulty: there are different images that have identical projections in any finite number of directions. However, by identifying the type of image that is likely to occur in an application area, one can design algorithms that may be efficacious in that area even when the number of projections is small. One such approach uses total variation minimization. We report on an algorithm based on this approach, and show that sometimes it produces medically-desirable reconstructions in computerized tomography (CT) even from a small number of projections. However, we also demonstrate that such a reconstruction is not guaranteed to provide the medically-relevant information: when data are collected by an actual CT scanner for a small number of projections, the noise in such data may very well result in a tumor in the brain not being visible in the reconstruction.}
+  abstract={Image reconstruction from projections suffers from an inherent difficulty: there are different images that have identical projections in any finite number of directions. However, by identifying the type of image that is likely to occur in an application area, one can design algorithms that may be efficacious in that area even when the number of projections is small. One such approach uses total variation minimization. We report on an algorithm based on this approach, and show that sometimes it produces medically-desirable reconstructions in computerized tomography ({CT}) even from a small number of projections. However, we also demonstrate that such a reconstruction is not guaranteed to provide the medically-relevant information: when data are collected by an actual {CT} scanner for a small number of projections, the noise in such data may very well result in a tumor in the brain not being visible in the reconstruction.}
 }
 @INPROCEEDINGS{PSCBMSR10,
-  AUTHOR =       {S. N. Penfold and R. W. Schulte and Y. Censor and V. Bashkirov and S. Macallister and K. E. Schubert and A. B. Rosenfeld},
+  AUTHOR =       {Scott N. Penfold and Reinhard W. Schulte and Yair Censor and Vladimir A. Bashkirov and Scott A. McAllister and Keith E. Schubert and Anatoly B. Rosenfeld},
   TITLE =        {Block-Iterative and String-Averaging Projection Algorithms in Proton Computed Tomography Image Reconstruction},
   BOOKTITLE =    {Biomedical Mathematics: Promising Directions in Imaging, Therapy Planning and Inverse Problems},
   YEAR =         {2010},
-  editor =       {Y. Censor and M. Jiang and G. Wang},
+  editor =       {Yair Censor and M. Jiang and G. Wang},
   organization = {The Huangguoshu International Interdisciplinary Conference},
-  publisher =    {Medical Physics Publishing, Madison, WI, USA},
+  publisher =    MEDPHYS,
   pages =       {347--367}
-}
+}%{Medical Physics Publishing, Madison, WI, USA}
   %address =      {Madison, WI, USA},
 @PHDTHESIS{PenfoldDis,
-  AUTHOR =       {S.N. Penfold},
-  TITLE =        {{Image Reconstruction and Monte Carlo Simulations in the Development of Proton Computed Tomography for Applications in Proton Radiation Therapy}},
+  AUTHOR =       {Scott N. Penfold},
+  TITLE =        {{Image Reconstruction and {Monte Carlo} Simulations in the Development of Proton Computed Tomography for Applications in Proton Radiation Therapy}},
   SCHOOL =       {University of Wollongong},
   YEAR =         {2010},
   address =      {Australia},
 }
 @Article{PC2015,
-author="Penfold, Scott
-and Censor, Yair",
+author="Scott N. Penfold and Yair Censor",
 title={Techniques in Iterative Proton {CT} Image Reconstruction},
 journal="Sensing and Imaging",
 year="2015",
-month="October",
+month="Oct",
 day="30",
 volume="16",
 number="1",
 pages={19},
-abstract="This is a review paper on some of the physics, modeling, and iterative algorithms in proton computed tomography ({pCT}) image reconstruction. The primary challenge in pCT image reconstruction lies in the degraded spatial resolution resulting from multiple Coulomb scattering within the imaged object. Analytical models such as the most likely path have been proposed to predict the scattered trajectory from measurements of individual proton location and direction before and after the object. Iterative algorithms provide a flexible tool with which to incorporate these models into image reconstruction. The modeling leads to a large and sparse linear system of equations that can efficiently be solved by projection methods-based iterative algorithms. Such algorithms perform projections of the iterates onto the hyperlanes that are represented by the linear equations of the system. They perform these projections in possibly various algorithmic structures, such as block-iterative projections, string-averaging projections. These algorithmic schemes allow flexibility of choosing blocks, strings, and other parameters. They also cater for parallel implementations which are apt to further save clock time in computations. Experimental results are presented which compare some of those algorithmic options.",
+abstract="This is a review paper on some of the physics, modeling, and iterative algorithms in proton computed tomography ({pCT}) image reconstruction. The primary challenge in p{CT} image reconstruction lies in the degraded spatial resolution resulting from multiple Coulomb scattering within the imaged object. Analytical models such as the most likely path have been proposed to predict the scattered trajectory from measurements of individual proton location and direction before and after the object. Iterative algorithms provide a flexible tool with which to incorporate these models into image reconstruction. The modeling leads to a large and sparse linear system of equations that can efficiently be solved by projection methods-based iterative algorithms. Such algorithms perform projections of the iterates onto the hyperlanes that are represented by the linear equations of the system. They perform these projections in possibly various algorithmic structures, such as block-iterative projections, string-averaging projections. These algorithmic schemes allow flexibility of choosing blocks, strings, and other parameters. They also cater for parallel implementations which are apt to further save clock time in computations. Experimental results are presented which compare some of those algorithmic options.",
 issn="1557--2072",
 doi="10.1007/s11220-015-0122-3"
 }
 @article{BRUZZI2017652,
 title = "Proton computed tomography images with algebraic reconstruction",
-journal = "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment",
+author = "M. Bruzzi and C. Civinini and M. Scaringella and D. Bonanno and M. Brianzi and M. Carpinelli and G.A.P. Cirrone and G. Cuttone and D. Lo Presti and G. Maccioni and S. Pallotta and N. Randazzo and F. Romano and V. Sipala and C. Talamonti and E. Vanzi",
+journal = NIMPRA,
 volume = "845",
 pages = "652 - 655",
 year = "2017",
@@ -535,89 +673,29 @@ note = "Proceedings of the Vienna Conference on Instrumentation 2016",
 issn = "0168-9002",
 doi = "https://doi.org/10.1016/j.nima.2016.05.056",
 url = "http://www.sciencedirect.com/science/article/pii/S0168900216304454",
-author = "M. Bruzzi and C. Civinini and M. Scaringella and D. Bonanno and M. Brianzi and M. Carpinelli and G.A.P. Cirrone and G. Cuttone and D. Lo Presti and G. Maccioni and S. Pallotta and N. Randazzo and F. Romano and V. Sipala and C. Talamonti and E. Vanzi",
 keywords = "Proton beams, Hadron therapy, Tomography, Silicon radiation detectors, Algebraic Reconstruction Technique"
 }
 @INPROCEEDINGS{SK15,
-author={B. Schultze and P. Karbasi and V. Giacometti and T. Plautz and K. E. Sch-bert and R. W. Schulte},
-booktitle={2015 IEEE Nuclear Science Symposium and Medical Imaging Conference (NSS/MIC)},
+author={Blake E. Schultze and Paniz Karbasi and Valentina Giacometti and Tia E. Plautz and Keith E. Schubert and Reinhard W. Schulte},
+booktitle={Proceedings of the IEEE Nuclear Science Symposium \& Medical Imaging Conference (NSS/MIC) 2015},
 title={Reconstructing highly accurate relative stopping powers in proton computed tomography},
 year={2015},
 volume={},
 number={},
 pages={1-3},
 abstract={PROTON computed tomography ({pCT}) is an evolving tomographic imaging modality with applications in proton and ion therapy. The method allows direct reconstruction of relative stopping power of patient tissues in a 3D-fashion. The {pCT} collaboration has built first experimental prototypes of {pCT} scanning systems [1] and has developed approaches to reconstruct proton {CT} images based on registering the coordinates and water equivalent path length (WEPL) of individual protons traversing the scanned volume. From these data one reconstructs the object boundary (hull) and initial image based on filtered back projection (FBP), calculates a most likely path (MLP) for each proton, and improves the initial image iteratively by solving a large linear system of equations of the form Ax = b using an iterative projection algorithm [2].},
-keywords={image reconstruction;medical image processing;radiation therapy;Catphan CTP 404 module;FBP image;Geant4 Monte Carlo;RSP vector;advanced hull detection techniques;filtered back projection;hull definition;ion therapy;iterative projection algorithm;mean effective path length;pCT collaboration;pCT scanning systems;patient tissues;proton CT data;proton CT images;proton computed tomography;proton therapy;tomographic imaging modality;water equivalent path length;Computed tomography;Graphics processing units;Image reconstruction;Phantoms;Protons;Standards},
+keywords={image reconstruction;medical image processing;radiation therapy;Catphan CTP 404 module;FBP image;Geant4 {Monte Carlo};RSP vector;advanced hull detection techniques;filtered back projection;hull definition;ion therapy;iterative projection algorithm;mean effective path length;p{CT} collaboration;p{CT} scanning systems;patient tissues;proton {CT} data;proton {CT} images;proton computed tomography;proton therapy;tomographic imaging modality;water equivalent path length;Computed tomography;Graphics processing units;Image reconstruction;Phantoms;Protons;Standards},
 doi={10.1109/NSSMIC.2015.7582218},
 ISSN={},
 month={Oct},
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% pCT ref  %%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% U. Linz (Ed.) Ion Beam Therapy: Fundamentals, Technologies, and Clinical Applications. Heidelberg: Springer, 2012 Volume 320 2012].
-@BOOK{IBT12,
-    author    = {Ute Linz},
-    title     = {Ion Beam Therapy: Fundamentals, Technologies, and Clinical Applications},
-    publisher = {Springer},
-    volume   = {320},
-    series   = {Biological and Medical Physics, Biomedical Engineering},
-    year      = {2012}
-}
-%%%% Cancer Information: Facts, Treatments, etc
-%American Cancer Society. Cancer Facts & Figures 2013. Atlanta: American Cancer Society; 2013.
-@article{Cormack76,
-  author={A M Cormack and A M Koehler},
-  title={Quantitative proton tomography: preliminary experiments},
-  journal={Physics in Medicine \& Biology},
-  volume={21},
-  number={4},
-  pages={560--569},
-  year={1976},
-  abstract={An attempt has been made to see whether energetic protons (158 MeV) could be used instead of X-rays in computerized axial tomography to detect density differences of the order of those at which commercial X-ray tomographs cease to be useful. A circularly symmetrical phantom consisting of Lucite and sugar solutions was used, and density differences of 0.5% were reconstructed with reasonable accuracy from data obtained with very simple equipment. Discontinuities in either density or chemical composition, or both, seem to cause artifacts in the reconstruction. These may be related to the West-Sherwood effect.}
-}
-  %url={http://stacks.iop.org/0031-9155/21/i=4/a=007},
-@ARTICLE{Hanson79,
-author={K. M. Hanson},
-journal={IEEE Transactions on Nuclear Science},
-title={Proton Computed Tomography},
-year={1979},
-volume={26},
-number={1},
-pages={1635--1640},
-keywords={Computed tomography;Electromagnetic interference;Humans;Image reconstruction;Imaging phantoms;Particle scattering;Protons;Spatial resolution;X-ray imaging;X-ray scattering},
-doi={10.1109/TNS.1979.4330455},
-ISSN={0018-9499},
-month={Feb},
-}
-@ARTICLE{Hanson78,
-author={K. M. Hanson and J. N. Bradbury and T. M. Cannon and R. L. Hutson and D. B. Laubacher and R. Macek and M. A. Paciotti and C. A. Taylor},
-journal={IEEE Transactions on Nuclear Science},
-title={The Application of Protons to Computed Tomography},
-year={1978},
-volume={25},
-number={1},
-pages={657--660},
-keywords={Computed tomography;Energy loss;Energy resolution;Imaging phantoms;Laboratories;Particle beams;Particle scattering;Protons;Spatial resolution;X-ray scattering},
-doi={10.1109/TNS.1978.4329389},
-ISSN={0018-9499},
-month={Feb},
-}
-@article{Hanson81,
-  author={K M Hanson and J N Bradbury and T M Cannon and R L Hutson and D B Laubacher and R J Macek and M A Paciotti and C A Taylor},
-  title={Computed tomography using proton energy loss},
-  journal={Physics in Medicine \& Biology},
-  volume={26},
-  number={6},
-  pages={965--983},
-  year={1981},
-  abstract={An experiment has been performed to demonstrate the feasibility of proton computed tomography. The proton energy loss was used to measure the projections of the relative stopping power of the phantom. High quality reconstructions were obtained from scans of 19 cm and 30 cm diameter performance phantoms. Comparison with reconstructions from an EMI CT-5005 X-ray scanner showed the proton technique is more dose efficient by a large factor.}
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Superiorization, TVS (Total Variation Superiorization)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-@article{0034-4885-81-1-016701,
-  author={Robert P Johnson},
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~ pCT image reconstruction optimization: total variation superiorization (TVS), projected subgradient methods (PSM), etc.~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
+@article{RJ18,
+  author={Robert P. Johnson},
   title={Review of medical radiography and tomography with proton beams},
   journal={Reports on Progress in Physics},
   volume={81},
@@ -625,10 +703,10 @@ month={Feb},
   pages={016701},
   url={http://stacks.iop.org/0034-4885/81/i=1/a=016701},
   year={2018},
-  abstract={The use of hadron beams, especially proton beams, in cancer radiotherapy has expanded rapidly in the past two decades. To fully realize the advantages of hadron therapy over traditional x-ray and gamma-ray therapy requires accurate positioning of the Bragg peak throughout the tumor being treated. A half century ago, suggestions had already been made to use protons themselves to develop images of tumors and surrounding tissue, to be used for treatment planning. The recent global expansion of hadron therapy, coupled with modern advances in computation and particle detection, has led several collaborations around the world to develop prototype detector systems and associated reconstruction codes for proton computed tomography (pCT), as well as more simple proton radiography, with the ultimate intent to use such systems in clinical treatment planning and verification. Recent imaging results of phantoms in hospital proton beams are encouraging, but many technical and programmatic challenges remain to be overcome before pCT scanners will be introduced into clinics. This review introduces hadron therapy and the perceived advantages of pCT and proton radiography for treatment planning, reviews its historical development, and discusses the physics related to proton imaging, the associated experimental and computation issues, the technologies used to attack the problem, contemporary efforts in detector and computational development, and the current status and outlook.}
+  abstract={The use of hadron beams, especially proton beams, in cancer radiotherapy has expanded rapidly in the past two decades. To fully realize the advantages of hadron therapy over traditional x-ray and gamma-ray therapy requires accurate positioning of the Bragg peak throughout the tumor being treated. A half century ago, suggestions had already been made to use protons themselves to develop images of tumors and surrounding tissue, to be used for treatment planning. The recent global expansion of hadron therapy, coupled with modern advances in computation and particle detection, has led several collaborations around the world to develop prototype detector systems and associated reconstruction codes for proton computed tomography (p{CT}), as well as more simple proton radiography, with the ultimate intent to use such systems in clinical treatment planning and verification. Recent imaging results of phantoms in hospital proton beams are encouraging, but many technical and programmatic challenges remain to be overcome before p{CT} scanners will be introduced into clinics. This review introduces hadron therapy and the perceived advantages of p{CT} and proton radiography for treatment planning, reviews its historical development, and discusses the physics related to proton imaging, the associated experimental and computation issues, the technologies used to attack the problem, contemporary efforts in detector and computational development, and the current status and outlook.}
 }
 @article{RDGHYC09,
-author = {Davidi R. and Herman G.T. and Censor Y.},
+author = {Ran Davidi and Gabor T. Herman and Yair Censor},
 title = {Perturbation-resilient block-iterative projection methods with application to image reconstruction from projections},
 journal = {International Transactions in Operational Research},
 volume = {16},
@@ -642,9 +720,9 @@ eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1475-3995.2009.00695
 abstract = {Abstract A block-iterative projection algorithm for solving the consistent convex feasibility problem in a finite-dimensional Euclidean space that is resilient to bounded and summable perturbations (in the sense that convergence to a feasible point is retained even if such perturbations are introduced in each iterative step of the algorithm) is proposed. This resilience can be used to steer the iterative process towards a feasible point that is superior in the sense of some functional on the points in the Euclidean space having a small value. The potential usefulness of this is illustrated in image reconstruction from projections, using both total variation and negative entropy as the functional.}
 }
 @article {HC12,
-author = {Herman, Gabor T. and Gardu-o, Edgar and Davidi, Ran and Censor, Yair},
+author = {Gabor T. Herman and Edgar Gardu{\~n}o and Ran Davidi and Yair Censor},
 title = {Superiorization: An optimization heuristic for medical physics},
-journal = {Medical Physics},
+journal = MEDPHYS,
 volume = {39},
 number = {9},
 publisher = {American Association of Physicists in Medicine},
@@ -657,33 +735,29 @@ year = {2012},
 }
 %Herman, G. T., Gardu-o, E., Davidi, R. and Censor, Y. (2012), Superiorization: An optimization heuristic for medical physics. Med. Phys., 39: 5532-5546. doi:10.1118/1.4745566
 @article{YC14,
-author = {Censor, Yair},
+author = {Yair Censor},
 year = {2014},
-month = {October},
+month = {Oct},
 pages = {41--54},
 title = {Weak and Strong Superiorization: Between Feasibility-Seeking and Minimization},
 volume = {23},
 journal = {Analele Stiintifice ale Universitatii Ovidius Constanta, Seria Matematica}
 }
 @article{YCRD10,
-author = {Censor, Yair and Davidi, R and T. Herman, Gabor},
+author = {Yair Censor and Ran Davidi and Gabor T. Herman},
 year = {2010},
-month = {June},
-pages = {65008},
+month = {Jun},
+pages = {},
 title = {Perturbation Resilience and Superiorization of Iterative Algorithms},
 volume = {26},
 journal = {Inverse problems}
-}
+}%65008
 @Article{YCRDGH14,
-author="Censor, Yair
-and Davidi, Ran
-and Herman, Gabor T.
-and Schulte, Reinhard W.
-and Tetruashvili, Luba",
+author="Yair Censor and Ran Davidi and Gabor T. Herman and Reinhard W. Schulte and Luba Tetruashvili",
 title="Projected Subgradient Minimization Versus Superiorization",
 journal="Journal of Optimization Theory and Applications",
 year="2014",
-month="March",
+month="Mar",
 day="01",
 volume="160",
 number="3",
@@ -694,77 +768,78 @@ doi="10.1007/s10957-013-0408-3",
 url="https://doi.org/10.1007/s10957-013-0408-3"
 }
 @article{YCGH17,
-  author={Yair Censor and Gabor T Herman and Ming Jiang},
-  title={Superiorization: theory and applications},
+  author={Yair Censor and Gabor T. Herman and Ming Jiang},
+  title={Superiorization: Theory and Applications},
   journal={{\textup{Special Issue of}} Inverse Problems},
   volume={33},
   number={4},
-  pages={040301},
+  pages={},
   url={http://stacks.iop.org/0266-5611/33/i=4/a=040301},
   year={2017},
   abstract={}
-}
+}%040301
 @INPROCEEDINGS{ACMN10,
-    author = {A. Chambolle and M. Novaga and D. Cremers and T. Pock},
+    author = {V. Caselles and A. Chambolle and D. Cremers and M. Novaga and T. Pock},
     title = {An introduction to total variation for image analysis},
     booktitle = {Theoretical Foundations and Numerical Methods for Sparse Recovery, De Gruyter},
     year = {2010}
 }
+%author = {A. Chambolle and M. Novaga and D. Cremers and T. Pock},
 @article{YC17,
   author={Yair Censor},
   title={Can linear superiorization be useful for linear optimization problems?},
   journal={Inverse Problems},
   volume={33},
   number={4},
-  pages={044006},
+  pages={},
   url={http://stacks.iop.org/0266-5611/33/i=4/a=044006},
   year={2017},
   abstract={Linear superiorization (LinSup) considers linear programming problems but instead of attempting to solve them with linear optimization methods it employs perturbation resilient feasibility-seeking algorithms and steers them toward reduced (not necessarily minimal) target function values. The two questions that we set out to explore experimentally are: (i) does LinSup provide a feasible point whose linear target function value is lower than that obtained by running the same feasibility-seeking algorithm without superiorization under identical conditions? (ii) How does LinSup fare in comparison with the Simplex method for solving linear programming problems? Based on our computational experiments presented here, the answers to these two questions are: -yes- and -very well-, respectively.}
-}
+}%044006
 @article{THJW17,
-  author={T Humphries and J Winn and A Faridani},
-  title={Superiorized algorithm for reconstruction of CT images from sparse-view and limited-angle polyenergetic data},
-  journal={Physics in Medicine \& Biology},
+  author={T. Humphries and J. Winn and A. Faridani},
+  title={Superiorized algorithm for reconstruction of {CT} images from sparse-view and limited-angle polyenergetic data},
+  journal=PMB,
   volume={62},
   number={16},
   pages={6762},
   url={http://stacks.iop.org/0031-9155/62/i=16/a=6762},
   year={2017},
-  abstract={Recent work in CT image reconstruction has seen increasing interest in the use of total variation (TV) and related penalties to regularize problems involving reconstruction from undersampled or incomplete data. Superiorization is a recently proposed heuristic which provides an automatic procedure to -superiorize- an iterative image reconstruction algorithm with respect to a chosen objective function, such as TV. Under certain conditions, the superiorized algorithm is guaranteed to find a solution that is as satisfactory as any found by the original algorithm with respect to satisfying the constraints of the problem; this solution is also expected to be superior with respect to the chosen objective. Most work on superiorization has used reconstruction algorithms which assume a linear measurement model, which in the case of CT corresponds to data generated from a monoenergetic x-ray beam. Many CT systems generate x-rays from a polyenergetic spectrum, however, in which the measured data represent an integral of object attenuation over all energies in the spectrum. This inconsistency with the linear model produces the well-known beam hardening artifacts, which impair analysis of CT images. In this work we superiorize an iterative algorithm for reconstruction from polyenergetic data, using both TV and an anisotropic TV (ATV) penalty. We apply the superiorized algorithm in numerical phantom experiments modeling both sparse-view and limited-angle scenarios. In our experiments, the superiorized algorithm successfully finds solutions which are as constraints-compatible as those found by the original algorithm, with significantly reduced TV and ATV values. The superiorized algorithm thus produces images with greatly reduced sparse-view and limited angle artifacts, which are also largely free of the beam hardening artifacts that would be present if a superiorized version of a monoenergetic algorithm were used.}
+  abstract={Recent work in {CT} image reconstruction has seen increasing interest in the use of total variation (TV) and related penalties to regularize problems involving reconstruction from undersampled or incomplete data. Superiorization is a recently proposed heuristic which provides an automatic procedure to -superiorize- an iterative image reconstruction algorithm with respect to a chosen objective function, such as TV. Under certain conditions, the superiorized algorithm is guaranteed to find a solution that is as satisfactory as any found by the original algorithm with respect to satisfying the constraints of the problem; this solution is also expected to be superior with respect to the chosen objective. Most work on superiorization has used reconstruction algorithms which assume a linear measurement model, which in the case of {CT} corresponds to data generated from a monoenergetic x-ray beam. Many {CT} systems generate x-rays from a polyenergetic spectrum, however, in which the measured data represent an integral of object attenuation over all energies in the spectrum. This inconsistency with the linear model produces the well-known beam hardening artifacts, which impair analysis of {CT} images. In this work we superiorize an iterative algorithm for reconstruction from polyenergetic data, using both TV and an anisotropic TV (ATV) penalty. We apply the superiorized algorithm in numerical phantom experiments modeling both sparse-view and limited-angle scenarios. In our experiments, the superiorized algorithm successfully finds solutions which are as constraints-compatible as those found by the original algorithm, with significantly reduced TV and ATV values. The superiorized algorithm thus produces images with greatly reduced sparse-view and limited angle artifacts, which are also largely free of the beam hardening artifacts that would be present if a superiorized version of a monoenergetic algorithm were used.}
 }
 @article{EHMZ17,
-  author={E S Helou and M V W Zibetti and E X Miqueles},
+  author={E.S. Helou and M.V.W. Zibetti and E.X. Miqueles},
   title={Superiorization of incremental optimization algorithms for statistical tomographic image reconstruction},
   journal={Inverse Problems},
   volume={33},
   number={4},
-  pages={044010},
+  pages={},
   url={http://stacks.iop.org/0266-5611/33/i=4/a=044010},
   year={2017},
   abstract={We propose the superiorization of incremental algorithms for tomographic image reconstruction. The resulting methods follow a better path in its way to finding the optimal solution for the maximum likelihood problem in the sense that they are closer to the Pareto optimal curve than the non-superiorized techniques. A new scaled gradient iteration is proposed and three superiorization schemes are evaluated. Theoretical analysis of the methods as well as computational experiments with both synthetic and real data are provided.}
-}
+}%044010
 @article{EGGH17,
-  author={Edgar Gardu-o and Gabor T Herman},
+  author={Edgar Gardu{\~n}o and Gabor T. Herman},
   title={Computerized tomography with total variation and with shearlets},
   journal={Inverse Problems},
   volume={33},
   number={4},
-  pages={044011},
+  pages={},
   url={http://stacks.iop.org/0266-5611/33/i=4/a=044011},
   year={2017},
-  abstract={To reduce the x-ray dose in computerized tomography (CT), many constrained optimization approaches have been proposed aiming at minimizing a regularizing function that measures a lack of consistency with some prior knowledge about the object that is being imaged, subject to a (predetermined) level of consistency with the detected attenuation of x-rays. One commonly investigated regularizing function is total variation (TV), while other publications advocate the use of some type of multiscale geometric transform in the definition of the regularizing function, a particular recent choice for this is the shearlet transform. Proponents of the shearlet transform in the regularizing function claim that the reconstructions so obtained are better than those produced using TV for texture preservation (but may be worse for noise reduction). In this paper we report results related to this claim. In our reported experiments using simulated CT data collection of the head, reconstructions whose shearlet transform has a small $\ell_1$-norm are not more efficacious than reconstructions that have a small TV value. Our experiments for making such comparisons use the recently-developed superiorization methodology for both regularizing functions. Superiorization is an automated procedure for turning an iterative algorithm for producing images that satisfy a primary criterion (such as consistency with the observed measurements) into its superiorized version that will produce results that, according to the primary criterion are as good as those produced by the original algorithm, but in addition are superior to them according to a secondary (regularizing) criterion. The method presented for superiorization involving the $\ell_1$-norm of the shearlet transform is novel and is quite general: It can be used for any regularizing function that is defined as the $\ell_1$-norm of a transform specified by the application of a matrix. Because in the previous literature the split Bregman algorithm is used for similar purposes, a section is included comparing the results of the superiorization algorithm with the split Bregman algorithm.}
-}
+  abstract={To reduce the x-ray dose in computerized tomography ({CT}), many constrained optimization approaches have been proposed aiming at minimizing a regularizing function that measures a lack of consistency with some prior knowledge about the object that is being imaged, subject to a (predetermined) level of consistency with the detected attenuation of x-rays. One commonly investigated regularizing function is total variation (TV), while other publications advocate the use of some type of multiscale geometric transform in the definition of the regularizing function, a particular recent choice for this is the shearlet transform. Proponents of the shearlet transform in the regularizing function claim that the reconstructions so obtained are better than those produced using TV for texture preservation (but may be worse for noise reduction). In this paper we report results related to this claim. In our reported experiments using simulated {CT} data collection of the head, reconstructions whose shearlet transform has a small $\ell_1$-norm are not more efficacious than reconstructions that have a small TV value. Our experiments for making such comparisons use the recently-developed superiorization methodology for both regularizing functions. Superiorization is an automated procedure for turning an iterative algorithm for producing images that satisfy a primary criterion (such as consistency with the observed measurements) into its superiorized version that will produce results that, according to the primary criterion are as good as those produced by the original algorithm, but in addition are superior to them according to a secondary (regularizing) criterion. The method presented for superiorization involving the $\ell_1$-norm of the shearlet transform is novel and is quite general: It can be used for any regularizing function that is defined as the $\ell_1$-norm of a transform specified by the application of a matrix. Because in the previous literature the split Bregman algorithm is used for similar purposes, a section is included comparing the results of the superiorization algorithm with the split Bregman algorithm.}
+}%044011
 @article{QYWC17,
-  author={Q Yang and W Cong and G Wang},
-  title={Superiorization-based multi-energy CT image reconstruction},
+  author={Q. Yang and W. Cong and G. Wang},
+  title={Superiorization-based multi-energy {CT} image reconstruction},
   journal={Inverse Problems},
   volume={33},
   number={4},
-  pages={044014},
+  pages={},
   url={http://stacks.iop.org/0266-5611/33/i=4/a=044014},
   year={2017},
-  abstract={The recently-developed superiorization approach is efficient and robust for solving various constrained optimization problems. This methodology can be applied to multi-energy CT image reconstruction with the regularization in terms of the prior rank, intensity and sparsity model (PRISM). In this paper, we propose a superiorized version of the simultaneous algebraic reconstruction technique (SART) based on the PRISM model. Then, we compare the proposed superiorized algorithm with the Split-Bregman algorithm in numerical experiments. The results show that both the Superiorized-SART and the Split-Bregman algorithms generate good results with weak noise and reduced artefacts.}
-}
+  abstract={The recently-developed superiorization approach is efficient and robust for solving various constrained optimization problems. This methodology can be applied to multi-energy {CT} image reconstruction with the regularization in terms of the prior rank, intensity and sparsity model (PRISM). In this paper, we propose a superiorized version of the simultaneous algebraic reconstruction technique (SART) based on the PRISM model. Then, we compare the proposed superiorized algorithm with the Split-Bregman algorithm in numerical experiments. The results show that both the Superiorized-SART and the Split-Bregman algorithms generate good results with weak noise and reduced artefacts.}
+}%044014
 @TECHREPORT{OL14,
   AUTHOR =       {O. Langthaler},
   TITLE =        {Incorporation of the Superiorization Methodology into Biomedical Imaging Software},
@@ -793,15 +868,15 @@ url="https://doi.org/10.1007/s10957-013-0408-3"
   NOTE =        {49 pages}
 }
 @ARTICLE{PSCR10,
-  AUTHOR =       {S.N. Penfold and R.W. Schulte and Y. Censor and A.B. Rosenfeld},
+  AUTHOR =       {Scott N. Penfold and Reinhard W. Schulte and Yair Censor and Anatoly B. Rosenfeld},
   TITLE =        {Total Variation Superiorization Schemes in Proton Computed Tomography Image Reconstruction},
-  JOURNAL =      {Med. Phys.},
+  JOURNAL =      MEDPHYS,
   YEAR =         {2010},
   volume =       {37},
   pages =        {5887-5895},
 }
 @ARTICLE{4407758,
-author={D. Butnariu and R. Davidi and G. T. Herman and I. G. Kazantsev},
+author={Dan Butnariu and Ran Davidi and Gabor T. Herman and Ivan G. Kazantsev},
 journal={IEEE Journal of Selected Topics in Signal Processing},
 title={Stable Convergence Behavior Under Summable Perturbations of a Class of Projection Methods for Convex Feasibility and Optimization Problems},
 year={2007},
@@ -815,16 +890,102 @@ month={Dec},
 }
 %url="https://doi.org/10.1007/s11220-015-0122-3"
 @MISC{website:Censor,
-      AUTHOR = {Censor, Yair},
+      AUTHOR = {Yair Censor},
       TITLE = {Superiorization and perturbation resilience of algorithms: A bibliography compiled and continuously updated},
       HOWPUBLISHED = {http://math.haifa.ac.il/yair/bib-superiorization-censor.html},
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Monte Carlo/geant4 simulations: scanner system, simplified proton beam, dose distributions, range uncertainties, planning verification,
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~ General pCT: theories/fundamentals, techniques and applications, etc. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
+% U. Linz (Ed.) Ion Beam Therapy: Fundamentals, Technologies, and Clinical Applications. Heidelberg: Springer, 2012 Volume 320 2012].
+@BOOK{IBT12,
+    author    = {Ute Linz},
+    title     = {Ion Beam Therapy: Fundamentals, Technologies, and Clinical Applications},
+    publisher = {Springer},
+    volume   = {320},
+    series   = {Biological and Medical Physics, Biomedical Engineering},
+    year      = {2012}
+}
+%%%% Cancer Information: Facts, Treatments, etc
+%American Cancer Society. Cancer Facts & Figures 2013. Atlanta: American Cancer Society; 2013.
+@article{Cormack76,
+  author={A.M. Cormack and A.M. Koehler},
+  title={Quantitative proton tomography: preliminary experiments},
+  journal=PMB,
+  volume={21},
+  number={4},
+  pages={560--569},
+  year={1976},
+  abstract={An attempt has been made to see whether energetic protons (158 MeV) could be used instead of X-rays in computerized axial tomography to detect density differences of the order of those at which commercial X-ray tomographs cease to be useful. A circularly symmetrical phantom consisting of Lucite and sugar solutions was used, and density differences of 0.5% were reconstructed with reasonable accuracy from data obtained with very simple equipment. Discontinuities in either density or chemical composition, or both, seem to cause artifacts in the reconstruction. These may be related to the West-Sherwood effect.}
+}
+  %url={http://stacks.iop.org/0031-9155/21/i=4/a=007},
+@ARTICLE{Hanson79,
+author={K. M. Hanson},
+journal=IEEETNS,
+title={Proton Computed Tomography},
+year={1979},
+volume={26},
+number={1},
+pages={1635--1640},
+keywords={Computed tomography;Electromagnetic interference;Humans;Image reconstruction;Imaging phantoms;Particle scattering;Protons;Spatial resolution;X-ray imaging;X-ray scattering},
+doi={10.1109/TNS.1979.4330455},
+ISSN={0018-9499},
+month={Feb},
+}
+@ARTICLE{Hanson78,
+author={K. M. Hanson and J. N. Bradbury and T. M. Cannon and R. L. Hutson and D. B. Laubacher and R. Macek and M. A. Paciotti and C. A. Taylor},
+journal=IEEETNS,
+title={The Application of Protons to Computed Tomography},
+year={1978},
+volume={25},
+number={1},
+pages={657--660},
+keywords={Computed tomography;Energy loss;Energy resolution;Imaging phantoms;Laboratories;Particle beams;Particle scattering;Protons;Spatial resolution;X-ray scattering},
+doi={10.1109/TNS.1978.4329389},
+ISSN={0018-9499},
+month={Feb},
+}
+@article{Hanson81,
+  author={K. M. Hanson and J. N. Bradbury and T. M. Cannon and R. L. Hutson and D. B. Laubacher and R. J. Macek and M. A. Paciotti and C. A. Taylor},
+  title={Computed tomography using proton energy loss},
+  journal=PMB,
+  volume={26},
+  number={6},
+  pages={965--983},
+  year={1981},
+  abstract={An experiment has been performed to demonstrate the feasibility of proton computed tomography. The proton energy loss was used to measure the projections of the relative stopping power of the phantom. High quality reconstructions were obtained from scans of 19 cm and 30 cm diameter performance phantoms. Comparison with reconstructions from an EMI {CT}-5005 X-ray scanner showed the proton technique is more dose efficient by a large factor.}
+}
+@article{GDLDSR17,
+  author={George Dedes and L. De Angelis and Simon Rit and D. Hansen and C. Belka and Vladimir A. Bashkirov and Robert P. Johnson and George Coutrakon and Keith E. Schubert and Reinhard W. Schulte and Katia Parodi and Guillaume Landry},
+  title={Application of fluence field modulation to proton computed tomography for proton therapy imaging},
+  journal=PMB,
+  volume={62},
+  number={15},
+  pages={6026--6043},
+  url={http://stacks.iop.org/0031-9155/62/i=15/a=6026},
+  year={2017},
+  abstract={This simulation study presents the application of fluence field modulated computed tomography, initially developed for x-ray {CT}, to proton computed tomography (p{CT}). By using pencil beam (PB) scanning, fluence modulated p{CT} (FMp{CT}) may achieve variable image quality in a p{CT} image and imaging dose reduction. Three virtual phantoms, a uniform cylinder and two patients, were studied using Monte Carlo simulations of an ideal list-mode p{CT} scanner. Regions of interest (ROI) were selected for high image quality and only PBs intercepting them preserved full fluence (FF). Image quality was investigated in terms of accuracy (mean) and noise (standard deviation) of the reconstructed proton relative stopping power compared to reference values. Dose calculation accuracy on FMp{CT} images was evaluated in terms of dose volume histograms (DVH), range difference (RD) for beam-eye-view (BEV) dose profiles and gamma evaluation. Pseudo FMp{CT} scans were created from broad beam experimental data acquired with a list-mode p{CT} prototype. FMp{CT} noise in ROIs was equivalent to FF images and accuracy better than-1.3\%(-0.7\%) by using 1\% of FF for the cylinder (patients). Integral imaging dose reduction of 37\% and 56\% was achieved for the two patients for that level of modulation. Corresponding DVHs from proton dose calculation on FMp{CT} images agreed to those from reference images and 96\% of BEV profiles had RD below 2mm, compared to only 1\% for uniform 1\% of FF. Gamma pass rates (2\%, 2mm) were 98\% for FMp{CT} while for uniform 1\% of FF they were as low as 59\%. Applying FMp{CT} to preliminary experimental data showed that low noise levels and accuracy could be preserved in a ROI, down to 30\% modulation. We have shown, using both virtual and experimental p{CT} scans, that FMp{CT} is potentially feasible and may allow a means of imaging dose reduction for a p{CT} scanner operating in PB scanning mode. This may be of particular importance to proton therapy given the low integral dose found outside the target.}
+}
+@article{GDRJMP18,
+author = {George Dedes and Robert P. Johnson and Mark Pankuch and Nick Detrich and Willemijn M. A. Pols and Simon Rit and Reinhard W. Schulte and Katia Parodi and Guillaume Landry},
+year = {2018},
+month = {May},
+pages = {3287--3296},
+title = {Experimental fluence modulated proton computed tomography by pencil beam scanning},
+volume = {45},
+journal = MEDPHYS
+}
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Monte Carlo/geant4 simulations/studies: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~ Scanner system, simplified proton beam, dose distributions, range uncertainties, planning verification, etc. ~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
 @article{geant4,
 title = "Geant4-a simulation toolkit",
-journal = "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment",
+author = "S. Agostinelli and J. Allison and K. Amako and others",
+journal = NIMPRA,
 volume = "506",
 number = "3",
 pages = "250 - 303",
@@ -832,34 +993,33 @@ year = "2003",
 issn = "0168-9002",
 doi = "https://doi.org/10.1016/S0168-9002(03)01368-8",
 url = "http://www.sciencedirect.com/science/article/pii/S0168900203013688",
-author = "S. Agostinelli and J. Allison and K. Amako and others",
 keywords = "Simulation, Particle interactions, Geometrical modelling, Software engineering, Object-oriented technology, Distributed software development"
 }
 @article{doi:10.1118/1.1796952,
-author = {Jiang, H. and Paganetti, H.},
-title = {Adaptation of GEANT4 to Monte Carlo dose calculations based on CT data},
-journal = {Medical Physics},
+title = {Adaptation of GEANT4 to {Monte Carlo} dose calculations based on {CT} data},
+author = {H. Jiang and H. Paganetti},
+journal = MEDPHYS,
 volume = {31},
 number = {10},
 year = {2004},
 pages = {2811-2818},
-keywords = {Monte Carlo methods, Dosimetry/exposure assessment, Treatment strategy, Simulation, Effects of ionizing radiation on biological systems, radiation therapy, dosimetry, Monte Carlo methods, simulation, biological effects of ionising radiation, computerised tomography, proton effects, GEANT4, Monte Carlo, CT, Protons, Dosimetry, Collisional energy loss, Monte Carlo methods, Photons, Radiation therapy, Optimization, Anatomy, Energy transfer, Proton therapy},
+keywords = {{Monte Carlo} methods, Dosimetry/exposure assessment, Treatment strategy, Simulation, Effects of ionizing radiation on biological systems, radiation therapy, dosimetry, {Monte Carlo} methods, simulation, biological effects of ionising radiation, computerised tomography, proton effects, GEANT4, {Monte Carlo}, {CT}, Protons, Dosimetry, Collisional energy loss, {Monte Carlo} methods, Photons, Radiation therapy, Optimization, Anatomy, Energy transfer, Proton therapy},
 doi = {10.1118/1.1796952},
 url = {https://aapm.onlinelibrary.wiley.com/doi/abs/10.1118/1.1796952},
 eprint = {https://aapm.onlinelibrary.wiley.com/doi/pdf/10.1118/1.1796952},
-abstract = {The GEANT4 Monte Carlo code provides many powerful functions for conducting particle transport simulations with great reliability and flexibility. However, as a general purpose Monte Carlo code, not all the functions were specifically designed and fully optimized for applications in radiation therapy. One of the primary issues is the computational efficiency, which is especially critical when patient CT data have to be imported into the simulation model. In this paper we summarize the relevant aspects of the GEANT4 tracking and geometry algorithms and introduce our work on using the code to conduct dose calculations based on CT data. The emphasis is focused on modifications of the GEANT4 source code to meet the requirements for fast dose calculations. The major features include a quick voxel search algorithm, fast volume optimization, and the dynamic assignment of material density. These features are ready to be used for tracking the primary types of particles employed in radiation therapy such as photons, electrons, and heavy charged particles. Re-calculation of a proton therapy treatment plan generated by a commercial treatment planning program for a paranasal sinus case is presented as an example.}
+abstract = {The GEANT4 {Monte Carlo} code provides many powerful functions for conducting particle transport simulations with great reliability and flexibility. However, as a general purpose {Monte Carlo} code, not all the functions were specifically designed and fully optimized for applications in radiation therapy. One of the primary issues is the computational efficiency, which is especially critical when patient {{CT}} data have to be imported into the simulation model. In this paper we summarize the relevant aspects of the GEANT4 tracking and geometry algorithms and introduce our work on using the code to conduct dose calculations based on {CT} data. The emphasis is focused on modifications of the GEANT4 source code to meet the requirements for fast dose calculations. The major features include a quick voxel search algorithm, fast volume optimization, and the dynamic assignment of material density. These features are ready to be used for tracking the primary types of particles employed in radiation therapy such as photons, electrons, and heavy charged particles. Re-calculation of a proton therapy treatment plan generated by a commercial treatment planning program for a paranasal sinus case is presented as an example.}
 }
 @inproceedings{WSS12,
-  author    = {M. Witt and B. Schultze and R. Schulte and K.E. Schubert and E. Gomez},
+  author    = {Micah Witt and Blake E. Schultze and Reinhard W. Schulte and Keith E. Schubert and Ernesto Gomez},
   title     = {A Proton Simulator for Testing Implementations of Proton {CT} Reconstruction Algorithms on {GPGPU} Clusters},
-  booktitle = {Proceedings of the IEEE Nuclear Science Symposium Medical Imaging Conference},
+  booktitle = {Proceedings of the IEEE Nuclear Science Symposium \& Medical Imaging Conference (NSS/MIC) 2012},
   year      = {2012},
   pages     = {4329-4334},
 }
 @article {VG17,
-author = {Giacometti, Valentina and Bashkirov, Vladimir A. and Piersimoni, Pierluigi and Guatelli, Susanna and Plautz, Tia E. and Sadrozinski, Hartmut F.-W. and Johnson, Robert P. and Zatserklyaniy, Andriy and Tessonnier, Thomas and Parodi, Katia and Rosenfeld, Anatoly B. and Schulte, Reinhard W.},
+author = {Valentina Giacometti and Vladimir A. Bashkirov and Pierluigi Piersimoni and Susanna Guatelli and Tia E. Plautz and Hartmut F.-W. Sadrozinski and Robert P. Johnson and Andriy Zatserklyaniy and Thomas Tessonnier and Katia Parodi and Anatoly B. Rosenfeld and Reinhard W. Schulte},
 title = {Software platform for simulation of a prototype proton {CT} scanner},
-journal = {Medical Physics},
+journal = MEDPHYS,
 volume = {44},
 number = {3},
 issn = {2473-4209},
@@ -869,12 +1029,14 @@ pages = {1002--1016},
 keywords = {Geant4, image reconstruction, proton computed tomography, stopping power},
 year = {2017},
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Dose evaluation/calculations, hadron/ion/proton/radio therapy & treatment planning
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~ Dose evaluation/calculations, hadron/ion/proton/radio therapy & treatment planning, etc. ~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
 @Article{MJ83,
 author = {Mustafa, AA and Jackson, DF},
-title = {The relation between X-ray CT numbers and charged particle stopping powers and its significance for radiotherapy treatment planning},
+title = {The relation between X-ray {CT} numbers and charged particle stopping powers and its significance for radiotherapy treatment planning},
 journal = {Phys Med Biol.},
 year = {1983},
 key = {PMID: 6408654},
@@ -885,8 +1047,8 @@ month = {Feb},
 }
 @Article{MTFYHMEK98,
 author = {Matsufuji, N and Tomura, H and Futami, Y and Yamashita, H and Higashi, A and Minohara, S and Endo, M and Kanai, T},
-title = {Relationship between CT number and electron density, scatter angle and nuclear reaction for hadron-therapy treatment planning},
-journal = {Physics in Medicine and Biology},
+title = {Relationship between {CT} number and electron density, scatter angle and nuclear reaction for hadron-therapy treatment planning},
+journal = PMB,
 year = {1998},
 key = {PubMed: 9832015},
 volume = {43},
@@ -895,20 +1057,20 @@ pages = {3261–3275},
 @ARTICLE{Smith09,
   AUTHOR =       {A.R. Smith},
   TITLE =        {Vision 20/20: proton therapy},
-  JOURNAL =      {Med. Phys.},
+  JOURNAL =      MEDPHYS,
   YEAR =         {2009},
   volume =       {36},
   pages =        {556-568},
 }
 @Article{22571913,
 author = {Paganetti, H.},
-title = {Range uncertainties in proton therapy and the role of Monte Carlo simulations},
-journal = {Physics in Medicine and Biology},
+title = {Range uncertainties in proton therapy and the role of {M}onte {C}arlo simulations},
+journal = PMB,
 year = {2012},
 key = {10.1088/0031-9155/57/11/R99},
 volume = {57},
 number = {11},
-pages = {R99–R117},
+pages = {R99–-R117},
 month = {May},
 }
 @article{1748-0221-12-01-C01034,
@@ -921,12 +1083,14 @@ Maccioni and S. Pallotta and N. Randazzo and M. Scaringella and F. Romano and V.
   pages={C01034},
   url={http://stacks.iop.org/1748-0221/12/i=01/a=C01034},
   year={2017},
-  abstract={Proton Computed Tomography (pCT) is a medical imaging method with a potential for increasing accuracy of treatment planning and patient positioning in hadron therapy. A pCT system based on a Silicon microstrip tracker and a YAG:Ce crystal calorimeter has been developed within the INFN Prima-RDH collaboration. The prototype has been tested with a 175 MeV proton beam at The Svedberg Laboratory (Uppsala, Sweden) with the aim to reconstruct and characterize a tomographic image. Algebraic iterative reconstruction methods (ART), together with the most likely path formalism, have been used to obtain tomographies of an inhomogeneous phantom to eventually extract density and spatial resolutions. These results will be presented and discussed together with an estimation of the average dose delivered to the phantom and the dependence of the image quality on the dose. Due to the heavy computation load required by the algebraic algorithms the reconstruction programs have been implemented to fully exploit the high calculation parallelism of Graphics Processing Units. An extended field of view pCT system is in an advanced construction stage. This apparatus will be able to reconstruct objects of the size of a human head making possible to characterize this pCT approach in a pre-clinical environment.}
+  abstract={Proton Computed Tomography (p{CT}) is a medical imaging method with a potential for increasing accuracy of treatment planning and patient positioning in hadron therapy. A p{CT} system based on a Silicon microstrip tracker and a YAG:Ce crystal calorimeter has been developed within the INFN Prima-RDH collaboration. The prototype has been tested with a 175 MeV proton beam at The Svedberg Laboratory (Uppsala, Sweden) with the aim to reconstruct and characterize a tomographic image. Algebraic iterative reconstruction methods (ART), together with the most likely path formalism, have been used to obtain tomographies of an inhomogeneous phantom to eventually extract density and spatial resolutions. These results will be presented and discussed together with an estimation of the average dose delivered to the phantom and the dependence of the image quality on the dose. Due to the heavy computation load required by the algebraic algorithms the reconstruction programs have been implemented to fully exploit the high calculation parallelism of Graphics Processing Units. An extended field of view p{CT} system is in an advanced construction stage. This apparatus will be able to reconstruct objects of the size of a human head making possible to characterize this p{CT} approach in a pre-clinical environment.}
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Miscellaneous: cancer/radiation oncology facts, image analysis
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-@TECHREPORT{ACS13, 
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Miscellaneous: cancer/radiation oncology facts, image analysis, etc. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
+@TECHREPORT{ACS13,
   AUTHOR =       {American Cancer Society},
   TITLE =        {Cancer Facts and Figures 2013},
   INSTITUTION =  {American Cancer Society Atlanta},
@@ -961,6 +1125,8 @@ issn="1471-2105",
 doi="10.1186/s12859-017-1934-z",
 url="https://doi.org/10.1186/s12859-017-1934-z"
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END FILE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%

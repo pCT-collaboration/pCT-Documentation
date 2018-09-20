@@ -1,0 +1,98 @@
+% --shell-escape -recorder WalkerProject-Documentation.tex -interaction=nonstopmode
+%-------------------------------------------------------------------------------------------------------------------------------%
+%*******************************************************************************************************************************%
+%******************* Provide appropriate 'R2Labs' package options for desired document type/layout/appearance ******************%
+%*******************************************************************************************************************************%
+%-------------------------------------------------------------------------------------------------------------------------------%
+\RequirePackage%
+[%
+    sizeXclo=10,
+    %twocolumn=true,%=false,%,
+    twocolumn=false,%,
+    fontencoding=OT1,
+    fontfamily=cmr,
+    fontname={Computer Modern Roman},
+    %fontseries=,
+    %fontshape=,
+    fontsize=18pt,
+    landscape,
+    %standalone,
+    %coverpage,
+    %toc,
+    automake=true,
+    %rotating,
+    %isorot,
+    %crop,
+    %countinchaps,
+    %article,
+    report,
+    frontpagenumbering=Roman,
+    %docpagenumbering=arabic,
+    %backpagenumbering=roman,
+    %footpagelabeling=ofsector,%oftotal%
+    FBM@dotfill,
+    %nonewpage,
+    FBM@clearpage=false,
+    %libpkg,                                            % Package is installed in TeX distribution library
+    %localpkg,                                           % Package isn't installed, read package files directly from local directory
+    %pkgdir={R2Labs},                                   % Package isn't installed, read package files from this explicit directory
+    %tdspkgdir,                                          % Package files stored in TeX Directory Structure (TDS) hieararchy
+    %dropbox={R2Labs/Blake/Reminder Walker},            % Explicitly set path to Dropbox folder
+    %showcslist={defn,defn},                            % Write definition of this macro/command list to log/console
+    %logdefs,                                           % Write macro/command definitions to log file instead of console window
+    libpkg,                                            % Package is installed in TeX distribution library
+    %fls,                                               % Write paths of all input package/document files to .fls file
+    exampleDir={C:/Users/Blake/Documents/GitHub/BlakeSchultze/LaTeX-Packages/doc/Examples/},
+    %glsdefsfile=pCT-Terms                     % Name of file where acronyms, symbols, and glossary terms are defined
+    %glsdefspath={./},                                  % Path to glsdefsfile, local/library searched by default (TDS too if incl)
+    %FBMstylespath={./},                              % Path to FBM style files, local + TDS (if incl)/library searched by default
+    fncychap=Sonny
+]%
+%{texmf-local/tex/latex/R2Labs/R2Labs}
+{R2Labs}
+%-------------------------------------------------------------------------------------------------------------------------------%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Specify document type and title/subtitle for cover page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%-------------------------------------------------------------------------------------------------------------------------------%
+\begin{thedocument}%
+[%
+    type={documentation}, %
+    title={pCT Collaboration Documentation}, %
+    subtitle=%
+    {%
+        Data Acquisition/Processing and Image Reconstruction Software: Theory and Implementation Details%
+    }%
+]%
+%-------------------------------------------------------------------------------------------------------------------------------%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Input document content from corresponding .tex files ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%-------------------------------------------------------------------------------------------------------------------------------%
+\input{./pCT-Data-Acquisition.tex}
+%-------------------------------------------------------------------------------------------------------------------------------%
+\input{./pCT-Preprocessing.tex}
+%-------------------------------------------------------------------------------------------------------------------------------%
+\input{./pCT-Image-Reconstruction.tex}
+%-------------------------------------------------------------------------------------------------------------------------------%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ End document content and close 'thedocument' environment ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%-------------------------------------------------------------------------------------------------------------------------------%
+\end{thedocument}
+%-------------------------------------------------------------------------------------------------------------------------------%
+%*******************************************************************************************************************************%
+%************************************************************ NOTES ************************************************************%
+%*******************************************************************************************************************************%
+%-------------------------------------------------------------------------------------------------------------------------------%
+% \TDS@PKG@DIR = texmf-local/tex/latex/\PKGNAME/
+% \thepwd = C:/Users/Blake/Dropbox/R2Labs/Blake/Reminder Walker/
+%getmainfile: \getmainfile % get real main file (can be different than jobname in some cases)
+%getabspath: \getabspath{\themainfile} % or use \jobname.tex instead (not as safe)
+%%asd \mainabsdir\\ % save result away (macro will be overwritten by the next \getabspath
+%%asd \mainabspath \\% save result away (macro will be overwritten by the next \getabspath
+%getpwd/thepwd: \getpwd \thepwd \\
+%\fullpath\\
+%getenv: \getenv[\USER@HOMEDIR]{HOME}\USER@HOMEDIR\\
+%dropbox: \@nameuse{\pkgopts@prefix dropbox}\\\vspace{1cm}
+% %P/TexAux 

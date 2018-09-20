@@ -156,7 +156,7 @@ usertype.dat
 #***********************************************************************#
 # MODE=TeX (uniquely TeX mode only)
 *.ltx
-*.tex
+#*.tex
 *.texi
 
 # MODE=AUX
@@ -179,7 +179,7 @@ usertype.dat
 *.bbl
 *.blg
 *-blx.aux
-#*-blx.bib
+*-blx.bib
 *.bnd
 *.brf
 *.run.xml
@@ -289,7 +289,7 @@ usertype.dat
 #-----------------------------------------------------------------------#
 #***********************************************************************#
 # achemso
-#acs-*.bib
+acs-*.bib
 
 # algorithms
 *.alg
