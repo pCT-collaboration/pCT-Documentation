@@ -9,40 +9,42 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \index{Block-Iterative Algorithms: Notation}
 \begin{tcbparbox}|Block-Iterative Algorithms: Notation|%
+%\begin{tcbenumbox}|Block-Iterative Algorithms: Notation|%
     \begin{itemize}
-        %\item $\mathscript\varmathbb\mathpzc\mathtxsy\mathcal\mathrsfs\mathbickx\mathfrakst
+        %\item \mathscript\varmathbb\mathpzc\mathtxsy\mathcal\mathrsfs\mathbickx\mathfrakst
         \item $m$ : total \# of proton histories
         \item $n$ : total \# of image vector voxels
         \item $B$ : total \# of BIP blocks
-        \item $\braced*{a\text{:}b}=\setopen i\setwhere i\in\bracketed*{a,b}\setclose$ : interval of indices
-        \item $A_{*, j}$ : Column vector composed of all $*=1\text{:}m$ rows of the $j$-th column of the matrix $A$
-        \item $A_{i, *}$ : Row vector composed of all $*=1\text{:}n$ columns of the $i$-th row of the matrix $A$
-        \item $A_{\braced*{a\text{:}b}, j}$%
-            : Column vector composed of the interval $a\text{:}b$ of rows of the $j$-th column of the matrix $A$
-        \item $A_{i, \braced*{a\text{:}b}}$%
-            : Row vector composed of the interval $a\text{:}b$ of columns of the $i$-th row of the matrix $A$
+        \item $\braced*{a\texttt{:}b}=\setopen i\setwhere i\in\bracketed*{a,b}\setclose$ : interval of indices
+        \item $A_{\kern1pt*,\kern1pt j}$ : Column vector composed of all $*=1\texttt{:}m$ rows of the $j$-th column of the matrix $A$
+        \item $A_{\kern1pti,\kern1pt *}$ : Row vector composed of all $*=1\texttt{:}n$ columns of the $i$-th row of the matrix $A$
+        \item $A_{\braced*{a\scriptscriptstyle\texttt{:}b},\kern1pt j}$ %
+            : Column vector composed of the interval $a\texttt{:}b$ of rows of the $j$-th column of the matrix $A$
+        \item $A_{i,\kern1pt \braced*{a\scriptscriptstyle\texttt{:}b}}$ %
+            : Row vector composed of the interval $a\texttt{:}b$ of columns of the $i$-th row of the matrix $A$
         \item $x_{(k)}$ : Image vector $x$ at iteration $k$
         \item $\mathbickx{I}%
-            =\braced*{1, 2, 3, \cdots, m}$%
+            =\braced*{1, 2, 3, \cdots, m}$ %
              : the sequentially ordered set of all proton history indices
         \item $\mathbickx{B}_{(k)}%
-            =\braced*{1, 2, 3, \cdots, B_{(k)}}$%
+            =\braced*{1, 2, 3, \cdots, B_{(k)}}$ %
              : the sequentially ordered set of all BIP block indices, where the \# of BIP blocks $B_{(k)}$ may vary as a function of iteration $k$.
-        \item $f_{(k)}\,\text{:}\,\mathbickx{I}\to\mathbickx{B}_{(k)}%
-            =\setopen\seqopen f_{(k)}(i)=b\seqclose_{i\in\mathbickx{I}, b\in\mathbickx{B}_{(k)}}\setclose\\
-            =\setopen f_{(k)}(1),f_{(k)}(2),f_{(k)}(3),\cdots,f_{(k)}(m)\setwhere f_{(k)}(i)=b\in\mathbickx{B}_{(k)}, i\in\mathbickx{I}\setclose$%
-             : function $f_{(k)}$ assigning one of the $B_{(k)}$ BIP block indices to each of the $m$ proton historie indices, thereby setting the \# of histories and the order they are processed within each block as well as the order that these blocks of histories are processed in the $k$-th iteration.  This function may be varied as a function of iteration $k$, permitting the user to assign different BIP block configurations and/or history ordering schemes.
+        \item $f_{(k)}\,\texttt{:}\,\mathbickx{I}\to\mathbickx{B}_{(k)}%
+            %=\setopen\seqopen f_{(k)}(i) = b\seqclose_{i\kern0.5pt\scriptscriptstyle\in\kern0.5pt\scriptstyle\mathbickx{I}, b\kern0.5pt\scriptscriptstyle\in\kern0.5pt\scriptstyle\mathbickx{B}_{(k)}}\setclose
+            =\setopen f_{(k)}(1),f_{(k)}(2),f_{(k)}(3),\cdots,f_{(k)}(m)\setwhere f_{(k)}(i)=b\in\mathbickx{B}_{(k)}, i\in\mathbickx{I}\setclose $
+             : function $f_{(k)}$ mapping each of the $m$ proton histories to one of the $B_{(k)}$ BIP blocks, which may vary as a function of $k$, thereby establishing the \# of histories in each block and the order they are processed.
         \item $\mathbickx{M}_{b(k)}%
-            =\setopen i\in\mathbickx{I}\setwhere f_{(k)}(i)=b, \,\smashoperator{\bigcup\limits_{b\in\mathbickx{B}_{(k)}}}\mathbickx{M}_{b(k)}=\mathbickx{M}\setclose$%
+            =\setopen i\in\mathbickx{I}\setwhere f_{(k)}(i)=b, \,\smashoperator{\bigcup\limits_{\kern5pt b\scriptscriptstyle\kern0.5pt\in\kern0.5pt\mathbickx{B}_{(k)}}}\mathbickx{M}_{b(k)}=\mathbickx{M}\setclose$ %
             : the ordered set of proton history indices within the $b$-th BIP block during iteration $k$, assigned according to the function $f_{(k)}$
         \item $\mathbickx{M}_{(k)}%
-            =\setopen\seqopen\mathbickx{M}_{b(k)}\seqclose_{b\in\mathbickx{B}_{(k)}}\setclose%
-            =\setopen\mathbickx{M}_{1(k)}, \mathbickx{M}_{2(k)}, \cdots, \mathbickx{M}_{B(k)}\setclose$%
+            =\setopen\seqopen\mathbickx{M}_{b(k)}\seqclose_{b\kern0.5pt\scriptscriptstyle\in\kern0.5pt\mathbickx{B}_{(k)}}\setclose%
+            =\setopen\mathbickx{M}_{1(k)}, \mathbickx{M}_{2(k)}, \cdots, \mathbickx{M}_{B(k)}\setclose$ %
             : the ordered family of sets of BIP blocks of proton history indices for iteration $k$, assigned according to the function $f_{(k)}$
-        \item $H_i=\setopen x\in\mathbbm{R}^n \setwhere \angled*{A_{i, *}, x} = b_i, i\in\mathbickx{I}\setclose$%
+        \item $H_i=\setopen x\in\mathbbm{R}^n \setwhere \angled*{A_{i, *}, x} = b_i, i\in\mathbickx{I}\setclose$ %
              : the hyperplanes corresponding to the $i$th row of the $m\times n$ linear system $Ax=b$ upon which the image vector $x_{(k)}$ is projected
     \end{itemize}
 \end{tcbparbox}
+%\end{tcbenumbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\begin{tcbparbox}|Block-Iterative Projections (BIP) Algorithm|
 %\begin{align*}

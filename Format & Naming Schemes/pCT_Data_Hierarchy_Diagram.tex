@@ -2,8 +2,8 @@
 %\clearpage%
 \Section*(Organized Data Hierarchy Diagram){\texttt{organized\_data} Hierarchy Diagram}%
 [%
-	\vspace{-2mm}%
-	the diagram below shows the hierarchy of \autohyperlink[type=Subsection,label={\docentry[constdir]{organized\_data}}]{Organized Data Hierarchy} directories.  The vertical ellipses (\,\protect\tinyvdots\,) indicate that the subdirectories below this level of the branch are identical to those below this same level of the branch that shows these subdirectories explicitly.%
+    \vspace{-2mm}%
+    the diagram below shows the hierarchy of \autohyperlink[type=Subsection,label={\docentry[constdir]{organized\_data}}]{Organized Data Hierarchy} directories.  The vertical ellipses (\,\protect\tinyvdots\,) indicate that the subdirectories below this level of the branch are identical to those below this same level of the branch that shows these subdirectories explicitly.%
 ]
 %-------------------------------------------------------------------------------------------------------------------------------%
 %-------------------------------------------------------------------------------------------------------------------------------%
@@ -42,31 +42,45 @@
 };
 \graph[use existing nodes, edge label, edges=thick]
 {
-    (parentdot)->(parentdir)->(pctdata)->(organizeddata)--(top3)--(top1)->(001)--(01)->(11)->(21)--(31)--(30)->(40)->(50);
-    (top3)--(top4)->(004)--(04)--(05)->(15)->(25);
+    (parentdot)->(parentdir)->(pctdata)->(organizeddata)--(top3);
+    (25)<-(15)<-(05)--(04)--(004)<-(top4)--(top1)->(001)--(01)->(11)->(21)--(31)%
+    --(32)->(42)->(52)--(62)->(72)--(82)->(92)--(102)->(112)->(122)--(132)->(142);
     (04)--(03)->(13)->(23);
-    (31)--(32)->(42)->(52)--(62)->(72)--(82)->(92)--(102)->(112)->(122)--(132)->(142);
-    (61)--(62)--(63)--(64)--(65);
-    (61)->(71);
-    (62)->(72);
+    (31)--(30)->(40)->(50);
+    (71)<-(61)--(65)->(75);
     (63)->(73);
     (64)->(74);
-    (65)->(75);
     (82)--(83)->(93);
-    (100)--(101)--(102)--(103)--(104)--(105);
-    (100)->(110);
+    (110)<-(100)--(105)->(115);
     (101)->(111);
-    (102)->(112);
     (103)->(113);
     (104)->(114);
-    (105)->(115);
-    (131)--(132)--(133);
-    (131)->(141);
-    (132)->(142);
-    (133)->(143)
+    (141)<-(131)--(133)->(143);
 };
 \end{tcbdiagram}
 %*******************************************************************************************************************************%
 %*******************************************************************************************************************************%
 %*******************************************************************************************************************************%
 \endinput 
+%    (parentdot)->(parentdir)->(pctdata)->(organizeddata)--(top3)--(top1)->(001)--(01)->(11)->(21)--(31)--(30)->(40)->(50);
+%    (top3)--(top4)->(004)--(04)--(05)->(15)->(25);
+%    (04)--(03)->(13)->(23);
+%    (31)--(32)->(42)->(52)--(62)->(72)--(82)->(92)--(102)->(112)->(122)--(132)->(142);
+%    %(61)--(62)--(63)--(64)--(65)->(75);
+%    %(61)->(71);
+%    (71)<-(61)--(65)->(75);
+%    (63)->(73);
+%    (64)->(74);
+%    (82)--(83)->(93);
+%    (100)--(105);
+%    (100)->(110);
+%    (101)->(111);
+%    (103)->(113);
+%    (104)->(114);
+%    (105)->(115);
+%    (131)--(133);
+%    (131)->(141);
+%    (133)->(143);
+%    %(62)->(72);
+%    %(102)->(112);
+%    %(132)->(142);

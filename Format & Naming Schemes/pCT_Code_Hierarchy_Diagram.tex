@@ -1,7 +1,7 @@
 %-------------------------------------------------------------------------------------------------------------------------------%
 \Section(pCT code Hierarchy Diagram){\texttt{pCT\_code} Hierarchy Diagram}%
 [%
-	the diagram below shows the hierarchy of \docentry[constdir]{pCT\_code} directories listed and described in the \autohyperlink[type=Subsection]{pCT Code Hierarchy} section, including the clones of the most commonly used GitHub accounts/repositories relevant to pCT (described in the \autohyperlink[type=Section]{GitHub Accounts/Repositories} section).%
+    the diagram below shows the hierarchy of \docentry[constdir]{pCT\_code} directories listed and described in the \autohyperlink[type=Subsection]{pCT Code Hierarchy} section, including the clones of the most commonly used GitHub accounts/repositories relevant to pCT (described in the \autohyperlink[type=Section]{GitHub Accounts/Repositories} section).%
 ]%
 %-------------------------------------------------------------------------------------------------------------------------------%
 %-------------------------------------------------------------------------------------------------------------------------------%
@@ -13,25 +13,25 @@
 {%
 &\node(parentdot)[pt]{};\\
 &\node(01)[D]{ion};\\
-&\node(11)[D]{pCT\_code};\\
-\node(20)[pt]{};&\node(21)[pt]{};&&\node(23)[pt]{};\\
+&\node(11)[D]{pCT\_code};\\[-1mm]
+\node(20)[pt]{};&\node(21)[pt]{};&&\node(23)[pt]{};\\[2mm]
 \node(30)[D]{user\_code};    &&&\node(33)[D]{git};\\[0mm]
-\node(40)[D]{$<$username$>$};&\node(41)[pt]{};&\node(42)[pt]{};&\node(43)[pt]{};&&\node(45)[pt]{};\\
-&\node(51)[D]{BlakeSchultze};&\node(52)[D]{BaylorICTHUS};&&&\node(55)[D]{pCT-collaboration};\\[1mm]
-\node(60)[pt]{};&\node(61)[pt]{};&\node(62)[F]{pCT\_Reconstruction};&\node(63)[pt]{};&\node(64)[pt]{};&\node(65)[pt]{};&\node(66)[pt]{};&\node(67)[pt]{};\\[1mm]
-\node(70)[F]{pCT\_Reconstruction};&\node(71)[F]{pCT\_Documentation};&&\node(73)[F]{pCT-docs};&\node(74)[F]{pCT\_Tools};&\node(75)[F]{Reconstruction\_BU};&\node(76)[F]{pct-recon-copy};&\node(77)[F]{Preprocessing};\\[1mm]
+\node(40)[D]{$<$username$>$};&&&&&\\[0mm]
+\node(vdots)[textonly]{$\vdots$};&&&&&\\[2mm]
+\node(50)[pt]{};&\node(51)[pt]{};&&\node(53)[pt]{};&&\node(55)[pt]{};\\[2mm]
+\node(60)[D]{BlakeSchultze};&\node(61)[D]{BaylorICTHUS};&&&&\node(65)[D]{pCT-collaboration};\\[-1mm]
+&&&\node(73)[pt]{};&\node(74)[pt]{};&\node(75)[pt]{};&\node(76)[pt]{};&\node(77)[pt]{};\\[2mm]
+\node(80)[F]{pCT\_Reconstruction};&\node(81)[F]{pCT\_Reconstruction};&&\node(83)[F]{pCT\_Documentation};&\node(84)[F]{pCT\_Tools};&\node(85)[F]{Kodiak\_Reconstruction};&\node(86)[F]{pct-recon-copy};&\node(87)[F]{Preprocessing};\\[1mm]
 };
 \graph[use existing nodes, edge label, edges=thick]
 {
-(parentdot)->(01)->(11)->(21)--(20)->(30)->(40);
-(21)--(23)->(33)--(43)--(42)--(41)->(51)--(61)--(60)->(70);
-(43)--(45)->(55)--(65)--(63)--(67)->(77);
-(42)->(52)->(62);
-(61)->(71);
-(63)->(73);
-(64)->(74);
-(65)->(75);
-(66)->(76);
+(parentdot)->(01)->(11)--(21);
+(vdots)<-(40)<-(30)<-(20)--(23)->(33)--(53)--(50)->(60)->(80);
+(53)--(55)->(65)--(75)->(85);
+(83)<-(73)--(77)->(87)
+(51)->(61)->(81);
+(74)->(84);
+(76)->(86);
 };
 \end{tcbdiagram}
 %*******************************************************************************************************************************%

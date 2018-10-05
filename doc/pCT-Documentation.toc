@@ -1,0 +1,9 @@
+\nobreakspace {}\hfill \textbf {Page}\par \vspace \medskipamount 
+\contentsline {Part}{{\numberline {\raisebox {10pt}{\hypertarget {PartI}{}}Part I : }}Image Reconstruction}{1}{section*.5}
+\contentsline {Chapter}{{\numberline {\raisebox {10pt}{\hypertarget {Chapter1}{}}1}}Image Reconstruction Algorithms}{2}{section*.7}
+\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section1.1}{}}1.1}}Initial Iterate}{2}{section*.8}
+\contentsline {Section}{{\numberline {\raisebox {10pt}{\hypertarget {Section1.2}{}}1.2}}Iterative Projection Algorithms}{2}{section*.9}
+\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection1.2.1}{}}1.2.1}}Sequential Projection Algorithms}{2}{section*.10}
+\contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection1.2.2}{}}1.2.2}}Block-Iterative Projection Algorithms}{3}{section*.12}
+\contentsfinish 
+\contentsline {backmatter}{\hspace {-1.5em}\numberline {\raisebox {10pt}{\hypertarget {Index}{}}}Index}{i}{section*.14}

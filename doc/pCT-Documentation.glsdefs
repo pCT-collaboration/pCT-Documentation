@@ -1,0 +1,1140 @@
+\ifglsentryexists{pi}{}%
+{%
+\gls@defglossaryentry{pi}%
+{%
+name={\ensuremath {\pi }},%
+sort={pi},%
+type={main},%
+first={\protect \ensuremath {\pi }},%
+firstplural={\protect \ensuremath {\pi }s},%
+text={\protect \ensuremath {\pi }},%
+plural={\protect \ensuremath {\pi }s},%
+description={ratio of circumference of circle to its diameter},%
+descriptionplural={ratio of circumference of circle to its diameter},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{real number}{}%
+{%
+\gls@defglossaryentry{real number}%
+{%
+name={real number},%
+sort={real number},%
+type={main},%
+first={real number},%
+firstplural={real numbers},%
+text={real number},%
+plural={real numbers},%
+description={include both rational numbers, such as $42$ and $\frac {-23}{129}$, and irrational numbers, such as $\pi $ and the},%
+descriptionplural={include both rational numbers, such as $42$ and $\frac {-23}{129}$, and irrational numbers, such as $\pi $ and the},%
+symbol={\ensuremath {\fakebold {\mathbb {R}}}},%
+symbolplural={\ensuremath {\fakebold {\mathbb {R}}}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Linux}{}%
+{%
+\gls@defglossaryentry{Linux}%
+{%
+name={Linux},%
+sort={Linux},%
+type={main},%
+first={Linux},%
+firstplural={Linuces},%
+text={Linux},%
+plural={Linuces},%
+description={is a generic term referring to the family of Unix-like computer operating systems that use the Linux kernel},%
+descriptionplural={is a generic term referring to the family of Unix-like computer operating systems that use the Linux kernel},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{naiive}{}%
+{%
+\gls@defglossaryentry{naiive}%
+{%
+name={na\"{\i }ve},%
+sort={naive},%
+type={main},%
+first={na\"{\i }ve},%
+firstplural={na\"{\i }ves},%
+text={na\"{\i }ve},%
+plural={na\"{\i }ves},%
+description={is a French loanword (adjective, form of na\"{\i }f) indicating having or showing a lack of experience, understanding or sophistication},%
+descriptionplural={is a French loanword (adjective, form of na\"{\i }f) indicating having or showing a lack of experience, understanding or sophistication},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{computers}{}%
+{%
+\gls@defglossaryentry{computers}%
+{%
+name={computers},%
+sort={computers},%
+type={main},%
+first={computers},%
+firstplural={computerss},%
+text={computers},%
+plural={computerss},%
+description={is a programmable machine that receives input, stores and manipulates data, and provides output in a useful format},%
+descriptionplural={is a programmable machine that receives input, stores and manipulates data, and provides output in a useful format},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{acr-OWD}{}%
+{%
+\gls@defglossaryentry{acr-OWD}%
+{%
+name={OWD},%
+sort={OWD},%
+type={acronym},%
+first={One-Way Delay (OWD)},%
+firstplural={One-Way Delays (OWDs)},%
+text={OWD},%
+plural={OWDs},%
+description={One-Way Delay},%
+descriptionplural={One-Way Delay},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{gls-OWD}{}%
+{%
+\gls@defglossaryentry{gls-OWD}%
+{%
+name={One-Way Delay},%
+sort={One-Way Delay},%
+type={main},%
+first={One-Way Delay (OWD)},%
+firstplural={One-Way Delays (OWDs)},%
+text={OWD},%
+plural={OWDs},%
+description={The time a packet uses through a network from one host to another},%
+descriptionplural={The time a packet uses through a network from one host to another},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{acr-nsf}{}%
+{%
+\gls@defglossaryentry{acr-nsf}%
+{%
+name={NSF},%
+sort={NSF},%
+type={acronym},%
+first={National Science Foundation (NSF)},%
+firstplural={National Science Foundations (NSFs)},%
+text={NSF},%
+plural={NSFs},%
+description={National Science Foundation},%
+descriptionplural={National Science Foundation},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{gls-nsf}{}%
+{%
+\gls@defglossaryentry{gls-nsf}%
+{%
+name={National Science Foundation},%
+sort={National Science Foundation},%
+type={main},%
+first={National Science Foundation (NSF)},%
+firstplural={National Science Foundations (NSFs)},%
+text={NSF},%
+plural={NSFs},%
+description={United States government agency that supports fundamental research and education in all the non-medical fields of science and engineering},%
+descriptionplural={United States government agency that supports fundamental research and education in all the non-medical fields of science and engineering},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{acr-cfrip}{}%
+{%
+\gls@defglossaryentry{acr-cfrip}%
+{%
+name={CFRIP},%
+sort={CFRIP},%
+type={acronym},%
+first={Collaborative Faculty Research Investment Program (CFRIP)},%
+firstplural={Collaborative Faculty Research Investment Programs (CFRIPs)},%
+text={CFRIP},%
+plural={CFRIPs},%
+description={Collaborative Faculty Research Investment Program},%
+descriptionplural={Collaborative Faculty Research Investment Program},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{gls-cfrip}{}%
+{%
+\gls@defglossaryentry{gls-cfrip}%
+{%
+name={Collaborative Faculty Research Investment Program},%
+sort={Collaborative Faculty Research Investment Program},%
+type={main},%
+first={Collaborative Faculty Research Investment Program (CFRIP)},%
+firstplural={Collaborative Faculty Research Investment Programs (CFRIPs)},%
+text={CFRIP},%
+plural={CFRIPs},%
+description={is a joint Baylor University, Baylor Scott \& White Health, and Baylor College of Medicine program providing seed funding for inter-institutional/disciplinary research projects},%
+descriptionplural={is a joint Baylor University, Baylor Scott \& White Health, and Baylor College of Medicine program providing seed funding for inter-institutional/disciplinary research projects},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{acr-bric}{}%
+{%
+\gls@defglossaryentry{acr-bric}%
+{%
+name={BRIC},%
+sort={BRIC},%
+type={acronym},%
+first={Baylor Research and Innovation Collaborative (BRIC)},%
+firstplural={Baylor Research and Innovation Collaboratives (BRICs)},%
+text={BRIC},%
+plural={BRICs},%
+description={Baylor Research and Innovation Collaborative},%
+descriptionplural={Baylor Research and Innovation Collaborative},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{gls-bric}{}%
+{%
+\gls@defglossaryentry{gls-bric}%
+{%
+name={Baylor Research and Innovation Collaborative},%
+sort={Baylor Research and Innovation Collaborative},%
+type={main},%
+first={Baylor Research and Innovation Collaborative (BRIC)},%
+firstplural={Baylor Research and Innovation Collaboratives (BRICs)},%
+text={BRIC},%
+plural={BRICs},%
+description={is Baylor University's research facility located about a mile from the main campus},%
+descriptionplural={is Baylor University's research facility located about a mile from the main campus},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{llu}{}%
+{%
+\gls@defglossaryentry{llu}%
+{%
+name={LLU},%
+sort={LLU},%
+type={acronym},%
+first={Loma Linda University\glsspace (LLU)},%
+firstplural={Loma Linda Universitys\glsspace (LLUs)},%
+text={LLU},%
+plural={LLUs},%
+description={Loma Linda University},%
+descriptionplural={Loma Linda University\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Loma Linda University},%
+longplural={Loma Linda Universitys},%
+short={LLU},%
+shortplural={LLUs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{lvm}{}%
+{%
+\gls@defglossaryentry{lvm}%
+{%
+name={LVM},%
+sort={LVM},%
+type={acronym},%
+first={Logical Volume Manager\glsspace (LVM)},%
+firstplural={Logical Volume Managers\glsspace (LVMs)},%
+text={LVM},%
+plural={LVMs},%
+description={Logical Volume Manager},%
+descriptionplural={Logical Volume Manager\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Logical Volume Manager},%
+longplural={Logical Volume Managers},%
+short={LVM},%
+shortplural={LVMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{fpsLabels}{}%
+{%
+\gls@defglossaryentry{fpsLabels}%
+{%
+name={FPSs},%
+sort={FPSs},%
+type={acronym},%
+first={Frame per Seconds\glsspace (FPSs)},%
+firstplural={Frames per Seconds\glsspace (FPSss)},%
+text={FPSs},%
+plural={FPSss},%
+description={Frame per Seconds},%
+descriptionplural={Frames per Seconds},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Frame per Seconds},%
+longplural={Frames per Seconds},%
+short={FPSs},%
+shortplural={FPSss},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{fpsLabel}{}%
+{%
+\gls@defglossaryentry{fpsLabel}%
+{%
+name={FPS},%
+sort={FPS},%
+type={acronym},%
+first={Frame per Second\glsspace (FPS)},%
+firstplural={Frames per Second\glsspace (FPSs)},%
+text={FPS},%
+plural={FPSs},%
+description={Frame per Second},%
+descriptionplural={Frames per Second},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Frame per Second},%
+longplural={Frames per Second},%
+short={FPS},%
+shortplural={FPSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{FBP}{}%
+{%
+\gls@defglossaryentry{FBP}%
+{%
+name={FBP},%
+sort={FBP},%
+type={acronym},%
+first={filtered backprojection\glsspace (FBP)},%
+firstplural={filtered backprojections\glsspace (FBPs)},%
+text={FBP},%
+plural={FBPs},%
+description={filtered backprojection},%
+descriptionplural={filtered backprojection\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={filtered backprojection},%
+longplural={filtered backprojections},%
+short={FBP},%
+shortplural={FBPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{pCT}{}%
+{%
+\gls@defglossaryentry{pCT}%
+{%
+name={pCT},%
+sort={pCT},%
+type={acronym},%
+first={proton computed tomography\glsspace (pCT)},%
+firstplural={proton computed tomographys\glsspace (pCTs)},%
+text={pCT},%
+plural={pCTs},%
+description={proton computed tomography},%
+descriptionplural={proton computed tomography\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={proton computed tomography},%
+longplural={proton computed tomographys},%
+short={pCT},%
+shortplural={pCTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{protonCT}{}%
+{%
+\gls@defglossaryentry{protonCT}%
+{%
+name={proton CT},%
+sort={proton CT},%
+type={acronym},%
+first={proton computed tomography\glsspace (proton CT)},%
+firstplural={proton computed tomographys\glsspace (proton CTs)},%
+text={proton CT},%
+plural={proton CTs},%
+description={proton computed tomography},%
+descriptionplural={proton computed tomography\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={proton computed tomography},%
+longplural={proton computed tomographys},%
+short={proton CT},%
+shortplural={proton CTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{wepl}{}%
+{%
+\gls@defglossaryentry{wepl}%
+{%
+name={WEPL},%
+sort={WEPL},%
+type={acronym},%
+first={water-equivalent path length\glsspace (WEPL)},%
+firstplural={water-equivalent path lengths\glsspace (WEPLs)},%
+text={WEPL},%
+plural={WEPLs},%
+description={water-equivalent path length},%
+descriptionplural={water-equivalent path length\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={water-equivalent path length},%
+longplural={water-equivalent path lengths},%
+short={WEPL},%
+shortplural={WEPLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{sc}{}%
+{%
+\gls@defglossaryentry{sc}%
+{%
+name={WEPL},%
+sort={WEPL},%
+type={acronym},%
+first={space/silhouette carving\glsspace (WEPL)},%
+firstplural={space/silhouette carvings\glsspace (WEPLs)},%
+text={WEPL},%
+plural={WEPLs},%
+description={space/silhouette carving},%
+descriptionplural={space/silhouette carving\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={space/silhouette carving},%
+longplural={space/silhouette carvings},%
+short={WEPL},%
+shortplural={WEPLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{msc}{}%
+{%
+\gls@defglossaryentry{msc}%
+{%
+name={WEPL},%
+sort={WEPL},%
+type={acronym},%
+first={modified space/silhouette carving\glsspace (WEPL)},%
+firstplural={modified space/silhouette carvings\glsspace (WEPLs)},%
+text={WEPL},%
+plural={WEPLs},%
+description={modified space/silhouette carving},%
+descriptionplural={modified space/silhouette carving\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={modified space/silhouette carving},%
+longplural={modified space/silhouette carvings},%
+short={WEPL},%
+shortplural={WEPLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{sm}{}%
+{%
+\gls@defglossaryentry{sm}%
+{%
+name={WEPL},%
+sort={WEPL},%
+type={acronym},%
+first={space/silhouette modeling\glsspace (WEPL)},%
+firstplural={space/silhouette modelings\glsspace (WEPLs)},%
+text={WEPL},%
+plural={WEPLs},%
+description={space/silhouette modeling},%
+descriptionplural={space/silhouette modeling\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={space/silhouette modeling},%
+longplural={space/silhouette modelings},%
+short={WEPL},%
+shortplural={WEPLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{bip}{}%
+{%
+\gls@defglossaryentry{bip}%
+{%
+name={BIP},%
+sort={BIP},%
+type={acronym},%
+first={block-iterative projections\glsspace (BIP)},%
+firstplural={block-iterative projectionss\glsspace (BIPs)},%
+text={BIP},%
+plural={BIPs},%
+description={block-iterative projections},%
+descriptionplural={block-iterative projections\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={block-iterative projections},%
+longplural={block-iterative projectionss},%
+short={BIP},%
+shortplural={BIPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{bicav}{}%
+{%
+\gls@defglossaryentry{bicav}%
+{%
+name={BICAV},%
+sort={BICAV},%
+type={acronym},%
+first={block-iterative component averaging\glsspace (BICAV)},%
+firstplural={block-iterative component averagings\glsspace (BICAVs)},%
+text={BICAV},%
+plural={BICAVs},%
+description={block-iterative component averaging},%
+descriptionplural={block-iterative component averaging\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={block-iterative component averaging},%
+longplural={block-iterative component averagings},%
+short={BICAV},%
+shortplural={BICAVs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{sart}{}%
+{%
+\gls@defglossaryentry{sart}%
+{%
+name={SART},%
+sort={SART},%
+type={acronym},%
+first={simultaneous algebraic reconstruction technique\glsspace (SART)},%
+firstplural={simultaneous algebraic reconstruction techniques\glsspace (SARTs)},%
+text={SART},%
+plural={SARTs},%
+description={simultaneous algebraic reconstruction technique},%
+descriptionplural={simultaneous algebraic reconstruction technique\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={simultaneous algebraic reconstruction technique},%
+longplural={simultaneous algebraic reconstruction techniques},%
+short={SART},%
+shortplural={SARTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ossart}{}%
+{%
+\gls@defglossaryentry{ossart}%
+{%
+name={OS-SART},%
+sort={OS-SART},%
+type={acronym},%
+first={ordered subsets simultaneous algebraic reconstruction technique\glsspace (OS-SART)},%
+firstplural={ordered subsets simultaneous algebraic reconstruction techniques\glsspace (OS-SARTs)},%
+text={OS-SART},%
+plural={OS-SARTs},%
+description={ordered subsets simultaneous algebraic reconstruction technique},%
+descriptionplural={ordered subsets simultaneous algebraic reconstruction technique\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={ordered subsets simultaneous algebraic reconstruction technique},%
+longplural={ordered subsets simultaneous algebraic reconstruction techniques},%
+short={OS-SART},%
+shortplural={OS-SARTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{drop}{}%
+{%
+\gls@defglossaryentry{drop}%
+{%
+name={DROP},%
+sort={DROP},%
+type={acronym},%
+first={diagonally-relaxed orthogonal projections\glsspace (DROP)},%
+firstplural={diagonally-relaxed orthogonal projectionss\glsspace (DROPs)},%
+text={DROP},%
+plural={DROPs},%
+description={diagonally-relaxed orthogonal projections},%
+descriptionplural={diagonally-relaxed orthogonal projections\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={diagonally-relaxed orthogonal projections},%
+longplural={diagonally-relaxed orthogonal projectionss},%
+short={DROP},%
+shortplural={DROPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{sap}{}%
+{%
+\gls@defglossaryentry{sap}%
+{%
+name={SAP},%
+sort={SAP},%
+type={acronym},%
+first={string-averaging projections\glsspace (SAP)},%
+firstplural={string-averaging projectionss\glsspace (SAPs)},%
+text={SAP},%
+plural={SAPs},%
+description={string-averaging projections},%
+descriptionplural={string-averaging projections\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={string-averaging projections},%
+longplural={string-averaging projectionss},%
+short={SAP},%
+shortplural={SAPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{carp}{}%
+{%
+\gls@defglossaryentry{carp}%
+{%
+name={CARP},%
+sort={CARP},%
+type={acronym},%
+first={component-averaged row projections\glsspace (CARP)},%
+firstplural={component-averaged row projectionss\glsspace (CARPs)},%
+text={CARP},%
+plural={CARPs},%
+description={component-averaged row projections},%
+descriptionplural={component-averaged row projections\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={component-averaged row projections},%
+longplural={component-averaged row projectionss},%
+short={CARP},%
+shortplural={CARPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{tvs}{}%
+{%
+\gls@defglossaryentry{tvs}%
+{%
+name={TVS},%
+sort={TVS},%
+type={acronym},%
+first={total variation superiorization\glsspace (TVS)},%
+firstplural={total variation superiorizations\glsspace (TVSs)},%
+text={TVS},%
+plural={TVSs},%
+description={total variation superiorization},%
+descriptionplural={total variation superiorization\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={total variation superiorization},%
+longplural={total variation superiorizations},%
+short={TVS},%
+shortplural={TVSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ssd}{}%
+{%
+\gls@defglossaryentry{ssd}%
+{%
+name={SSD},%
+sort={SSD},%
+type={acronym},%
+first={silicon strip detector\glsspace (SSD)},%
+firstplural={silicon strip detectors\glsspace (SSDs)},%
+text={SSD},%
+plural={SSDs},%
+description={silicon strip detector},%
+descriptionplural={silicon strip detector\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={silicon strip detector},%
+longplural={silicon strip detectors},%
+short={SSD},%
+shortplural={SSDs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ssdrive}{}%
+{%
+\gls@defglossaryentry{ssdrive}%
+{%
+name={SSD},%
+sort={SSD},%
+type={acronym},%
+first={solid-state drive\glsspace (SSD)},%
+firstplural={solid-state drives\glsspace (SSDs)},%
+text={SSD},%
+plural={SSDs},%
+description={solid-state drive},%
+descriptionplural={solid-state drive\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={solid-state drive},%
+longplural={solid-state drives},%
+short={SSD},%
+shortplural={SSDs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{sym:m}{}%
+{%
+\gls@defglossaryentry{sym:m}%
+{%
+name={$m$},%
+sort={$m$},%
+type={symbols},%
+first={m},%
+firstplural={ms},%
+text={m},%
+plural={ms},%
+description={symb m},%
+descriptionplural={symb m},%
+symbol={$m$},%
+symbolplural={$m$},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{sym:m2}{}%
+{%
+\gls@defglossaryentry{sym:m2}%
+{%
+name={$\widetilde {m}$},%
+sort={$\widetilde {m}$},%
+type={symbols},%
+first={\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\protect \textstyle m$}\mathaccent "0365{m}},%
+firstplural={\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\protect \textstyle m$}\mathaccent "0365{m}s},%
+text={\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\protect \textstyle m$}\mathaccent "0365{m}},%
+plural={\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\protect \textstyle m$}\mathaccent "0365{m}s},%
+description={symbol m2},%
+descriptionplural={symbol m2},%
+symbol={$\widetilde {m}$},%
+symbolplural={$\widetilde {m}$},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{sym:f}{}%
+{%
+\gls@defglossaryentry{sym:f}%
+{%
+name={function},%
+sort={function},%
+type={symbols},%
+first={f},%
+firstplural={fs},%
+text={f},%
+plural={fs},%
+description={This is a function},%
+descriptionplural={This is a function},%
+symbol={$f(\cdot )$},%
+symbolplural={$f(\cdot )$},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{sym:ohm}{}%
+{%
+\gls@defglossaryentry{sym:ohm}%
+{%
+name={ohm},%
+sort={ohm},%
+type={symbols},%
+first={ohm},%
+firstplural={ohms},%
+text={ohm},%
+plural={ohms},%
+description={unit of electrical resistance},%
+descriptionplural={unit of electrical resistance},%
+symbol={\si {\ohm }},%
+symbolplural={\si {\ohm }},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
