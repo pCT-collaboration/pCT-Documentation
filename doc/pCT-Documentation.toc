@@ -6,4 +6,3 @@
 \contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection1.2.1}{}}1.2.1}}Sequential Projection Algorithms}{2}{section*.10}
 \contentsline {Subsection}{{\numberline {\raisebox {10pt}{\hypertarget {Subsection1.2.2}{}}1.2.2}}Block-Iterative Projection Algorithms}{3}{section*.12}
 \contentsfinish 
-\contentsline {backmatter}{\hspace {-1.5em}\numberline {\raisebox {10pt}{\hypertarget {Index}{}}}Index}{i}{section*.14}
