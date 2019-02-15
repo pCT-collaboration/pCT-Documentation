@@ -1,0 +1,200 @@
+%-------------------------------------------------------------------------------------------------------------------------------%
+%*******************************************************************************************************************************%
+%**************************************************** `IEEEtrans' Template *****************************************************%
+%*******************************************************************************************************************************%
+%-------------------------------------------------------------------------------------------------------------------------------%
+% This template provides authors with a basic TeX document configuration for IEEE Transaction publications, establishing a set
+% of basic package dependencies, BibTeX bibliography configuration, and control sequence definitions useful in the publication
+% and review process. IEEE specific control sequences and environments are provided for defining/configuring the titling,
+% authorship, and abstract/keywords and inserting these into the document (variations of '\maketitle' etc.). IEEE also provides
+% '\IEEEPARstart{F}{irst}' for special handling of the 1st word of the 1st paragraph.
+%
+%
+%-------------------------------------------------------------------------------------------------------------------------------%
+%*******************************************************************************************************************************%
+%*********************************** Declare document class/options and package dependencies ***********************************%
+%*******************************************************************************************************************************%
+%-------------------------------------------------------------------------------------------------------------------------------%
+%\documentclass{iopart}
+\documentclass[journal]{IEEEtran}% journal, transmag
+\usepackage{fixltx2e}
+\usepackage{xcolor}                         % Add access to predefined set of named colors & macros (http://ctan.org/pkg/xcolor)
+\usepackage[pdftex]{graphicx}               % Add graphics inclusion/positioning environments & macros
+%\usepackage{dblfloatfix}
+%\usepackage{caption}                       % Add figure/table captioning w/ numbering and ToC insertion
+\usepackage{amsbsy}                         % Add access to AMS math symbols/controls
+\usepackage{amsmath}                        % Add access to AMS math
+\interdisplaylinepenalty=2500
+\usepackage{enumitem}                       % Add enumerate/itemize listing environments & configuration controls
+%\usepackage{algorithm}
+\usepackage{algpseudocode}                  % Adds many algorithm writing styles and utilities for user definined styles
+%\usepackage{algorithm2e}                   % Adds many algorithm writing styles and utilities for user definined styles
+%\usepackage{algorithmic}                   % Adds many algorithm writing styles and utilities for user definined styles
+\usepackage{algorithmicx}                   % Adds many algorithm writing styles and utilities for user definined styles
+%\algsetup{linenodelimiter=)}               % Define character that follows number label of each line of an algorithm
+\usepackage{datetime2}
+%-------------------------------------------------------------------------------------------------------------------------------%
+\usepackage{xr}                             % Reference figures etc. from another doc w/ \ref (e.g. Supplemental Materials)
+\externaldocument{IEEEtrans-template}    % Define .tex files containing figures/etc. to be referenced by \ref
+%-------------------------------------------------------------------------------------------------------------------------------%
+\ifCLASSOPTIONcompsoc
+% requires cite.sty v4.0 or later (November 2003)
+    \usepackage[nocompress,noadjust]{cite}
+\else
+    \usepackage[noadjust]{cite}
+\fi
+%\usepackage{natbib}
+%\usepackage{harvard}
+%\usepackage[backend=biber]{biblatex}
+%\addbibresource{pct.bib}
+\bibliographystyle{IEEEtran}%ieeetr, agsm, dcu, jphysicsB
+%-------------------------------------------------------------------------------------------------------------------------------%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Preprint option/configuration controls ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%-------------------------------------------------------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------------------------------------%
+%\usepackage[printwatermark]{xwatermark}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{PREPRINT}
+%\SetWatermarkScale{0.65}
+%\SetWatermarkLightness{0.925}
+%\newwatermark*[allpages,color=red!50,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
+%-------------------------------------------------------------------------------------------------------------------------------%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ IEEE review revision marking utilities ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%-------------------------------------------------------------------------------------------------------------------------------%
+\usepackage[pdftex]{changebar}% http://ctan.org/pkg/changebar
+\def\cbmarkcolor{blue}
+\def\cbstartcolor{\cbstart\bgroup\color{\cbmarkcolor}}
+\def\cbendcolor{\egroup\cbend}
+%-------------------------------------------------------------------------------------------------------------------------------%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Common symbol/math macro definitions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%-------------------------------------------------------------------------------------------------------------------------------%
+\newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
+\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
+\newcommand{\degrees}{\ensuremath{^\circ}}
+\newcommand{\IEEEauthorblock}{\ensuremath{^\circ}}
+%\IEEEaftertitletext
+%\IEEEoverridecommandlockouts
+%\IEEEPARstart, \IEEEbiography, \IEEEbiographynophoto, \IEEEpubid, \IEEEpubidadjcol, \IEEEmembership
+%\IEEEcompsocitemizethanks and \IEEEcompsocthanksitem commands to provide for the \thanks (first footnote) itemized list used for author affiliations;
+%\IEEEauthorrefmark
+%\IEEEspecialpapernotice{(Invited Paper)}
+%\IEEEraisesectionheading{\section{Introduction}\label{sec:introduction}}
+%\IEEEilabelindent\IEEEilabelindentA\IEEEilabelindentB
+%\IEEEdlabelindent\IEEEelabelindent
+%\IEEEiednormlabelsep\IEEEiedmathlabelsep\IEEEusemathlabelsep
+%\IEEEQED\IEEEQEDopen\IEEEQEDclosed
+%\IEEElabelindentfactori\IEEElabelindentfactorvi
+%\IEEEiedtopsep
+%\IEEElabelindentfactori 1.0
+%\IEEElabelindentfactorii 0.75
+%\IEEElabelindentfactoriii 0.0
+%\IEEElabelindentfactoriv 0.0
+%\IEEElabelindentfactorv 0.0
+%\IEEElabelindentfactorvi 0.0
+
+%\IEEEnolabelindentfactortrue\IEEEnocalcleftmargintrue
+%\iedlabeljustifyl, \iedlabeljustifyc, and \iedlabeljustifyr can be used in a list control to justify the  list labels to the left, center, and right sides, respectively.
+%\IEEEiedlistdecl\renewcommand{\IEEEiedlistdecl}{\settowidth{\labelwidth}{Hello}}
+%\IEEEsetlabelwidth{X}
+%IEEEitemize, IEEEenumerate, IEEEdescription
+%  IEEEeqnarray,  IEEEeqnarraybox
+%\IEEEtriggeratref{10}
+%before the bibliography will insert a page break just before reference number ten. The command that is executed defaults
+%to \newpage. However, this can be changed via the \IEEEtriggercmd command:
+%\IEEEtriggercmd{\enlargethispage{-5.35in}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Electrical and Computer Engineering, Baylor University, Waco, TX 76798, USA, email: Blake\_Schultze@baylor.edu, Paniz\_Karbasi@baylor.edu, Keith\_Schubert@baylor.edu}
+%-------------------------------------------------------------------------------------------------------------------------------%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Document specific author macro definitions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%-------------------------------------------------------------------------------------------------------------------------------%
+\newcommand{\CatphanTM}{{Catphan\textsuperscript{\textregistered}}}
+\newcommand{\CTP}{{CTP404\space}}
+\newcommand{\CatphanTMlong}{{\CatphanTM}\CTP}
+\def\suppmats{Supplemental Materials}
+%-------------------------------------------------------------------------------------------------------------------------------%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Document Editing Configurations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%-------------------------------------------------------------------------------------------------------------------------------%
+%\openup 1em
+%\onecolumn
+%\fontsize{18pt}{\baselineskip}\selectfont%
+%-------------------------------------------------------------------------------------------------------------------------------%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Symbol macro definitions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%-------------------------------------------------------------------------------------------------------------------------------%
+\begin{document}
+\title{IEEE Transactions Journal Publication Template: Supplemental Materials}
+%------------------------------------------------------------------------------------------------------------------------------%
+\author%
+{%
+\IEEEauthorblockN%
+{%
+  Blake~Schultze\IEEEauthorrefmark{1},
+  Yair~Censor\IEEEauthorrefmark{2},
+  Paniz~Karbasi\IEEEauthorrefmark{1},
+  Keith~E.~Schubert\IEEEauthorrefmark{1}~\IEEEmembership{Senior Member,~IEEE}, and
+  Reinhard~W.~Schulte\IEEEauthorrefmark{3}~\IEEEmembership{Member,~IEEE}%
+}
+
+\IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Electrical and Computer Engineering, Baylor University, Waco, TX 76798, USA, email: Blake\_Schultze@baylor.edu, Paniz\_Karbasi@baylor.edu, Keith\_Schubert@baylor.edu}
+
+\IEEEauthorblockA{\IEEEauthorrefmark{2}Department of Mathematics, University of Haifa, Haifa 3498838, Israel, email: yair@math.haifa.ac.il}
+
+\IEEEauthorblockA{\IEEEauthorrefmark{3}Department of Basic Sciences, Division of Biomedical Engineering Sciences, Loma Linda University, Loma Linda, CA 92350 USA, email: rschulte@llu.edu}%
+}
+%\author{Michael Shell, {Member,IEEE,} John Doe, {Fellow,OSA,} and Jane Doe, {Life Fellow,IEEE}%
+%\IEEEcompsocitemizethanks{\IEEEcompsocthanksitem M. Shell is with the Georgia Institute of Technology.
+%\IEEEcompsocthanksitem J. Doe and J. Doe are with Anonymous University.}%
+%\thanks{Manuscript received January 20, 2002; revised August 26, 2015.}}
+\IEEEaftertitletext{\textbf{NOTE: This work has been submitted to the IEEE for possible publication. Copyright may be transferred without notice, after which this version may no longer be accessible.}}
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Transactions on Magnetics Journals}
+%-------------------------------------------------------------------------------------------------------------------------------%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Abstract/Keywords Environments ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%-------------------------------------------------------------------------------------------------------------------------------%
+%\IEEEtitleabstractindextext%
+{%
+%\begin{abstract}
+%\end{abstract}
+%%------------------------------------------------------------------------------------------------------------------------------%
+%\begin{IEEEkeywords}
+%\end{IEEEkeywords}
+%}
+%------------------------------------------------------------------------------------------------------------------------------%
+\maketitle
+\IEEEdisplaynontitleabstractindextext
+\IEEEpeerreviewmaketitle
+%------------------------------------------------------------------------------------------------------------------------------%
+\section{Supplemental Materials}\label{sec:suppmat}
+\IEEEPARstart{F}{irst} word of paragraph handling
+%-------------------------------------------------------------------------------------------------------------------------
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|}\hline
+                & Air       &PMP  & LDPE    &Epoxy  \\\hline
+Simulated       & 0.0013    &0.877 &0.9973  &1.024       \\
+Experimental    & 0.0013    &0.883  &0.979  & 1.144     \\\hline\hline
+                &Polystyrene &Acrylic &Delrin   &   Teflon\\\hline
+Simulated       &1.0386     &   1.155 &  1.356   &  1.828 \\
+Experimental    &1.024      &   1.160  &  1.359   &  1.79\\\hline
+\end{tabular}
+\caption{RSP of the material inserts for the simulated and experimental \CatphanTMlong data sets}
+\label{tab:CTP404-RSP}
+\end{table}
+%-------------------------------------------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------------------------------------------------------%
+%\bibliography{pct}
+%\bibliography{C:/Users/Blake/Documents/GitHub/pCT-Collaboration/pCT_Documentation/Publications/pct}
+\end{document}
+%------------------------------------------------------------------------------------------------------------------------------% 

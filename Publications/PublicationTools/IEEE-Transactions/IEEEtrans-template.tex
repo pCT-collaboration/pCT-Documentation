@@ -1,0 +1,238 @@
+%-------------------------------------------------------------------------------------------------------------------------------%
+%*******************************************************************************************************************************%
+%**************************************************** `IEEEtrans' Template *****************************************************%
+%*******************************************************************************************************************************%
+%-------------------------------------------------------------------------------------------------------------------------------%
+% This TeX file provides authors with a basic template for generating manuscripts w/ the appropriate configurations/formatting for IEEE Transactions submissions. IEEE distributes the 'IEEEtran.cls' document class containing definitions of IEEE specific 'IEEE<x>' control sequences (CS) and environments for inserting many of the most common LaTeX2e macros/environments '<x>' (e.g. IEEEkeywords, IEEEeqnarray, etc.) w/ the appropriate IEEE Transactions manuscript formatting/appearance (for a detailed description of the 'IEEEtran.cls' document class and its usage, see http://texdoc.net/texmf-dist/doc/latex/IEEEtran/IEEEtran_HOWTO.pdf). The 'IEEEtrans-tools' package provided w/ this template configures useful third-party package macros/environments for IEEE submissions and provides additional tools that simplify the generation of IEEE manuscripts and other associated documents arising during the editing and review/resubmission process.
+%
+% Authors should begin by saving this template with the desired .tex file name and change the values of the example 'key=value' titling, authorship, and abstract/keywords options of the 'IEEEdocument' environment to match their own manuscript information (author affiliations and/or abstract/keywords may be omitted, but this is not recommended). This simplifies the process of specifying manuscript information and automatically enforces the appropriate formatting for the chosen 'doctype', incl. the standard IEEE formatting of the 1st word of the 1st \section ("Introduction" by default, optionally renamed w/ the 'introtitle' option). Additional control sequences an author wishes to use within their particular document may be defined in the corresponding "Document specific author macro definitions" section below.
+%
+% Authors should then set the 'IEEEtrans-tools' package options to specify (1) any external documents w/ content they wish to \ref reference, (2) various formatting options, and (3) the desired type of document to be generated (manuscript, markedup, preprint, arxiv). Sidebar, watermarking, and editing options only affect document formatting/appearance if they're appropriate for the selected 'doctype'; e.g. sidebars are only displayed if 'doctype=markedup', watermarking and the required IEEE submission note only appear if 'doctype=preprint/arxiv', and all watermarking/editing is suppressed if 'doctype=markedup/manuscript'. Hence, authors can use the same .tex file to generate each type of document by simply specifying the corresponding 'doctype' without (1) removing any sidebars inserted to mark modified text or (2) changing/removing any of the watermarking/sidebar/editing options.
+%
+%-------------------------------------------------------------------------------------------------------------------------------%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Document specific author macro definitions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%-------------------------------------------------------------------------------------------------------------------------------%
+\newcommand{\CatphanTM}{{Catphan\textsuperscript{\textregistered}}}
+\newcommand{\CTP}{{CTP404\space}}
+\newcommand{\CatphanTMlong}{{\CatphanTM}\CTP}
+\def\suppmats{Supplemental Materials}
+%-------------------------------------------------------------------------------------------------------------------------------%
+%*******************************************************************************************************************************%
+%*********************************** Declare document class/options and package dependencies ***********************************%
+%*******************************************************************************************************************************%
+%-------------------------------------------------------------------------------------------------------------------------------%
+% IEEEtran class options: <letter/a4/cs>paper, 9-12pt, <one/two>column, <one/two>side, draft<+cls/clsnofoot>/final, journal/conference/technote/peerreview<+ca>, transmag, nofonttune, captionsoff, comsoc/compsoc, romanappendices
+\documentclass[letterpaper,10pt,twocolumn,oneside,final,journal]{IEEEtran}
+%-------------------------------------------------------------------------------------------------------------------------------%
+\RequirePackage%
+[
+    externaldocs={IEEEtrans-SupplementalMaterials}, % CSV list of external .tex files w/ \ref targets (e.g. Supplemental Materials)
+    algdelims=(-),                                  % Set chars surrounding algorithm line #s ('-' represents the #, DEFAULT=-:)
+    watermarktext={PREPRINT},                       % Set watermark text
+    watermarkscale=0.65,                            % Set watermark text size as scale (0.0-1.0)
+    sidebarcolor=blue,                              % Set edited text color in reviewer response submissions (marked-up versions)
+    doctype=manuscript,                                 % Choose desired document type = manuscript, markedup, preprint, or arxiv
+    % Sets options 'edit=true' & other formatting options w/ 'key=value' pairs, alternative to specifying each option separately
+    editing={onecolumn=true,doublespace=true,fontsize=18pt}
+]%
+{IEEEtrans-tools}                                               % Package designed for pCT-collaboration submissions to IEEE
+%-------------------------------------------------------------------------------------------------------------------------------%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Document title/authorship/preamble construction ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%-------------------------------------------------------------------------------------------------------------------------------%
+\begin{IEEEdocument}
+[
+    new authors=%                           author->{name}{affiliation marker #}[IEEE membership, if applicable],
+    {
+        {John F. Doe}{Baylor}{h\_doe@mail.com},
+        {Joe Blow}{Baylor,LLU}{blow@mail.com}[Senior Member],
+        {Joe Fitz Blow}{LLU}{blow@mail.com}[Senior Member],
+        {Fred Barney Wilma Rubble}{LLU}{blow@mail.com}[Senior Member]%,
+        %{Keith Evan Schubert}{Baylor,LLU}{hoe@mail.com}[Senior Member]
+    },
+    new affiliations=%                       author->{name}{affiliation marker #}[IEEE membership, if applicable],
+    {
+        {SFU}{San Franisco University},
+        {CSUSB}{Cal State University San Bernardino},
+        {CSULB}{Cal State University Long Beach}
+    },
+    title={IEEE Transactions Journal Publication Template},
+    authors={Blake Edward Schultze, Yair Censor, Paniz Karbasi, Keith E. Schubert, Reinhard W. Schulte},
+    abstract={Insert abstract here.},
+    keywords={list, of, keywords, here},
+    introtitle={Introduction}
+]%
+%-------------------------------------------------------------------------------------------------------------------------------%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Document Body ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%-------------------------------------------------------------------------------------------------------------------------------%
+
+
+
+
+The first word of \cbenclose{the first paragraph is configured such that the first letter drops down to the second line and the remaining letters of the word are capitalized.}%
+\makeatletter\\%
+%\applytext@dotspaces{ab d.e.f fdg hhr. }\\
+%\meaning\IEEEaffiliation
+%\thebibdefs\\
+\@for\bibdef:=\thebibdefs\do{\bibdef\\}
+%\foreach\@csv@element [count=\@csv@elements] in \thebibdefs{\@csv@element,}\\
+\authorname@testopts{Keith Schubert,Keith E. Schubert,Keith Evan Schubert,Keith Evan Charles Schubert,Keith Charles E. Evan Charles Schubert}
+%-------------------------------------------------------------------------------------------------------------------------------%
+authorname: initials={none},show spaces=true, show dots=true\\
+\authorname[initials={none},show spaces=true, show dots=true]{Keith Schubert}\\
+\authorname[initials={none},show spaces=true, show dots=true]{Keith E. Schubert}\\
+\authorname[initials={none},show spaces=true, show dots=true]{Keith Evan Schubert}\\
+\authorname[initials={none},show spaces=true, show dots=true]{Keith Evan Charles Schubert}\\
+\authorname[initials={none},show spaces=true, show dots=true]{Keith Charles E. Evan Charles Schubert}\\
+\authorname[initials={none},show spaces=true, show dots=true]{Keith E. A. B. Schubert}\\
+%
+authorname: initials={none},show spaces=true, show dots=false\\
+\authorname[initials={none},show spaces=true, show dots=false]{Keith Schubert}\\
+\authorname[initials={none},show spaces=true, show dots=false]{Keith E. Schubert}\\
+\authorname[initials={none},show spaces=true, show dots=false]{Keith Evan Schubert}\\
+\authorname[initials={none},show spaces=true, show dots=false]{Keith Evan Charles Schubert}\\
+\authorname[initials={none},show spaces=true, show dots=false]{Keith Charles E. Evan Charles Schubert}\\
+\authorname[initials={none},show spaces=true, show dots=false]{Keith E. A. B. Schubert}\\
+%
+authorname: initials={none},show spaces=false, show dots=true\\
+\authorname[initials={none},show spaces=false, show dots=true]{Keith Schubert}\\
+\authorname[initials={none},show spaces=false, show dots=true]{Keith E. Schubert}\\
+\authorname[initials={none},show spaces=false, show dots=true]{Keith Evan Schubert}\\
+\authorname[initials={none},show spaces=false, show dots=true]{Keith Evan Charles Schubert}\\
+\authorname[initials={none},show spaces=false, show dots=true]{Keith Charles E. Evan Charles Schubert}\\
+\authorname[initials={none},show spaces=false, show dots=true]{Keith E. A. B. Schubert}\\
+%
+authorname: initials={none},show spaces=false, show dots=false\\
+\authorname[initials={none},show spaces=false, show dots=false]{Keith Schubert}\\
+\authorname[initials={none},show spaces=false, show dots=false]{Keith E. Schubert}\\
+\authorname[initials={none},show spaces=false, show dots=false]{Keith Evan Schubert}\\
+\authorname[initials={none},show spaces=false, show dots=false]{Keith Evan Charles Schubert}\\
+\authorname[initials={none},show spaces=false, show dots=false]{Keith Charles E. Evan Charles Schubert}\\
+\authorname[initials={none},show spaces=false, show dots=false]{Keith E. A. B. Schubert}\\
+%
+authorname: initials={middle},show spaces=true, show dots=true\\
+\authorname[initials={middle},show spaces=true, show dots=true]{Keith Schubert}\\
+\authorname[initials={middle},show spaces=true, show dots=true]{Keith E. Schubert}\\
+\authorname[initials={middle},show spaces=true, show dots=true]{Keith Evan Schubert}\\
+\authorname[initials={middle},show spaces=true, show dots=true]{Keith Evan Charles Schubert}\\
+\authorname[initials={middle},show spaces=true, show dots=true]{Keith Charles E. Evan Charles Schubert}\\
+\authorname[initials={middle},show spaces=true, show dots=true]{Keith E. A. B. Schubert}\\
+%
+authorname: initials={middle},show spaces=true, show dots=false\\
+\authorname[initials={middle},show spaces=true, show dots=false]{Keith Schubert}\\
+\authorname[initials={middle},show spaces=true, show dots=false]{Keith E. Schubert}\\
+\authorname[initials={middle},show spaces=true, show dots=false]{Keith Evan Schubert}\\
+\authorname[initials={middle},show spaces=true, show dots=false]{Keith Evan Charles Schubert}\\
+\authorname[initials={middle},show spaces=true, show dots=false]{Keith Charles E. Evan Charles Schubert}\\
+\authorname[initials={middle},show spaces=true, show dots=false]{Keith E. A. B. Schubert}\\
+%
+authorname: initials={middle},show spaces=false, show dots=true\\
+\authorname[initials={middle},show spaces=false, show dots=true]{Keith Schubert}\\
+\authorname[initials={middle},show spaces=false, show dots=true]{Keith E. Schubert}\\
+\authorname[initials={middle},show spaces=false, show dots=true]{Keith Evan Schubert}\\
+\authorname[initials={middle},show spaces=false, show dots=true]{Keith Evan Charles Schubert}\\
+\authorname[initials={middle},show spaces=false, show dots=true]{Keith Charles E. Evan Charles Schubert}\\
+\authorname[initials={middle},show spaces=false, show dots=true]{Keith E. A. B. Schubert}\\
+%
+authorname: initials={middle},show spaces=false, show dots=false\\
+\authorname[initials={middle},show spaces=false, show dots=false]{Keith Schubert}\\
+\authorname[initials={middle},show spaces=false, show dots=false]{Keith E. Schubert}\\
+\authorname[initials={middle},show spaces=false, show dots=false]{Keith Evan Schubert}\\
+\authorname[initials={middle},show spaces=false, show dots=false]{Keith Evan Charles Schubert}\\
+\authorname[initials={middle},show spaces=false, show dots=false]{Keith Charles E. Evan Charles Schubert}\\
+\authorname[initials={middle},show spaces=false, show dots=false]{Keith E. A. B. Schubert}\\
+%
+authorname: initials={first and middle},show spaces=true, show dots=true\\
+\authorname[initials={first and middle},show spaces=true, show dots=true]{Keith Schubert}\\
+\authorname[initials={first and middle},show spaces=true, show dots=true]{Keith E. Schubert}\\
+\authorname[initials={first and middle},show spaces=true, show dots=true]{Keith Evan Schubert}\\
+\authorname[initials={first and middle},show spaces=true, show dots=true]{Keith Evan Charles Schubert}\\
+\authorname[initials={first and middle},show spaces=true, show dots=true]{Keith Charles E. Evan Charles Schubert}\\
+\authorname[initials={first and middle},show spaces=true, show dots=true]{Keith E. A. B. Schubert}\\
+%
+authorname: initials={first and middle},show spaces=true, show dots=false\\
+\authorname[initials={first and middle},show spaces=true, show dots=false]{Keith Schubert}\\
+\authorname[initials={first and middle},show spaces=true, show dots=false]{Keith E. Schubert}\\
+\authorname[initials={first and middle},show spaces=true, show dots=false]{Keith Evan Schubert}\\
+\authorname[initials={first and middle},show spaces=true, show dots=false]{Keith Evan Charles Schubert}\\
+\authorname[initials={first and middle},show spaces=true, show dots=false]{Keith Charles E. Evan Charles Schubert}\\
+\authorname[initials={first and middle},show spaces=true, show dots=false]{Keith E. A. B. Schubert}\\
+%
+authorname: initials={first and middle},show spaces=false, show dots=true\\
+\authorname[initials={first and middle},show spaces=false, show dots=true]{Keith Schubert}\\
+\authorname[initials={first and middle},show spaces=false, show dots=true]{Keith E. Schubert}\\
+\authorname[initials={first and middle},show spaces=false, show dots=true]{Keith Evan Schubert}\\
+\authorname[initials={first and middle},show spaces=false, show dots=true]{Keith Evan Charles Schubert}\\
+\authorname[initials={first and middle},show spaces=false, show dots=true]{Keith Charles E. Evan Charles Schubert}\\
+\authorname[initials={first and middle},show spaces=false, show dots=true]{Keith E. A. B. Schubert}\\
+%
+authorname: initials={first and middle},show spaces=false, show dots=false\\
+\authorname[initials={first and middle},show spaces=false, show dots=false]{Keith Schubert}\\
+\authorname[initials={first and middle},show spaces=false, show dots=false]{Keith E. Schubert}\\
+\authorname[initials={first and middle},show spaces=false, show dots=false]{Keith Evan Schubert}\\
+\authorname[initials={first and middle},show spaces=false, show dots=false]{Keith Evan Charles Schubert}\\
+\authorname[initials={first and middle},show spaces=false, show dots=false]{Keith Charles E. Evan Charles Schubert}\\
+\authorname[initials={first and middle},show spaces=false, show dots=false]{Keith E. A. B. Schubert}\\
+@author@csname\\
+\@author@csname<Keith Schubert>\\
+\@author@csname<Keith E. Schubert>\\
+\@author@csname<Keith Evan Schubert>\\
+\@author@csname<Keith Evan Charles Schubert>\\
+\@author@csname<Keith Charles E. Evan Charles Schubert>\\
+\@author@csname<Keith E. A. B. Schubert>\\
+IEEEauthor@use\\
+\IEEEauthor@use<Keith Schubert(@affiliation)>\\
+\IEEEauthor@use<Keith E. Schubert(@affiliation)>\\
+\IEEEauthor@use<Keith Evan Schubert(@affiliation)>\\
+\IEEEauthor@use<Keith E. A. B. Schubert(@affiliation)>\\
+%\allowspaces
+%\print@affiliations@info\hfil\\\hfil
+%\ifcsvfirst{1}{T}{F}\\
+%\ifcsvfirst{2}{T}{F}\\
+%%\csvlistring{abc,def,ghi,jkl,mno}\\
+%%\csvtostring{abc,def,ghi,jkl,mno}\\
+%@num@authors=\@num@authors\\
+\makeatother\hfil\\\hfil
+%-------------------------------------------------------------------------------------------------------------------------------%
+    \begin{algorithmic}[1]%\label{alg:NTVS} % The number tells where the line numbering should start
+    \State set $k = 0$
+    \State set $\ell_{-1} = 0$
+    \State set $x^k = \bar{x}$
+    \While{$k<K\lparen$}
+    \State set $n = 0$
+    \State set $\ell_{k} = \textrm{rand}(k,\ell_{k-1})$\label{alg:lk}
+    \State set $x^{k,n} = x^k$
+    \While{$\boldsymbol{n < N}$}\label{alg:N}
+            \State set $v^{k,n}=\phi'(x^{k,n})$
+            \State set $\beta_{k,n} = \alpha^{\ell_{k}}$\label{alg:beta}
+            \State set $x^{k,n+1} = x^{k,n} + \beta_{k,n}v^{k,n}$
+            \State set $n = n + 1$
+            \State set $\ell_{k} = \ell_{k} + 1$
+        \EndWhile
+        \State set $x^{k+1} = P_T(x^{k,N})$
+        \State set $k = k + 1$
+    \EndWhile
+    \end{algorithmic}\label{alg:NTVS}
+%------------------------------------------------------------------------------------------------------------------------------%
+\nocite{*}
+%\bibliography{pct}
+\bibliography{%
+IEEEfull,%
+%IEEEabrv,%
+%C:/Users/Blake/Documents/GitHub/pCT-Collaboration/pCT_Documentation/Publications/PublicationTools/pctstrings,%
+%C:/Users/Blake/Documents/GitHub/pCT-Collaboration/pCT_Documentation/Publications/PublicationTools/abrvnames,%fullnames
+C:/Users/Blake/Documents/GitHub/pCT-Collaboration/pCT_Documentation/Publications/PublicationTools/journal-names,%journal-names, journal-abrvs, pubnames, pubabrvs
+C:/Users/Blake/Documents/GitHub/pCT-Collaboration/pCT_Documentation/Publications/PublicationTools/pct%
+}
+%\bibliography{IEEEabrv,C:/Users/Blake/Documents/GitHub/pCT-Collaboration/pCT_Documentation/Publications/PublicationTools/pct}
+\end{IEEEdocument}
+%-------------------------------------------------------------------------------------------------------------------------------%
+%*******************************************************************************************************************************%
+%*********************************************************** NOTES *************************************************************%
+%*******************************************************************************************************************************%
+%-------------------------------------------------------------------------------------------------------------------------------%
