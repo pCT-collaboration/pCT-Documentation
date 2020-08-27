@@ -203,7 +203,8 @@
     DOI =           {10.1016/j.nima.2015.07.066},
     URL =           {http://www.sciencedirect.com/science/article/pii/S0168900215009274},
     KEYWORDS =      {Proton computed tomography, Hadron therapy, WEPL, Proton detector, Range measurement, Head scanner},
-}
+    KEY =           {PubMed PMID: 26957679},
+}%PubMed Central PMCID: PMC4779442
 %------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{PBGHJ16,
     TITLE =         {An evaluation of spatial resolution of a prototype proton {CT} scanner},
@@ -221,7 +222,7 @@
 %------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{JBCGK16,
     TITLE =         {Results from a Prototype Proton-{CT} Head Scanner},
-    AUTHOR =        {Robert P. Johnson} # AND # BASHKIROV # AND #{George Coutrakon} # { and Valentina Giacometti and Paniz Karbasi and Nicolas T. Karonis and Caesar Ordo{\~n}ez and Mark Pankuch and Hartmut F.-W. Sadrozinski and Keith E. Schubert and Reinhard W. Schulte},
+    AUTHOR =        {Robert P. Johnson and Vladimir A. Bashkirov and George Coutrakon and Valentina Giacometti and Paniz Karbasi and Nicolas T. Karonis and Caesar Ordo{\~n}ez and Mark Pankuch and Hartmut F.-W. Sadrozinski and Keith E. Schubert and Reinhard W. Schulte},
     JOURNAL =       {Conference on the Application of Accelerators in Research and Industry, CAARI 2016, 30 October - 4 November 2016, Ft. Worth, TX, USA},
     MONTH =         {Jul},
     YEAR =          {2017},
@@ -235,8 +236,9 @@
     JOURNAL =       IEEE_J_NS,
     YEAR =          {2016},
     VOLUME =        {63},
-    PAGES =         {52--60}
-}
+    PAGES =         {52--60},
+    KEY =           {PubMed PMID: 27127307},
+}%PubMed Central PMCID: PMC4844465
 %-------------------------------------------------------------------------------------------------------------------------------%
 %-------------------------------------------------------------------------------------------------------------------------------%
 %~~~~~~~~ Preprocessing/prereconstruction: statistical data analysis/cuts, most-likely path (MLP) & system matrix, etc. ~~~~~~~~%
@@ -250,6 +252,7 @@
     YEAR =          {2008},
     VOLUME =        {35},
     PAGES =         {4849--4856},
+    KEY =           {PubMed PMID: 19070218},
 }
 %------------------------------------------------------------------------------------------------------------------------%
 @INPROCEEDINGS{BSCEW08,
@@ -520,6 +523,7 @@
     KEYWORDS =      {Proton beams, Hadron therapy, Tomography, Silicon radiation detectors, Algebraic Reconstruction Technique},
     ABSTRACT =      {A prototype of proton Computed Tomography (pCT) system for hadron-therapy has been manufactured and tested in a 175MeV proton beam with a non-homogeneous phantom designed to simulate high-contrast material. BI-SART reconstruction algorithms have been implemented with GPU parallelism, taking into account of most likely paths of protons in matter. Reconstructed tomography images with density resolutions r.m.s. down to $\sim$1\% and spatial resolutions <1mm, achieved within processing times of $\sim$15′ for a $512\times 512$ pixels image prove that this technique will be beneficial if used instead of {X-CT} in hadron-therapy.}
 }
+
 %------------------------------------------------------------------------------------------------------------------------%
 @INPROCEEDINGS{SKGPSS15,
     TITLE =         {Reconstructing highly accurate relative stopping powers in proton computed tomography},
@@ -567,7 +571,7 @@
     ABSTRACT =      {A block-iterative projection algorithm for solving the consistent convex feasibility problem in a finite-dimensional Euclidean space that is resilient to bounded and summable perturbations (in the sense that convergence to a feasible point is retained even if such perturbations are introduced in each iterative step of the algorithm) is proposed. This resilience can be used to steer the iterative process towards a feasible point that is superior in the sense of some functional on the points in the Euclidean space having a small value. The potential usefulness of this is illustrated in image reconstruction from projections, using both total variation and negative entropy as the functional.}
 }
 %------------------------------------------------------------------------------------------------------------------------%
-@ARTICLE {HGDC12,
+@ARTICLE{HGDC12,
     TITLE =         {Superiorization: An optimization heuristic for medical physics},
     AUTHOR =        {Gabor T. Herman and Edgar Gardu{\~n}o and Ran Davidi and Yair Censor},
     JOURNAL =       MEDPHYS,
@@ -701,34 +705,37 @@
     ABSTRACT =      {The recently-developed superiorization approach is efficient and robust for solving various constrained optimization problems. This methodology can be applied to multi-energy {CT} image reconstruction with the regularization in terms of the prior rank, intensity and sparsity model (PRISM). In this paper, we propose a superiorized version of the simultaneous algebraic reconstruction technique (SART) based on the PRISM model. Then, we compare the proposed superiorized algorithm with the Split-Bregman algorithm in numerical experiments. The results show that both the Superiorized-SART and the Split-Bregman algorithms generate good results with weak noise and reduced artefacts.}
 }
 %------------------------------------------------------------------------------------------------------------------------%
-@TECHREPORT{Langthaler14,
+@MISC{Langthaler14,
     TITLE =         {Incorporation of the Superiorization Methodology into Biomedical Imaging Software},
     AUTHOR =        {O. Langthaler},
     TYPE =          {{Marshall Plan Scholarship Report}},
-    MONTH =         {September},
+    MONTH =         {Sep},
     YEAR =          {2014},
     INSTITUTION =   {Salzburg University of Applied Sciences, Salzburg, Austria, and the Graduate Center of the City University of New York, NY, USA},
-    NOTE =          {76 pages}
+    NOTE =          {76 pages},
+    URL =           {https://static1.squarespace.com/static/559921a3e4b02c1d7480f8f4/t/585c49d6725e25be085071c7/1482443225511/Langthaler.pdf}
 }
 %------------------------------------------------------------------------------------------------------------------------%
-@TECHREPORT{Prommegger14,
+@MISC{Prommegger14,
     TITLE =         {Verification and Evaluation of Superiorized Algorithms Used in. Biomedical Imaging: Comparison of Iterative Algorithms With and Without Superiorization for Image Reconstruction from Projections},
     AUTHOR =        {B. Prommegger},
     TYPE =          {{Marshall Plan Scholarship Report}},
-    MONTH =         {October},
+    MONTH =         {Oct},
     YEAR =          {2014},
     INSTITUTION =   {Salzburg University of Applied Sciences, Salzburg, Austria, and the Graduate Center of the City University of New York, NY, USA},
-    NOTE =          {84 pages}
+    NOTE =          {84 pages},
+    URL =           {https://static1.squarespace.com/static/559921a3e4b02c1d7480f8f4/t/585c49bc8419c2c4f892861b/1482443201138/Prommegger.pdf}
 }
 %------------------------------------------------------------------------------------------------------------------------%
-@TECHREPORT{Havas16,
+@MISC{Havas16,
     TITLE =         {Revised Implementation and Empirical Study of Maximum Likelihood Expectation Maximization Algorithms with and without Superiorization in Image Reconstruction},
     AUTHOR =        {C. Havas},
     TYPE =          {{Marshall Plan Scholarship Report}},
-    MONTH =         {October},
+    MONTH =         {Oct},
     YEAR =          {2016},
     INSTITUTION =   {Salzburg University of Applied Sciences, Salzburg, Austria, and the Graduate Center of the City University of New York, NY, USA},
-    NOTE =          {49 pages}
+    NOTE =          {49 pages},
+    URL =           {https://static1.squarespace.com/static/559921a3e4b02c1d7480f8f4/t/596c97aad1758e1c6808c0fa/1500288944245/Havas+Clemens_615.pdf}
 }
 %------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{PSCR10,
@@ -771,6 +778,46 @@
     VOLUME =        {320},
     PUBLISHER =     {Springer},
     YEAR =          {2012},
+}
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Historic ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
+@ARTICLE{Wilson46,
+    TITLE =         {Radiological Use of Fast Protons},
+    AUTHOR =        {Wilson, Robert R.},
+    JOURNAL =       {Radiology},
+    YEAR =          {1946},
+    VOLUME =        {47},
+    NUMBER =        {5},
+    PAGES =         {487-491},
+    DOI =           {10.1148/47.5.487},
+    NOTE =          {PMID: 20274616},
+}
+%------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{Cormack63,
+    TITLE =         {Representation of a Function by Its Line Integrals, with Some Radiological Applications},
+    AUTHOR =        {A. M. Cormack},
+    JOURNAL =       {Journal of Applied Physics},
+    MONTH =         {Sep},
+    YEAR =          {1963},
+    VOLUME =        {34},
+    NUMBER =        {9},
+    PAGES =         {2722-7},
+    DOI =           {10.1063/1.1729798},
+}
+%------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{Cormack64,
+    TITLE =         {Representation of a Function by Its Line Integrals, with Some Radiological Applications. II},
+    AUTHOR =        {A. M. Cormack},
+    JOURNAL =       {Journal of Applied Physics},
+    MONTH =         {Oct},
+    YEAR =          {1964},
+    VOLUME =        {35},
+    NUMBER =        {10},
+    PAGES =         {2908-13},
+    DOI =           {10.1063/1.1713127},
 }
 %------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{Cormack76,
@@ -948,7 +995,7 @@
     VOLUME =        {57},
     NUMBER =        {11},
     PAGES =         {R99–-R117},
-    KEY =           {10.1088/0031-9155/57/11/R99},
+    DOI =           {10.1088/0031-9155/57/11/R99},
 }
 %------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{CBBCC17,
@@ -974,6 +1021,22 @@
     URL =           {http://iopscience.iop.org/article/10.1088/1361-6633/aa8b1d/meta},
     ABSTRACT =      {Image-guided radiotherapy has an established role in all forms of radiotherapy treatment delivery. Proton therapy seeks to deliver superior dose distributions through utilising the Bragg peak to target tumour and avoid sensitive normal tissue. The Bragg peak and sharp falloff in dose delivered by proton therapy necessitate careful treatment planning and treatment delivery. The dose distribution delivered by proton therapy is particularly sensitive to uncertainty in the prediction of proton range during treatment planning and deviations from the planned delivery during the course of the fractionated treatment. Realising the superior dose distribution of proton therapy requires increased diligence and image guidance has a key role in ensuring that treatments are planned and delivered. This article will outline the current status of image guidance for proton therapy, particularly highlighting differences with regard to high-energy X-ray therapy, and will look at a number of future improvements in image-guided proton therapy.}
 }
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{SP95,
+    TITLE =         {Proton radiography as a tool for quality control in proton therapy},
+    AUTHOR =        {Uwe Schneider and Eros Pedroni},
+    JOURNAL =       MEDPHYS,
+    MONTH =         {Apr},
+    YEAR =          {1995},
+    VOLUME =        {22},
+    NUMBER =        {4},
+    PAGES =         {353--363},
+    DOI =           {10.1118/1.597470},
+    URL =           {https://aapm.onlinelibrary.wiley.com/doi/abs/10.1118/1.597470},
+    EPRINT =        {https://aapm.onlinelibrary.wiley.com/doi/pdf/10.1118/1.597470},
+    ABSTRACT =      {Proton radiography is investigated for its use as a quality control tool in proton therapy. Images were produced both with range and range uncertainty information of protons passing through phantoms (Alderson phantom and a sheep's head). With the range images the correct positioning of the patient with respect to the beam could be verified. The range uncertainty images were used to quantitatively detect range variations of protons passing through inhomogeneities in the patient. These measurements can be used to indicate critical situations during proton therapy or to determine the safety margin around the tumor volume. With the range information the precision of different calibrations of computer tomography Hounsfield values to relative proton stopping power, used for proton treatment planning, was determined. It is found that the precision in range can be improved by a detailed analysis of the calibration data obtained from tissue-substitute measurements, by a factor of 2.5. The resulting range errors are in the order of the positioning precision (1 mm).},
+    KEYWORDS =      {Dosimetry/exposure assessment, Treatment strategy, Computed radiography, BIOMEDICAL RADIOGRAPHY, RADIOTHERAPY, QUALITY CONTROL, PROTON COMPUTED TOMOGRAPHY, CALIBRATION, PROTON DOSIMETRY, SPATIAL DOSE DISTRIBUTIONS, RANGE, USES, 87.53.08.a, 87.53.10.j, 87.56.05, Protons, Proton therapy, Medical imaging, Calibration, Quality assurance, Radiography, Cancer, Medical radiation safety, Computer science and technology, Tomography},
+}%{Medical Physics},
 %-------------------------------------------------------------------------------------------------------------------------------%
 %-------------------------------------------------------------------------------------------------------------------------------%
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Miscellaneous: cancer/radiation oncology facts, image analysis, etc. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
@@ -1009,6 +1072,57 @@
     URL =           {https://doi.org/10.1186/s12859-017-1934-z},
     ABSTRACT =      {ImageJ is an image analysis program extensively used in the biological sciences and beyond. Due to its ease of use, recordable macro language, and extensible plug-in architecture, ImageJ enjoys contributions from non-programmers, amateur programmers, and professional developers alike. Enabling such a diversity of contributors has resulted in a large community that spans the biological and physical sciences. However, a rapidly growing user base, diverging plugin suites, and technical limitations have revealed a clear need for a concerted software engineering effort to support emerging imaging paradigms, to ensure the software's ability to handle the requirements of modern science.},
 }
+%*******************************************************************************************************************************%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Publications that were added for Series #1 Paper ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%*******************************************************************************************************************************%
+%*******************************************************************************************************************************%
+@ARTICLE{Crowe75,
+	TITLE =         {Axial Scanning with 900 MeV Alpha Particles},
+    AUTHOR =        {K. M. {Crowe} and T. F. {Budinger} and J. L. {Cahoon} and V. P. {Elischer} and R. H. {Huesman} and L. L. {Kanstein}},
+	JOURNAL =       IEEE_J_NS,
+	MONTH =         {Jun},
+	YEAR =          {1975},
+	VOLUME =        {22},
+	NUMBER =        {3},
+	PAGES =         {1752-1754},
+	DOI =           {10.1109/TNS.1975.4327983},
+	ISSN =          {0018-9499},
+	ABSTRACT =      {High energy (fast) alpha particles can be used for nondestructive radiography of the human body because small electron density changes are reflected in measurable alpha particle energy changes. Using high resolution radiation detectors and computer techniques for transaxial reconstruction, it is possible to present information that is not available from conventional radiographs with doses one-tenth that required for photon scanning procedures incorporated in the EMI or similar scanners.},
+	KEYWORDS =      {Alpha particles;Radiography;Humans;Electrons;Density measurement;Energy measurement;Particle measurements;Energy resolution;Radiation detectors;Optical computing},
+}%{IEEE Transactions on Nuclear Science},
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{PAE15,
+    TITLE =         {Proton radiography and tomography with application to proton therapy},
+    AUTHOR =        {Gavin Poludniowski and Nigel M. Allinson and P. M. Evans},
+    JOURNAL =       {The British Journal of Radiology},
+    MONTH =         {Jun},
+    YEAR =          {2015},
+    VOLUME =        {88},
+    PAGES =         {20150134},
+    DOI =           {10.1259/bjr.20150134},
+    URL =           {https://doi.org/10.1259/bjr.20150134},
+    EPRINT =        {https://doi.org/10.1259/bjr.20150134},
+    ABSTRACT =      {Proton radiography and tomography have long promised benefit for proton therapy. Their first suggestion was in the early 1960s and the first published proton radiographs and CT images appeared in the late 1960s and 1970s, respectively. More than just providing anatomical images, proton transmission imaging provides the potential for the more accurate estimation of stopping-power ratio inside a patient and hence improved treatment planning and verification. With the recent explosion in growth of clinical proton therapy facilities, the time is perhaps ripe for the imaging modality to come to the fore. Yet many technical challenges remain to be solved before proton CT scanners become commonplace in the clinic. Research and development in this field is currently more active than at any time with several prototype designs emerging. This review introduces the principles of proton radiography and tomography, their historical developments, the raft of modern prototype systems and the primary design issues. },
+    KEY =           {PubMed PMID: 26043157},
+}%Br J Radiol
+%PubMed Central PMCID: PMC4743570
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{Hanson82,
+    TITLE =         {Proton computed tomography of human specimens},
+    AUTHOR =        {K M Hanson and J N Bradbury and R A Koeppe and R J Macek and D R Machen and R Morgado and M A Paciotti and S A Sandford and V W Steward},
+    JOURNAL =       PMB,
+    PUBLISHER =     {{IOP} Publishing},
+    MONTH =         {Jan},
+    YEAR =          {1982},
+    VOLUME =        {27},
+    NUMBER =        {1},
+    PAGES =         {25--36},
+    DOI =           {10.1088/0031-9155/27/1/003},
+    URL =           {https://doi.org/10.1088/0031-9155/27/1/003},
+    ABSTRACT =      {The experimental procedure and results of a comparative study of the imaging characteristics of proton and X-ray {CT} scans are presented. Scans of a human brain and heart are discussed. The proton produced images are found to be similar in information content while providing a decided dose advantage.}
+}%{Physics in Medicine and Biology},
 %*******************************************************************************************************************************%
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Potentially useful publications that have not yet been added ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
