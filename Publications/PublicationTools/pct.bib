@@ -57,6 +57,21 @@
     PAGES =         {1579--1592},
 }
 %------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{LLSSWS06,
+    TITLE =         {Reconstruction for proton computed tomography by tracing proton trajectories: A Monte Carlo study},
+    AUTHOR =        {Li, Tianfang and Liang, Zhengrong and Singanallur, Jayalakshmi V. and Satogata, Todd J. and Williams, David C. and Schulte, Reinhard W.},
+    JOURNAL =       {Medical Physics},
+    YEAR =          {2006},
+    VOLUME =        {33},
+    NUMBER =        {3},
+    PAGES =         {699-706},
+    URL =           {https://aapm.onlinelibrary.wiley.com/doi/abs/10.1118/1.2171507},
+    EPRINT =        {https://aapm.onlinelibrary.wiley.com/doi/pdf/10.1118/1.2171507},
+    DOI =           {https://doi.org/10.1118/1.2171507},
+    KEYWORDS =      {Computed radiography, Image analysis, Monte Carlo methods, Treatment strategy, Dosimetry/exposure assessment, Ancillary equipment, computerised tomography, Monte Carlo methods, splines (mathematics), image reconstruction, radiation therapy, dosimetry, phantoms, medical image processing, proton {CT}, multiple Coulomb scattering, curved proton path, ART algorithm, Protons, Spatial resolution, Medical image reconstruction, Medical imaging, Image reconstruction, Collisional energy loss, Monte Carlo methods, Optical microcavities, Computed tomography, Dosimetry},
+    ABSTRACT =      {Proton computed tomography (pCT) has been explored in the past decades because of its unique imaging characteristics, low radiation dose, and its possible use for treatment planning and on-line target localization in proton therapy. However, reconstruction of pCT images is challenging because the proton path within the object to be imaged is statistically affected by multiple Coulomb scattering. In this paper, we employ GEANT4-based Monte Carlo simulations of the two-dimensional pCT reconstruction of an elliptical phantom to investigate the possible use of the algebraic reconstruction technique (ART) with three different path-estimation methods for pCT reconstruction. The first method assumes a straight-line path (SLP) connecting the proton entry and exit positions, the second method adapts the most-likely path (MLP) theoretically determined for a uniform medium, and the third method employs a cubic spline path (CSP). The ART reconstructions showed progressive improvement of spatial resolution when going from the SLP [2 line pairs (lp) ] to the curved CSP and MLP path estimates . The MLP-based ART algorithm had the fastest convergence and smallest residual error of all three estimates. This work demonstrates the advantage of tracking curved proton paths in conjunction with the ART algorithm and curved path estimates.},
+}
+%------------------------------------------------------------------------------------------------------------------------%
 @INPROCEEDINGS{CGHNSS12,
     TITLE =         {Accurate Proton Beam Localization},
     AUTHOR =        {Y. Chen and Ernesto Gomez and Robert Ford Hurley and Y. Nie and Keith E. Schubert and Reinhard W. Schulte},
@@ -203,8 +218,7 @@
     DOI =           {10.1016/j.nima.2015.07.066},
     URL =           {http://www.sciencedirect.com/science/article/pii/S0168900215009274},
     KEYWORDS =      {Proton computed tomography, Hadron therapy, WEPL, Proton detector, Range measurement, Head scanner},
-    KEY =           {PubMed PMID: 26957679},
-}%PubMed Central PMCID: PMC4779442
+}
 %------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{PBGHJ16,
     TITLE =         {An evaluation of spatial resolution of a prototype proton {CT} scanner},
@@ -237,12 +251,28 @@
     YEAR =          {2016},
     VOLUME =        {63},
     PAGES =         {52--60},
-    KEY =           {PubMed PMID: 27127307},
-}%PubMed Central PMCID: PMC4844465
+    PMID =          {27127307},
+    PMCID =         {PMC4844465},
+}
 %-------------------------------------------------------------------------------------------------------------------------------%
 %-------------------------------------------------------------------------------------------------------------------------------%
 %~~~~~~~~ Preprocessing/prereconstruction: statistical data analysis/cuts, most-likely path (MLP) & system matrix, etc. ~~~~~~~~%
 %-------------------------------------------------------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{Williams04,
+	TITLE =        {The most likely path of an energetic charged particle through a uniform medium},
+	AUTHOR =       {D C Williams},
+	JOURNAL =      {Physics in Medicine and Biology},
+	YEAR =         {2004},
+	MONTH =        {Jun},
+	VOLUME =       {49},
+	NUMBER =       {13},
+	PAGES =        {2899--2911},
+	PUBLISHER =    {{IOP} Publishing},
+	URL =          {https://doi.org/10.1088/0031-9155/49/13/010},
+	DOI =          {10.1088/0031-9155/49/13/010},
+	ABSTRACT =     {Presented is a calculation of the most likely path for a charged particle traversing a uniform medium and suffering multiple-Coulomb scattering when the entrance and exit positions and angles are known. The effects of ionization energy loss are included and the results are verified using Monte Carlo simulation. The application to proton computed tomography is discussed.}
+}
 %-------------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{SPTS08,
     TITLE =         {A maximum likelihood proton path formalism for application in proton computed tomography},
@@ -252,13 +282,13 @@
     YEAR =          {2008},
     VOLUME =        {35},
     PAGES =         {4849--4856},
-    KEY =           {PubMed PMID: 19070218},
+    PMID =          {19070218},
 }
 %------------------------------------------------------------------------------------------------------------------------%
 @INPROCEEDINGS{BSCEW08,
     TITLE =         {{Development of Proton Computed Tomography for Applications in Proton Therapy}},
     AUTHOR =        {Vladimir A. Bashkirov and Reinhard W. Schulte and George Coutrakon and B. Erdelyi and K. Wong and Hartmut F.-W. Sadrozinski and Scott N. Penfold and Anatoly B. Rosenfeld and Scott A. McAllister and Keith E. Schubert},
-    MONTH =         {Aug 10-15},
+    MONTH =         {Aug 10--15},
     YEAR =          {2008},
     BOOKTITLE =     {Application of Accelerators in Research and Industry: Twentieth International Conference},
     VOLUME =        {AIP Conference Proceedings Volume 1099},
@@ -266,7 +296,7 @@
     EDITOR =        {Floyd D. McDaniel and Barney L. Doyle},
     ORGANIZATION =  {American Institute of Physics},
     ADDRESS =       {Fort Worth (Texas)},
-    NOTE =          {ISBN: 978-0-7354-0633-9},
+    ISBN =          {978-0-7354-0633-9},
 }
 %------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{PRSS09,
@@ -278,6 +308,16 @@
     VOLUME =        {36},
     NUMBER =        {10},
     PAGES =         {4511--4518},
+}
+%------------------------------------------------------------------------------------------------------------------------%
+@INPROCEEDINGS{PSCBR09,
+    TITLE =         {Characteristics of Proton {CT} Images Reconstructed with Filtered Backprojection and Iterative Projection Algorithms},
+    AUTHOR =        {Penfold, Scott and Schulte, Reinhard and Censor, Yair and Bashkirov, Vladimir and Rosenfeld, Anatoly},
+    BOOKTITLE =     {IEEE Nuclear Science Symposium Conference Record},
+    YEAR =          {2009},
+    MONTH =         {12},
+    PAGES =         {4176 - 4180},
+    DOI =           {10.1109/NSSMIC.2009.5402282}
 }
 %------------------------------------------------------------------------------------------------------------------------%
 @INPROCEEDINGS{MSSP09,
@@ -313,21 +353,39 @@
 @INPROCEEDINGS{VBSK00,
     TITLE =         {Shape and Motion Carving in 6D},
     AUTHOR =        {S. Vedula and S. Baker and S. Seitz and T. Kanade},
+    BOOKTITLE =     {Proceedings of the 2000 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR)},
+    ADDRESS =       {Hilton Head, SC, USA},
     YEAR =          {2000},
-    BOOKTITLE =     {Proceedings of Computer Vision and Pattern Recognition Conference (CVPR)},
+    MONTH =         {13--15 Jun},
 }
-%Region-of-Construction Algorithm
-%A Vision System for Fast 3D Model Reconstruction
-%Huei-Yung Lin and Murali Subbarao
-%Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, 2001. CVPR 2001.
-%II-663 - II-668 vol.2
-%
+%------------------------------------------------------------------------------------------------------------------------%
+@INPROCEEDINGS{LinSubbarao01,
+    TITLE =         {A vision system for fast 3D model reconstruction},
+    AUTHOR =        {Huei-Yung Lin and Subbarao, M.},
+    BOOKTITLE =     {Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR)},
+    ADDRESS =       {Kauai, HI, USA},
+    VOLUME =        {2},
+    NUMBER =        {},
+    YEAR =          {2001},
+    MONTH =         {8--14 Dec},
+    PAGES =         {II-II},
+    ABSTRACT =      {A desktop vision system is presented for complete 3D model acquisition. It is fast, low-cost, and accurate. Partial 3D shapes and texture information are acquired from multiple viewing directions using rotational stereo and shape from focus (SFF). The resulting range images are registered to a common coordinate system and a surface representation is created for each range image. The resulting surfaces are integrated using a new algorithm named Region-of-Construction. Unlike previous approaches, the Region-of-Construction algorithm directly exploits the structure of the raw range images. The algorithm determines regions in range images corresponding to non-redundant surfaces which can be stitched along the boundaries to construct the complete 3D surface model. The algorithm is computationally efficient and less sensitive to registration error. It also has the ability to construct complete 3D models of complex objects with holes. A photo realistic 3D model is obtained by mapping texture information onto the complete surface model representing 3D shape. Experimental results for several real objects are presented.},
+    KEYWORDS =      {},
+    DOI =           {10.1109/CVPR.2001.991027},
+    ISSN =          {1063-6919},
+}
+%------------------------------------------------------------------------------------------------------------------------%
 %uses silhouette carving
-%Silhouette Carving
-%Bj-orn Karlsson William Nilsson- Johan Wetter-
-
-%uses silhouette carving: Lyness, C., Marte, O., Wong, B., Marais, P. 2001. Low-Cost Model Reconstruction from Image Sequences. AFRIGRAPH 2001, 131-135.
-%introduced idea of silhouette carving
+%Silhouette Carving Bj-orn Karlsson William Nilsson- Johan Wetter-
+%------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{LMWM01,
+    AUTHOR =        {Lyness, Caleb and Marte, Otto-carl and Wong, Bryan and Marais, Patrick},
+    YEAR =          {2001},
+    MONTH =         {Sep},
+    PAGES =         {},
+    TITLE =         {Low--Cost Model Reconstruction from Image Sequences},
+    DOI =           {10.1145/513867.513896}
+}
 %------------------------------------------------------------------------------------------------------------------------%
 @INPROCEEDINGS{Niem94,
     TITLE =         {Robust and fast modelling of 3{D} natural objects from multiple views},
@@ -375,7 +433,7 @@
     SERIES =        {Contemporary Mathematics},
     EDITOR =        {S. Reich and A.J. Zaslavski},
     VOLUME =        {636},
-    PAGES =         {211--224},
+    PAGES =         {211--224}
 }
 %-------------------------------------------------------------------------------------------------------------------------------%
 %-------------------------------------------------------------------------------------------------------------------------------%
@@ -555,6 +613,7 @@
     URL =           {http://stacks.iop.org/0034-4885/81/i=1/a=016701},
     ABSTRACT =      {The use of hadron beams, especially proton beams, in cancer radiotherapy has expanded rapidly in the past two decades. To fully realize the advantages of hadron therapy over traditional x-ray and gamma-ray therapy requires accurate positioning of the Bragg peak throughout the tumor being treated. A half century ago, suggestions had already been made to use protons themselves to develop images of tumors and surrounding tissue, to be used for treatment planning. The recent global expansion of hadron therapy, coupled with modern advances in computation and particle detection, has led several collaborations around the world to develop prototype detector systems and associated reconstruction codes for proton computed tomography (p{CT}), as well as more simple proton radiography, with the ultimate intent to use such systems in clinical treatment planning and verification. Recent imaging results of phantoms in hospital proton beams are encouraging, but many technical and programmatic challenges remain to be overcome before p{CT} scanners will be introduced into clinics. This review introduces hadron therapy and the perceived advantages of p{CT} and proton radiography for treatment planning, reviews its historical development, and discusses the physics related to proton imaging, the associated experimental and computation issues, the technologies used to attack the problem, contemporary efforts in detector and computational development, and the current status and outlook.}
 }
+
 %------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{DHC09,
     TITLE =         {Perturbation-resilient block-iterative projection methods with application to image reconstruction from projections},
@@ -571,7 +630,7 @@
     ABSTRACT =      {A block-iterative projection algorithm for solving the consistent convex feasibility problem in a finite-dimensional Euclidean space that is resilient to bounded and summable perturbations (in the sense that convergence to a feasible point is retained even if such perturbations are introduced in each iterative step of the algorithm) is proposed. This resilience can be used to steer the iterative process towards a feasible point that is superior in the sense of some functional on the points in the Euclidean space having a small value. The potential usefulness of this is illustrated in image reconstruction from projections, using both total variation and negative entropy as the functional.}
 }
 %------------------------------------------------------------------------------------------------------------------------%
-@ARTICLE{HGDC12,
+@ARTICLE {HGDC12,
     TITLE =         {Superiorization: An optimization heuristic for medical physics},
     AUTHOR =        {Gabor T. Herman and Edgar Gardu{\~n}o and Ran Davidi and Yair Censor},
     JOURNAL =       MEDPHYS,
@@ -705,37 +764,34 @@
     ABSTRACT =      {The recently-developed superiorization approach is efficient and robust for solving various constrained optimization problems. This methodology can be applied to multi-energy {CT} image reconstruction with the regularization in terms of the prior rank, intensity and sparsity model (PRISM). In this paper, we propose a superiorized version of the simultaneous algebraic reconstruction technique (SART) based on the PRISM model. Then, we compare the proposed superiorized algorithm with the Split-Bregman algorithm in numerical experiments. The results show that both the Superiorized-SART and the Split-Bregman algorithms generate good results with weak noise and reduced artefacts.}
 }
 %------------------------------------------------------------------------------------------------------------------------%
-@MISC{Langthaler14,
+@TECHREPORT{Langthaler14,
     TITLE =         {Incorporation of the Superiorization Methodology into Biomedical Imaging Software},
     AUTHOR =        {O. Langthaler},
     TYPE =          {{Marshall Plan Scholarship Report}},
-    MONTH =         {Sep},
+    MONTH =         {September},
     YEAR =          {2014},
     INSTITUTION =   {Salzburg University of Applied Sciences, Salzburg, Austria, and the Graduate Center of the City University of New York, NY, USA},
-    NOTE =          {76 pages},
-    URL =           {https://static1.squarespace.com/static/559921a3e4b02c1d7480f8f4/t/585c49d6725e25be085071c7/1482443225511/Langthaler.pdf}
+    NOTE =          {76 pages}
 }
 %------------------------------------------------------------------------------------------------------------------------%
-@MISC{Prommegger14,
+@TECHREPORT{Prommegger14,
     TITLE =         {Verification and Evaluation of Superiorized Algorithms Used in. Biomedical Imaging: Comparison of Iterative Algorithms With and Without Superiorization for Image Reconstruction from Projections},
     AUTHOR =        {B. Prommegger},
     TYPE =          {{Marshall Plan Scholarship Report}},
-    MONTH =         {Oct},
+    MONTH =         {October},
     YEAR =          {2014},
     INSTITUTION =   {Salzburg University of Applied Sciences, Salzburg, Austria, and the Graduate Center of the City University of New York, NY, USA},
-    NOTE =          {84 pages},
-    URL =           {https://static1.squarespace.com/static/559921a3e4b02c1d7480f8f4/t/585c49bc8419c2c4f892861b/1482443201138/Prommegger.pdf}
+    NOTE =          {84 pages}
 }
 %------------------------------------------------------------------------------------------------------------------------%
-@MISC{Havas16,
+@TECHREPORT{Havas16,
     TITLE =         {Revised Implementation and Empirical Study of Maximum Likelihood Expectation Maximization Algorithms with and without Superiorization in Image Reconstruction},
     AUTHOR =        {C. Havas},
     TYPE =          {{Marshall Plan Scholarship Report}},
-    MONTH =         {Oct},
+    MONTH =         {October},
     YEAR =          {2016},
     INSTITUTION =   {Salzburg University of Applied Sciences, Salzburg, Austria, and the Graduate Center of the City University of New York, NY, USA},
-    NOTE =          {49 pages},
-    URL =           {https://static1.squarespace.com/static/559921a3e4b02c1d7480f8f4/t/596c97aad1758e1c6808c0fa/1500288944245/Havas+Clemens_615.pdf}
+    NOTE =          {49 pages}
 }
 %------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{PSCR10,
@@ -781,43 +837,43 @@
 }
 %*******************************************************************************************************************************%
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Historic ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Historic ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 %*******************************************************************************************************************************%
 @ARTICLE{Wilson46,
-    TITLE =         {Radiological Use of Fast Protons},
     AUTHOR =        {Wilson, Robert R.},
+    TITLE =         {Radiological Use of Fast Protons},
     JOURNAL =       {Radiology},
     YEAR =          {1946},
     VOLUME =        {47},
     NUMBER =        {5},
     PAGES =         {487-491},
     DOI =           {10.1148/47.5.487},
-    NOTE =          {PMID: 20274616},
-}
+    PMID =          {20274616},
+}%note ={PMID: 20274616},
 %------------------------------------------------------------------------------------------------------------------------%
-@ARTICLE{Cormack63,
-    TITLE =         {Representation of a Function by Its Line Integrals, with Some Radiological Applications},
+@Article{Cormack63,
     AUTHOR =        {A. M. Cormack},
+    TITLE =         {Representation of a Function by Its Line Integrals, with Some Radiological Applications},
     JOURNAL =       {Journal of Applied Physics},
-    MONTH =         {Sep},
     YEAR =          {1963},
+    MONTH =         {Sep},
     VOLUME =        {34},
     NUMBER =        {9},
-    PAGES =         {2722-7},
+    PAGES =         {2722--2727},
     DOI =           {10.1063/1.1729798},
 }
 %------------------------------------------------------------------------------------------------------------------------%
-@ARTICLE{Cormack64,
-    TITLE =         {Representation of a Function by Its Line Integrals, with Some Radiological Applications. II},
+@Article{Cormack64,
     AUTHOR =        {A. M. Cormack},
+    TITLE =         {Representation of a Function by Its Line Integrals, with Some Radiological Applications. II},
     JOURNAL =       {Journal of Applied Physics},
-    MONTH =         {Oct},
     YEAR =          {1964},
+    DOI =           {10.1063/1.1713127},
     VOLUME =        {35},
     NUMBER =        {10},
-    PAGES =         {2908-13},
-    DOI =           {10.1063/1.1713127},
+    PAGES =         {2908--2913},
+    MONTH =         {October},
 }
 %------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{Cormack76,
@@ -830,7 +886,7 @@
     PAGES =         {560--569},
     DOI =           {10.1088/0031-9155/21/4/007},
     URL =           {http://stacks.iop.org/0031-9155/21/i=4/a=007},
-    ABSTRACT =      {An attempt has been made to see whether energetic protons (158 MeV) could be used instead of X-rays in computerized axial tomography to detect density differences of the order of those at which commercial X-ray tomographs cease to be useful. A circularly symmetrical phantom consisting of Lucite and sugar solutions was used, and density differences of 0.5% were reconstructed with reasonable accuracy from data obtained with very simple equipment. Discontinuities in either density or chemical composition, or both, seem to cause artifacts in the reconstruction. These may be related to the West-Sherwood effect.}
+    ABSTRACT =      {An attempt has been made to see whether energetic protons (158 MeV) could be used instead of X-rays in computerized axial tomography to detect density differences of the order of those at which commercial X-ray tomographs cease to be useful. A circularly symmetrical phantom consisting of Lucite and sugar solutions was used, and density differences of 0.5\% were reconstructed with reasonable accuracy from data obtained with very simple equipment. Discontinuities in either density or chemical composition, or both, seem to cause artifacts in the reconstruction. These may be related to the West-Sherwood effect.}
 }
 %------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{Hanson78,
@@ -964,8 +1020,8 @@
     VOLUME =        {28},
     NUMBER =        {2},
     PAGES =         {169--176},
-    KEY =           {PMID: 6408654},
-}
+    PMID =          {6408654},
+}%KEY =           {PMID: 6408654},
 %------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{MTFYH98,
     TITLE =         {Relationship between {CT} number and electron density, scatter angle and nuclear reaction for hadron-therapy treatment planning},
@@ -973,9 +1029,9 @@
     JOURNAL =       PMB,
     YEAR =          {1998},
     VOLUME =        {43},
-    PAGES =         {3261–-3275},
-    KEY =           {PubMed: 9832015},
-}
+    PAGES =         {3261--3275},
+    PMID =          {9832015},
+}%KEY =           {PubMed: 9832015},
 %------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{Smith09,
     TITLE =         {Vision 20/20: proton therapy},
@@ -994,7 +1050,7 @@
     YEAR =          {2012},
     VOLUME =        {57},
     NUMBER =        {11},
-    PAGES =         {R99–-R117},
+    PAGES =         {R99--R117},
     DOI =           {10.1088/0031-9155/57/11/R99},
 }
 %------------------------------------------------------------------------------------------------------------------------%
@@ -1022,21 +1078,37 @@
     ABSTRACT =      {Image-guided radiotherapy has an established role in all forms of radiotherapy treatment delivery. Proton therapy seeks to deliver superior dose distributions through utilising the Bragg peak to target tumour and avoid sensitive normal tissue. The Bragg peak and sharp falloff in dose delivered by proton therapy necessitate careful treatment planning and treatment delivery. The dose distribution delivered by proton therapy is particularly sensitive to uncertainty in the prediction of proton range during treatment planning and deviations from the planned delivery during the course of the fractionated treatment. Realising the superior dose distribution of proton therapy requires increased diligence and image guidance has a key role in ensuring that treatments are planned and delivered. This article will outline the current status of image guidance for proton therapy, particularly highlighting differences with regard to high-energy X-ray therapy, and will look at a number of future improvements in image-guided proton therapy.}
 }
 %-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{SP94,
+    TITLE       =   {Multiple Coulomb scattering and spatial resolution in proton radiography},
+    AUTHOR      =   {Schneider, Uwe and Pedroni, Eros},
+    JOURNAL     =   {Medical Physics},
+    VOLUME      =   {21},
+    NUMBER      =   {11},
+    PAGES       =   {1657-1663},
+    KEYWORDS    =   {Thermography, BIOMEDICAL RADIOGRAPHY, PROTON BEAMS, MULTIPLE SCATTERING, COULOMB SCATTERING, SPATIAL RESOLUTION, IMAGE FORMING, COMPUTERIZED SIMULATION, ENERGY LOSSES, BEAM TRANSPORT, 87.53.08.a, 87.53.10.f, Spatial resolution, Protons, Multiple scattering, Radiography, Transmission measurement, Collisional energy loss, Scattering measurements},
+    DOI         =   {https://doi.org/10.1118/1.597212},
+    URL         =   {https://aapm.onlinelibrary.wiley.com/doi/abs/10.1118/1.597212},
+    EPRINT      =   {https://aapm.onlinelibrary.wiley.com/doi/pdf/10.1118/1.597212},
+    ABSTRACT    =   {A simple formula for the spatial resolution of transmission proton radiography is derived for two different methods of measuring the proton coordinates. The effect of multiple Coulomb scattering and energy loss are taken into account. Experimental measurements of the spatial resolution have been done and are compared with the calculations. The technique of measuring entrance and exit coordinates in coincidence for each single proton improves the spatial resolution by a factor of 8 compared to a single coordinate measurement.},
+    YEAR        =   {1994}
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{SP95,
     TITLE =         {Proton radiography as a tool for quality control in proton therapy},
     AUTHOR =        {Uwe Schneider and Eros Pedroni},
     JOURNAL =       MEDPHYS,
-    MONTH =         {Apr},
     YEAR =          {1995},
+    MONTH =         {Apr},
     VOLUME =        {22},
     NUMBER =        {4},
     PAGES =         {353--363},
-    DOI =           {10.1118/1.597470},
     URL =           {https://aapm.onlinelibrary.wiley.com/doi/abs/10.1118/1.597470},
     EPRINT =        {https://aapm.onlinelibrary.wiley.com/doi/pdf/10.1118/1.597470},
-    ABSTRACT =      {Proton radiography is investigated for its use as a quality control tool in proton therapy. Images were produced both with range and range uncertainty information of protons passing through phantoms (Alderson phantom and a sheep's head). With the range images the correct positioning of the patient with respect to the beam could be verified. The range uncertainty images were used to quantitatively detect range variations of protons passing through inhomogeneities in the patient. These measurements can be used to indicate critical situations during proton therapy or to determine the safety margin around the tumor volume. With the range information the precision of different calibrations of computer tomography Hounsfield values to relative proton stopping power, used for proton treatment planning, was determined. It is found that the precision in range can be improved by a detailed analysis of the calibration data obtained from tissue-substitute measurements, by a factor of 2.5. The resulting range errors are in the order of the positioning precision (1 mm).},
+    DOI =           {10.1118/1.597470},
+    PMID =          {7609715},
     KEYWORDS =      {Dosimetry/exposure assessment, Treatment strategy, Computed radiography, BIOMEDICAL RADIOGRAPHY, RADIOTHERAPY, QUALITY CONTROL, PROTON COMPUTED TOMOGRAPHY, CALIBRATION, PROTON DOSIMETRY, SPATIAL DOSE DISTRIBUTIONS, RANGE, USES, 87.53.08.a, 87.53.10.j, 87.56.05, Protons, Proton therapy, Medical imaging, Calibration, Quality assurance, Radiography, Cancer, Medical radiation safety, Computer science and technology, Tomography},
-}%{Medical Physics},
+    ABSTRACT =      {Proton radiography is investigated for its use as a quality control tool in proton therapy. Images were produced both with range and range uncertainty information of protons passing through phantoms (Alderson phantom and a sheep's head). With the range images the correct positioning of the patient with respect to the beam could be verified. The range uncertainty images were used to quantitatively detect range variations of protons passing through inhomogeneities in the patient. These measurements can be used to indicate critical situations during proton therapy or to determine the safety margin around the tumor volume. With the range information the precision of different calibrations of computer tomography Hounsfield values to relative proton stopping power, used for proton treatment planning, was determined. It is found that the precision in range can be improved by a detailed analysis of the calibration data obtained from tissue-substitute measurements, by a factor of 2.5. The resulting range errors are in the order of the positioning precision (1 mm).},
+}%KEY = {PubMed PMID: 7609715},
 %-------------------------------------------------------------------------------------------------------------------------------%
 %-------------------------------------------------------------------------------------------------------------------------------%
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Miscellaneous: cancer/radiation oncology facts, image analysis, etc. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
@@ -1079,56 +1151,306 @@
 %*******************************************************************************************************************************%
 %*******************************************************************************************************************************%
 @ARTICLE{Crowe75,
-	TITLE =         {Axial Scanning with 900 MeV Alpha Particles},
-    AUTHOR =        {K. M. {Crowe} and T. F. {Budinger} and J. L. {Cahoon} and V. P. {Elischer} and R. H. {Huesman} and L. L. {Kanstein}},
-	JOURNAL =       IEEE_J_NS,
-	MONTH =         {Jun},
-	YEAR =          {1975},
-	VOLUME =        {22},
-	NUMBER =        {3},
-	PAGES =         {1752-1754},
-	DOI =           {10.1109/TNS.1975.4327983},
-	ISSN =          {0018-9499},
-	ABSTRACT =      {High energy (fast) alpha particles can be used for nondestructive radiography of the human body because small electron density changes are reflected in measurable alpha particle energy changes. Using high resolution radiation detectors and computer techniques for transaxial reconstruction, it is possible to present information that is not available from conventional radiographs with doses one-tenth that required for photon scanning procedures incorporated in the EMI or similar scanners.},
-	KEYWORDS =      {Alpha particles;Radiography;Humans;Electrons;Density measurement;Energy measurement;Particle measurements;Energy resolution;Radiation detectors;Optical computing},
+	TITLE =        {Axial Scanning with 900 MeV Alpha Particles},
+	AUTHOR =       {K. M. {Crowe} and T. F. {Budinger} and J. L. {Cahoon} and V. P. {Elischer} and R. H. {Huesman} and L. L. {Kanstein}},
+	JOURNAL =      IEEE_J_NS,
+	YEAR =         {1975},
+	MONTH =        {Jun},
+	VOLUME =       {22},
+	NUMBER =       {3},
+	PAGES =        {1752-1754},
+	DOI =          {10.1109/TNS.1975.4327983},
+	ISSN =         {0018-9499},
+	KEYWORDS =     {Alpha particles;Radiography;Humans;Electrons;Density measurement;Energy measurement;Particle measurements;Energy resolution;Radiation detectors;Optical computing},
+	ABSTRACT =     {High energy (fast) alpha particles can be used for nondestructive radiography of the human body because small electron density changes are reflected in measurable alpha particle energy changes. Using high resolution radiation detectors and computer techniques for transaxial reconstruction, it is possible to present information that is not available from conventional radiographs with doses one-tenth that required for photon scanning procedures incorporated in the EMI or similar scanners.},
 }%{IEEE Transactions on Nuclear Science},
 %-------------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{PAE15,
     TITLE =         {Proton radiography and tomography with application to proton therapy},
     AUTHOR =        {Gavin Poludniowski and Nigel M. Allinson and P. M. Evans},
     JOURNAL =       {The British Journal of Radiology},
-    MONTH =         {Jun},
     YEAR =          {2015},
+    MONTH =         {Jun},
     VOLUME =        {88},
     PAGES =         {20150134},
-    DOI =           {10.1259/bjr.20150134},
     URL =           {https://doi.org/10.1259/bjr.20150134},
     EPRINT =        {https://doi.org/10.1259/bjr.20150134},
+    DOI =           {10.1259/bjr.20150134},
+    PMID =          {26043157},
+    PMCID =         {PMC4743570},
     ABSTRACT =      {Proton radiography and tomography have long promised benefit for proton therapy. Their first suggestion was in the early 1960s and the first published proton radiographs and CT images appeared in the late 1960s and 1970s, respectively. More than just providing anatomical images, proton transmission imaging provides the potential for the more accurate estimation of stopping-power ratio inside a patient and hence improved treatment planning and verification. With the recent explosion in growth of clinical proton therapy facilities, the time is perhaps ripe for the imaging modality to come to the fore. Yet many technical challenges remain to be solved before proton CT scanners become commonplace in the clinic. Research and development in this field is currently more active than at any time with several prototype designs emerging. This review introduces the principles of proton radiography and tomography, their historical developments, the raft of modern prototype systems and the primary design issues. },
-    KEY =           {PubMed PMID: 26043157},
-}%Br J Radiol
+}%KEY = {PubMed PMID: 26043157},
+%Br J Radiol
 %PubMed Central PMCID: PMC4743570
 %-------------------------------------------------------------------------------------------------------------------------------%
 @ARTICLE{Hanson82,
-    TITLE =         {Proton computed tomography of human specimens},
-    AUTHOR =        {K M Hanson and J N Bradbury and R A Koeppe and R J Macek and D R Machen and R Morgado and M A Paciotti and S A Sandford and V W Steward},
-    JOURNAL =       PMB,
-    PUBLISHER =     {{IOP} Publishing},
-    MONTH =         {Jan},
-    YEAR =          {1982},
-    VOLUME =        {27},
-    NUMBER =        {1},
-    PAGES =         {25--36},
-    DOI =           {10.1088/0031-9155/27/1/003},
-    URL =           {https://doi.org/10.1088/0031-9155/27/1/003},
-    ABSTRACT =      {The experimental procedure and results of a comparative study of the imaging characteristics of proton and X-ray {CT} scans are presented. Scans of a human brain and heart are discussed. The proton produced images are found to be similar in information content while providing a decided dose advantage.}
+	AUTHOR =       {K M Hanson and J N Bradbury and R A Koeppe and R J Macek and D R Machen and R Morgado and M A Paciotti and S A Sandford and V W Steward},
+	TITLE =        {Proton computed tomography of human specimens},
+	JOURNAL =      PMB,
+	YEAR =         {1982},
+	MONTH =        {Jan},
+	VOLUME =       {27},
+	NUMBER =       {1},
+	PAGES =        {25--36},
+	PUBLISHER =    {{IOP} Publishing},
+	URL =          {https://doi.org/10.1088/0031-9155/27/1/003},
+	DOI =          {10.1088/0031-9155/27/1/003},
+	ABSTRACT =     {The experimental procedure and results of a comparative study of the imaging characteristics of proton and X-ray {CT} scans are presented. Scans of a human brain and heart are discussed. The proton produced images are found to be similar in information content while providing a decided dose advantage.}
 }%{Physics in Medicine and Biology},
+%	URL = {https://doi.org/10.1088\%2F0031-9155%2F27%2F1%2F003},
+%*******************************************************************************************************************************%
+%-------------------------------------------------------------------------------------------------------------------------------%
+%Additions for Series 2 paper (possibly duplicates)
+%-------------------------------------------------------------------------------------------------------------------------------%
+@INCOLLECTION{CEH01,
+    TITLE =         {{Averaging strings of sequential iterations for convex feasibility problems}},
+    AUTHOR =        {Censor, Y. and Elfving, T. and Herman, G. T.},
+    BOOKTITLE =     {Studies in Computational Mathematics},
+    YEAR =          {2001},
+    VOLUME =        {8},
+    NUMBER =        {C},
+    PAGES =         {101--113},
+    DOI =           {10.1016/S1570-579X(01)80009-4},
+    ISSN =          {1570579X},
+    FILE =          {:C\:/Users/Christina/Dropbox/Series Papers/#2 Series Paper/References/70-strings-CEH-pink-book.pdf:pdf},
+    ABSTRACT =      {An algorithmic scheme for the solution of convex feasibility problems is proposed inwhich the end-points of strings of sequential projections onto the constraints are averaged. The scheme, employing Bregman projections, is analyzed with the aid of an extended product space formalism. For the case of orthogonal projections we give also a relaxed version. Along with the well-known purely sequential and fully simultaneous cases, the new scheme includes many other inherently parallel algorithmic options depending on the choice of strings. Convergence in the consistent case is proven and an application to optimization over linear inequalities is given. {\textcopyright} 2001 Elsevier B.V. All rights reserved.},
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{CT03,
+    TITLE =         {{Convergence of string-averaging projection schemes for inconsistent convex feasibility problems}},
+    AUTHOR =        {Censor, Yair and Tom, Eli},
+    JOURNAL =       {Optimization Methods and Software},
+    YEAR =          {2003},
+    VOLUME =        {18},
+    NUMBER =        {5},
+    PAGES =         {543--554},
+    DOI =           {10.1080/10556780310001610484},
+    ISSN =          {10556788},
+    FILE =          {:C\:/Users/Christina/Dropbox/Series Papers/#2 Series Paper/References/Censor-Tom-String averaging-2003.pdf:pdf},
+    KEYWORDS =      {Convex feasibility,Inconsistent feasibility problem,Product space,Projection methods,String-averaging},
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{CM18,
+    TITLE =         {Convergence analysis of processes with valiant projection operators in hilbert space},
+    AUTHOR =        {Censor, Yair and Mansour, Rafiq},
+    JOURNAL =       {Journal of Optimization Theory and Applications},
+    YEAR =          {2018},
+    VOLUME =        {176},
+    NUMBER =        {1},
+    PAGES =         {35--56},
+    PUBLISHER =     {Springer},
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{Cimmino1938,
+    TITLE =         {Cacolo approssimato per le soluzioni dei systemi di equazioni lineari},
+    AUTHOR =        {Cimmino, Gianfranco},
+    JOURNAL =       {La Ricerca Scientifica (Roma)},
+    YEAR =          {1938},
+    VOLUME =        {1},
+    PAGES =         {326--333},
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{Gordon2005,
+    TITLE =         {Component-Averaged Row Projections: A Robust, Block-Parallel Scheme for Sparse Linear Systems},
+    AUTHOR =        {Gordon, Dan and Gordon, Rachel},
+    JOURNAL =       {SIAM Journal of Scientific Computing},
+    YEAR =          {2005},
+    MONTH =         {Jan},
+    VOLUME =        {27},
+    PAGES =         {1092-1117},
+    DOI =           {10.1137/040609458},
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{Gordon2015,
+    TITLE     =     {Compact high order schemes with gradient-direction derivatives for absorbing boundary conditions},
+    AUTHOR    =     {Dan Gordon and Rachel Gordon and Eli Turkel},
+    JOURNAL   =     {Journal of Computational Physics},%{J. Comput. Phys.},
+    YEAR      =     {2015},
+    VOLUME    =     {297},
+    PAGES     =     {295--315},
+    URL       =     {https://doi.org/10.1016/j.jcp.2015.05.027},
+    DOI       =     {10.1016/j.jcp.2015.05.027},
+    timestamp =     {Wed, 19 Feb 2020 18:08:51 +0100},
+    biburl    =     {https://dblp.org/rec/journals/jcphy/GordonGT15.bib},
+    bibsource =     {dblp computer science bibliography, https://dblp.org}
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@TECHREPORT{Kaczmarz1937,
+    TITLE =         {Approximate solution of systems of linear equations},
+    AUTHOR =        {Kaczmarz, MS},
+    YEAR =          {1937}
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{Kaczmarz1993,
+    TITLE =         {Approximate solution of systems of linear equations},
+    AUTHOR =        {Kaczmarz, Stefan},
+    JOURNAL =       {International Journal of Control},
+    YEAR =          {1993}
+    VOLUME =        {57},
+    NUMBER =        {6},
+    PAGES =         {1269--1271},
+    PUBLISHER =     {Taylor \& Francis},
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{RDFSJ13,
+    TITLE =         {Filtered backprojection proton {CT} reconstruction along most likely paths},
+    AUTHOR =        {Rit, Simon and Dedes, George and Freud, Nicolas and Sarrut, David and Létang, Jean Michel},
+    JOURNAL =       MEDPHYS,
+    YEAR =          {2013},
+    VOLUME =        {40},
+    NUMBER =        {3},
+    PAGES =         {031103},
+    URL =           {https://aapm.onlinelibrary.wiley.com/doi/abs/10.1118/1.4789589},
+    DOI =           {https://doi.org/10.1118/1.4789589},
+    EPRINT =        {https://aapm.onlinelibrary.wiley.com/doi/pdf/10.1118/1.4789589},
+    KEYWORDS =      {Conformal radiation treatment, Monte Carlo methods, Spatial resolution, Reconstruction, Computed tomography, computerised tomography, image reconstruction, image resolution, medical image processing, Monte Carlo methods, phantoms, radiation therapy, proton computed tomography, proton CT, filtered backprojection, most likely path, Computerised tomographs, Radiation therapy, Digital computing or data processing equipment or methods, specially adapted for specific applications, Image data processing or generation, in general, Protons, Spatial resolution, Medical imaging, Image reconstruction, Computed tomography, Medical image reconstruction, Radiography, Collisional energy loss, Medical image spatial resolution, Photons},
+    ABSTRACT =      {Purpose: Proton {CT} ({pCT}) has the potential to accurately measure the electron density map of tissues at low doses but the spatial resolution is prohibitive if the curved paths of protons in matter is not accounted for. The authors propose to account for an estimate of the most likely path of protons in a filtered backprojection (FBP) reconstruction algorithm. Methods: The energy loss of protons is first binned in several proton radiographs at different distances to the proton source to exploit the depth-dependency of the estimate of the most likely path. This process is named the distance-driven binning. A voxel-specific backprojection is then used to select the adequate radiograph in the distance-driven binning in order to propagate in the pCT image the best achievable spatial resolution in proton radiographs. The improvement in spatial resolution is demonstrated using Monte Carlo simulations of resolution phantoms. Results: The spatial resolution in the distance-driven binning depended on the distance of the objects from the source and was optimal in the binned radiograph corresponding to that distance. The spatial resolution in the reconstructed pCT images decreased with the depth in the scanned object but it was always better than previous FBP algorithms assuming straight line paths. In a water cylinder with 20 cm diameter, the observed range of spatial resolutions was 0.7 − 1.6 mm compared to 1.0 − 2.4 mm at best with a straight line path assumption. The improvement was strongly enhanced in shorter 200° scans. Conclusions: Improved spatial resolution was obtained in pCT images with filtered backprojection reconstruction using most likely path estimates of protons. The improvement in spatial resolution combined with the practicality of FBP algorithms compared to iterative reconstruction algorithms makes this new algorithm a candidate of choice for clinical pCT.}
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{SCKSS19,
+    TITLE   =       {{An Improved Method of Total Variation Superiorization Applied to Reconstruction in Proton Computed Tomography}},
+    AUTHOR  =       {Schultze, Blake E. and Censor, Yair and Karbasi, Paniz and Schubert, Keith E. and Schulte, Reinhard W.},
+    JOURNAL =       IEEE_J_MI,
+    YEAR    =       {2019},
+    MONTH   =       {Apr},
+    VOLUME  =       {39},
+    NUMBER  =       {2},
+    PAGES   =       {294--307},
+    EPRINT  =       {1803.01112},
+    DOI     =       {10.1109/TMI.2019.2911482},
+    ISSN    =       {1558254X},
+    PMID =          {30998460},
+    ARCHIVEPREFIX = {arXiv},
+    ARXIVID =       {1803.01112},
+    FILE    =       {:C\:/Users/Christina/Dropbox/Series Papers/#2 Series Paper/References/An Improved Method of Total Variation - B. Schultze, Y. Censor, P. Karbasi, K. Schubert, R. Schulte (2019).pdf:pdf},
+    KEYWORDS =      {Feasibility-seeking algorithms,image reconstruction,perturbations,proton computed tomography (pCT),superiorization,total variation superiorization (TVS)},
+    ABSTRACT =      {Previous work has shown that total variation superiorization (TVS) improves reconstructed image quality in proton computed tomography (pCT). The structure of the TVS algorithm has evolved since then and this paper investigated if this new algorithmic structure provides additional benefits to pCT image quality. Structural and parametric changes introduced to the original TVS algorithm included: (1) inclusion or exclusion of TV reduction requirement, (2) a variable number, N , of TV perturbation steps per feasibility-seeking iteration, and (3) introduction of a perturbation kernel 0< $\alpha$ < 1. The structural change of excluding the TV reduction requirement check tended to have a beneficial effect for 3≤ N≤ 6 and allows full parallelization of the TVS algorithm. Repeated perturbations per feasibility-seeking iterations reduced total variation (TV) and material dependent standard deviations for 3≤ N≤ 6. The perturbation kernel $\alpha$ , effectively equal to $\alpha$ =0.5 in the original TVS algorithm, reduced TV and standard deviations as $\alpha$ was increased beyond $\alpha$ =0.5 , but negatively impacted reconstructed relative stopping power (RSP) values for $\alpha$ >0.75. The reductions in TV and standard deviations allowed feasibility-seeking with a larger relaxation parameter $\lambda$than previously used, without the corresponding increases in standard deviations experienced with the original TVS algorithm. This paper demonstrates that the modifications related to the evolution of the original TVS algorithm provide benefits in terms of both pCT image quality and computational efficiency for appropriately chosen parameter values.},
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@BOOK{CensorZenios1997A,
+    TITLE =         {Parallel Optimization: Theory, Algorithms and Applications},
+    AUTHOR =        {Censor, Yair Al and Zenios, Stavros A.},
+    YEAR =          {1997},
+    PUBLISHER =     {Oxford University Press, Inc.},
+    ADDRESS =       {USA}
+    ISBN =          {019510062X},
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+% Alternative ref found,  but 2000 pub in Springer by Janos Pinter also exists
+@INPROCEEDINGS{CensorZenios1997B,
+    TITLE =         {Parallel Optimization: Theory, Algorithms, and Applications},
+    AUTHOR =        {Y. Censor and S. Zenios},
+    PUBLISHER =     {Oxford University Press, Inc.},
+    YEAR =          {1997}
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{SKSCOK21,
+    TITLE =         {Particle-Tracking Proton Computed Tomography—Data Acquisition, Preprocessing, and Preconditioning},
+    AUTHOR =        {Schultze, Blake E. and Karbasi, Paniz and Sarosiek, Christina and Coutrakon, George and Ordoñez, Caesar E. and Karonis, Nicholas T. and Duffin, Kirk L. and Bashkirov, Vladimir A. and Johnson, Robert P. and Schubert, Keith E. and Schulte, Reinhard W.},
+    JOURNAL =       {IEEE Access},
+    YEAR =          {2021},
+    VOLUME =        {9},
+    NUMBER =        {},
+    PAGES =         {25946--25958},
+    DOI =           {10.1109/ACCESS.2021.3057760}
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{Bresenham65,
+    TITLE =         {Algorithm for computer control of a digital plotter},
+    AUTHOR =        {Bresenham, J. E.},
+    JOURNAL =       {IBM Systems Journal},
+    YEAR =          {1965},
+    VOLUME =        {4},
+    NUMBER =        {1},
+    PAGES =         {25--30},
+    DOI =           {10.1147/sj.41.0025}
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{Wu91A,
+    TITLE =         {An Efficient Antialiasing Technique},
+    AUTHOR =        {Wu, Xiaolin},
+    JOURNAL =       {Computer Graphics},
+    YEAR =          {1991},
+    MONTH =         {Jul},
+    VOLUME =        {25},
+    NUMBER =        {4},
+    PAGES =         {143--152},
+    NUMPAGES =      {10},
+    PUBLISHER =     {Association for Computing Machinery},
+    ADDRESS =       {New York, NY, USA},
+    ISSUE_DATE =    {July 1991},
+    URL =           {https://doi.org/10.1145/127719.122734},
+    DOI =           {10.1145/127719.122734},
+    ISSN =          {0097-8930},
+    KEYWORDS =      {convolution, antialiasing, digital geometry, curve digitization},
+    ABSTRACT =      {An intuitive concept of antialiasing is developed into very efficient antialiased line and circle generators that require even less amount of integer arithmetic than Bresenham's line and circle algorithms. Unlike its predecessors, the new antialiasing technique is derived in spatial domain (raster plane) under a subjectively meaningful error measure to preserve the dynamics of curve and object boundaries. A formal analysis of the new antialiasing technique in frequency domain is also conducted. It is shown that our antialiasing technique computes the same antialiased images as Fujimoto-Iwata's algorithm but at a fraction of the latter's computational cost. The simplicities of the new antialiased line and circle generators also mean their easy hardware implementations.},
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@INPROCEEDINGS{Wu91B,
+    TITLE =         {An Efficient Antialiasing Technique},
+    AUTHOR =        {Wu, Xiaolin},
+    BOOKTITLE =     {Proceedings of the 18th Annual Conference on Computer Graphics and Interactive Techniques},
+    YEAR =          {1991},
+    SERIES =        {SIGGRAPH '91},
+    PAGES =         {143--152},
+    NUMPAGES =      {10},
+    PUBLISHER =     {Association for Computing Machinery},
+    ADDRESS =       {New York, NY, USA},
+    URL =           {https://doi.org/10.1145/122718.122734},
+    DOI =           {10.1145/122718.122734},
+    ISBN =          {0897914368},
+    KEYWORDS =      {antialiasing, convolution, curve digitization, digital geometry},
+    ABSTRACT =      {An intuitive concept of antialiasing is developed into very efficient antialiased line and circle generators that require even less amount of integer arithmetic than Bresenham's line and circle algorithms. Unlike its predecessors, the new antialiasing technique is derived in spatial domain (raster plane) under a subjectively meaningful error measure to preserve the dynamics of curve and object boundaries. A formal analysis of the new antialiasing technique in frequency domain is also conducted. It is shown that our antialiasing technique computes the same antialiased images as Fujimoto-Iwata's algorithm but at a fraction of the latter's computational cost. The simplicities of the new antialiased line and circle generators also mean their easy hardware implementations.},
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{Abrash92,
+    TITLE =         {Fast Antialiasing},
+    AUTHOR =        {Abrash, Michael},
+    JOURNAL =       {Dr. Dobb's J.},
+    YEAR =          {1992},
+    MONTH =         {Jun},
+    VOLUME =        {17},
+    NUMBER =        {6},
+    PAGES =         {139--143},
+    NUMPAGES =      {5},
+    PUBLISHER =     {CMP Media, Inc.},
+    ADDRESS =       {USA},
+    ISSUE_DATE =    {June 1992},
+    ISSN =          {1044-789X},
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{GKSSW93,
+    TITLE =         {Multiple Coulomb scattering of 160 MeV protons},
+    AUTHOR =        {B. Gottschalk and A.M. Koehler and R.J. Schneider and J.M. Sisterson and M.S. Wagner},
+    JOURNAL =       NIMPRB,
+    YEAR =          {1993},
+    VOLUME =        {74},
+    NUMBER =        {4},
+    PAGES =         {467--490},
+    URL =           {https://www.sciencedirect.com/science/article/pii/0168583X9395944Z},
+    DOI =           {https://doi.org/10.1016/0168-583X(93)95944-Z},
+    ISSN =          {0168-583X},
+    ABSTRACT =      {We have measured multiple Coulomb scattering of 158.6 MeV protons in fourteen materials from beryllium to uranium including brass and several plastics. Targets ranged from thin (negligible energy loss) to very thick (greater than the mean proton range). The angular distribution was measured by means of a single diode dosimeter scanned typically over two decades of dose falloff. Each data set was fitted with a Molière scattering distribution (using Bethe's tables) to extract a characteristic angle θM as well as a Gaussian distribution to extract a characteristic angle θ0. As expected in the small angle region, the Gaussian fits about as well as the Molière shape. The θM values were compared with Molière's predicted value (χcB2) including Fano's correction for scattering by atomic electrons and using Molière's formalism to account for energy loss and/or compound targets or mixtures. The distribution of the deviation from theory for 115 independent measurements is approximately normal, with a mean value − 0.5 ± 0.4\% and an rms spread of 5\%. The $θ_0$ values were compared with Highland's formula and with an “improved Highland” formula of Lynch and Dahl, using our own generalization to thick targets. The overall accuracy of Highland's formula is slightly worse than that of Molière theory. The distribution of the deviation from theory for 115 independent measurements is normal, with a mean value − 2.6 ± 0.5\% and an rms spread of 6\%. The Lynch formula gives nearly the same average statistics though details of the fit are different. Some data were taken for very thick targets (thickness greater than 97\% of the mean proton range) where only a fraction of the incident protons emerge. Here the characteristic angle appears to level off or even to fall slightly with target thickness perhaps due to the filtering out of large-angle protons. These measurements are presented but were excluded from the comparison with theory. We have reviewed six other published proton measurements, partially reanalyzing four whose authors claimed that Molière theory either did not apply (because of thick targets) or was incorrect. These experiments range from 1 MeV to 200 GeV incident energy. Averaging each measurement including our own over everything but target material we obtain 39 independent measurements of the deviation from theory whose distribution is normal with a mean value − 0.3 ± 0.5\% and an rms spread of 3\%. We conclude that Molière theory with the Fano correction is accurate to better than 1\% on the average for protons. Systematic discrepancies on the order of a few percent with target thickness and/or target material cannot be ruled out at present. In particular there is some indication that the theory may be  $\apprx 4\%$ high for the highest-Z materials.}
+}
+%-------------------------------------------------------------------------------------------------------------------------------%
+@ARTICLE{Horner1819,
+    TITLE =         {A New Method of Solving Numerical Equations of All Orders, by Continuous Approximation},
+    AUTHOR =        {W. G. Horner},
+    JOURNAL =       {Philosophical Transactions of the Royal Society of London},
+    YEAR =          {1819},
+    VOLUME =        {109},
+    NUMBER =        {},
+    PAGES =         {308--335},
+    PUBLISHER =     {The Royal Society},
+    URL =           {http://www.jstor.org/stable/107508},
+    ISSN =          {02610523},
+}
 %*******************************************************************************************************************************%
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Potentially useful publications that have not yet been added ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 %*******************************************************************************************************************************%
-%type, number, address, month, note, key
+%type, NUMBER, ADDRESS, MONTH, note, key
 %[4] H.H. Barrett and W. Swindell, Radialogical Imaging: The Theory of Image Formation,Detection and Processing. New York: Academic Press, 1981.
 %[8] R. Gordon, R. Bender, and G. Herman, "Algebraic reconstruction techniques (ART) for three dimensional electron microscopy and X-ray photography," Journal of Theoritical Biology, vol. 36, pp. 105-117, 1970.
 %[9] R. Gordon, "A tutorial on ART(Algebraic Reconstruction Techniques)," IEEE Trans-actions on Nuclear Science, vol. NS-21, pp. 78-93, 1974.
